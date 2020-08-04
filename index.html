@@ -72,6 +72,7 @@
   <div class="content">
   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true" style="display: none;">Home</a>
+    <a class="nav-link" id="v-pills-open-tab" data-toggle="pill" href="#v-pills-open" role="tab" aria-controls="v-pills-open" aria-selected="false" style="display: none;">Open</a>
     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
     <a class="nav-link" id="v-pills-cc-tab" data-toggle="pill" href="#v-pills-cc" role="tab" aria-controls="v-pills-cc" aria-selected="false">Chief Complaint</a>
     <a class="nav-link" id="v-pills-hpi-tab" data-toggle="pill" href="#v-pills-hpi" role="tab" aria-controls="v-pills-hpi" aria-selected="false">History of Present Illness</a>
@@ -98,8 +99,24 @@
         <h1 class="h3 mb-3 font-weight-normal">One Line Health</h1>
         <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
       </div>
-      <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-profile-tab')">Start</a>
+      <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-open-tab')">Start</a>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+    </div>
+    <div class="tab-pane fade" id="v-pills-open" role="tabpanel" aria-labelledby="v-pills-open-tab">
+    <div class="row">
+      <div class="col-md-3">
+        &nbsp;
+      </div>
+      <div class="col-md-5">
+      <video id="openVideo" height="600" controls autoplay="autoplay">
+        <source src="open.MOV" type="video/mp4">
+      </video>
+      </div>
+      <div class="col-md-3">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab')" role="button">Next</a>
+      </div>
+    </div>
     </div>
     <!-- profile -->
     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" onchange="validate_tab(this.id)">
@@ -421,23 +438,23 @@
       <div class="row" id="md" onchange="validate_checkbox(this.id)">
         <div class="col">
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Diabetes" required>
             <label class="form-check-label" for="exampleRadios1">Diabetes</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Heart attack" required>
             <label class="form-check-label" for="exampleRadios2">Heart attack</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios3" value="option3">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Heart failure" required>
             <label class="form-check-label" for="exampleRadios3">Heart failure</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="High blood pressure" required>
             <label class="form-check-label" for="exampleRadios4">High blood pressure</label>
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Cancer1" required>
             <label class="form-check-label" for="exampleRadios4">Cancer:</label>
           </div>
           <div class="form-check-inline">
@@ -461,23 +478,23 @@
         </div>
         <div class="col">
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Stroke" required>
             <label class="form-check-label" for="exampleRadios1">Stroke</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Asthma / COPD" required>
             <label class="form-check-label" for="exampleRadios2">Asthma / COPD</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios3" value="option3">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Liver disease" required>
             <label class="form-check-label" for="exampleRadios3">Liver disease</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Thyroid disorder" required>
             <label class="form-check-label" for="exampleRadios4">Thyroid disorder</label>
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Diabetes" required>
             <label class="form-check-label" for="exampleRadios4">Others:</label>
           </div>
           <div class="form-check-inline">
@@ -486,19 +503,19 @@
         </div>
         <div class="col">
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Depression" required>
             <label class="form-check-label" for="exampleRadios1">Depression</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="High cholesterol" required>
             <label class="form-check-label" for="exampleRadios2">High cholesterol</label>
           </div>
           <div class="form-check mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios3" value="option3">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Bleeding problems" required>
             <label class="form-check-label" for="exampleRadios3">Bleeding problems</label>
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="Cancer2" required>
             <label class="form-check-label" for="exampleRadios4">Cancer:</label>
           </div>
           <div class="form-check-inline">
@@ -520,7 +537,7 @@
               </select>
           </div>
           <div class="form-check form-check-inline mb-2">
-            <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+            <input type="checkbox" class="form-check-input" name="entry.1042938998" value="None" required>
             <label class="form-check-label" for="exampleRadios4">None</label>
           </div>
         </div>
@@ -533,41 +550,45 @@
       <div class="mb-2">
         <label style="margin-bottom: 0rem"><b>Allergies: Do you have any allergies for medicines or food?&nbsp;</b></label>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="radio" name="allergiesRadio" onclick="disappear('allergies_blank')">
+          <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="show('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">No</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="radio" name="allergiesRadio" onclick="show('allergies_blank')">
+          <input type="radio" class="form-check-input" name="entry.1564701543" value="Yes" onclick="show('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">Yes</label>
         </div>
         <br>
         <div id="allergies_blank" style="display: none;">
           <small class="text-muted"> If so, what reaction did you have.</small>
           <div class="input-group-prepend">
-              <div class="col-md-6" style="text-align: center;">Allergy</div>
-              <div class="col-md-6" style="text-align: center;">The Reaction you had</div>
+              <div class="col-md-3" style="text-align: center;">Allergy</div>
+              <div class="col-md-3" style="text-align: center;">The Reaction you had</div>
+              <div class="col-md-3" style="text-align: center;">Allergy</div>
+              <div class="col-md-3" style="text-align: center;">The Reaction you had</div>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
+            <input id="1881770472" type="text" name="entry.1881770472" class="form-control" >
+            <input id="1743558470" type="text" name="entry.1743558470" class="form-control" >
+            &nbsp;
+            <input id="1708488701" type="text" name="entry.1708488701" class="form-control" >
+            <input id="2048102725" type="text" name="entry.2048102725" class="form-control" >
           </div>
           <div class="input-group">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
-          </div>
-          <div class="input-group">
-            <input type="text" class="form-control">
-            <input type="text" class="form-control">
+            <input id="458771763" type="text" name="entry.458771763" class="form-control" >
+            <input id="955959842" type="text" name="entry.955959842" class="form-control" >
+            &nbsp;
+            <input id="318698116" type="text" name="entry.318698116" class="form-control" >
+            <input id="1057122970" type="text" name="entry.1057122970" class="form-control" >
           </div>
         </div>
       </div>
       <label style="margin-bottom: 0rem"><b>Medications: Do you have any medicines?&nbsp;</b></label>
       <div class="form-check form-check-inline">
-        <input required class="form-check-input" type="radio" name="medicinesRadio" onclick="disappear('medicines_blank')">
+        <input type="radio" class="form-check-input" name="entry.157084051" value="No" onclick="show('medicines_blank')" required>
         <label class="form-check-label" for="exampleRadios4">No</label>
       </div>
       <div class="form-check form-check-inline">
-        <input required class="form-check-input" type="radio" name="medicinesRadio" onclick="show('medicines_blank')">
+        <input type="radio" class="form-check-input" name="entry.157084051" value="Yes" onclick="show('medicines_blank')" required>
         <label class="form-check-label" for="exampleRadios4">Yes</label>
       </div>
       <div id="medicines_blank" style="display: none;">
@@ -579,20 +600,20 @@
             <div class="col-md-3" style="text-align: center;">Dose</div>
         </div>
         <div class="input-group">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
+          <input id="849484916" type="text" class="form-control" name="entry.849484916" class="form-control" >
+          <input id="1799696774" type="text" class="form-control" name="entry.1799696774" class="form-control" >
           &nbsp;
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
+          <input id="1833963266" type="text" class="form-control" name="entry.1833963266" class="form-control" >
+          <input id="1116093556" type="text" class="form-control" name="entry.1116093556" class="form-control" >
         </div>
         <div class="input-group">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
+          <input id="15375545" type="text" class="form-control" name="entry.15375545" class="form-control" >
+          <input id="1652644719" type="text" class="form-control" name="entry.1652644719" class="form-control" >
           &nbsp;
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
+          <input id="1616447112" type="text" class="form-control" name="entry.1616447112" class="form-control" >
+          <input id="1626577871" type="text" class="form-control" name="entry.1626577871" class="form-control" >
         </div>
-        <div class="input-group" id="adddrug1" style="display: none;">
+<!--         <div class="input-group" id="adddrug1" style="display: none;">
           <input type="text" class="form-control">
           <input type="text" class="form-control">
           &nbsp;
@@ -605,10 +626,10 @@
           &nbsp;
           <input type="text" class="form-control">
           <input type="text" class="form-control">
-        </div>
+        </div> -->
         <br>
-        <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrug()">Add Drugs</a>
-        <a type="button" class="btn btn-outline-primary mb-3" onclick="deletedrug()">Delete Drugs</a>
+<!--         <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrug()">Add Drugs</a>
+        <a type="button" class="btn btn-outline-primary mb-3" onclick="deletedrug()">Delete Drugs</a> -->
         <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrugpage('v-pills-medicines-tab')">Add Medicines Page</a>
       </div>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-social-tab')">Next</a>
@@ -624,74 +645,74 @@
           <div class="col-md-3" style="text-align: center;">Dose</div>
       </div>
       <div class="input-group">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="586238945" type="text" class="form-control" name="entry.586238945" class="form-control" >
+        <input id="852423648" type="text" class="form-control" name="entry.852423648" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1572482010" type="text" class="form-control" name="entry.1572482010" class="form-control" >
+        <input id="1946505153" type="text" class="form-control" name="entry.1946505153" class="form-control" >
       </div>
       <div class="input-group">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="326338896" type="text" class="form-control" name="entry.326338896" class="form-control" >
+        <input id="867301081" type="text" class="form-control" name="entry.867301081" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="354748428" type="text" class="form-control" name="entry.354748428" class="form-control" >
+        <input id="1630129686" type="text" class="form-control" name="entry.1630129686" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="803819920" type="text" class="form-control" name="entry.803819920" class="form-control" >
+        <input id="1172741373" type="text" class="form-control" name="entry.1172741373" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1850291724" type="text" class="form-control" name="entry.1850291724" class="form-control" >
+        <input id="1160430342" type="text" class="form-control" name="entry.1160430342" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1861649655" type="text" class="form-control" name="entry.1861649655" class="form-control" >
+        <input id="228933675" type="text" class="form-control" name="entry.228933675" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1680754032" type="text" class="form-control" name="entry.1680754032" class="form-control" >
+        <input id="461410285" type="text" class="form-control" name="entry.461410285" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="625970181" type="text" class="form-control" name="entry.625970181" class="form-control" >
+        <input id="1072660354" type="text" class="form-control" name="entry.1072660354" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="309728817" type="text" class="form-control" name="entry.309728817" class="form-control" >
+        <input id="444637174" type="text" class="form-control" name="entry.444637174" class="form-control" >
       </div>
       <div class="input-group">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1117120621" type="text" class="form-control" name="entry.1117120621" class="form-control" >
+        <input id="1931074187" type="text" class="form-control" name="entry.1931074187" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1099798515" type="text" class="form-control" name="entry.1099798515" class="form-control" >
+        <input id="19903613" type="text" class="form-control" name="entry.19903613" class="form-control" >
       </div>
       <div class="input-group">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1137072067" type="text" class="form-control" name="entry.1137072067" class="form-control" >
+        <input id="1326432973" type="text" class="form-control" name="entry.1326432973" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="15223092" type="text" class="form-control" name="entry.15223092" class="form-control" >
+        <input id="338757991" type="text" class="form-control" name="entry.338757991" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1867363325" type="text" class="form-control" name="entry.1867363325" class="form-control" >
+        <input id="1222821364" type="text" class="form-control" name="entry.1222821364" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="777512166" type="text" class="form-control" name="entry.777512166" class="form-control" >
+        <input id="341197969" type="text" class="form-control" name="entry.341197969" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1321388956" type="text" class="form-control" name="entry.1321388956" class="form-control" >
+        <input id="2085348460" type="text" class="form-control" name="entry.2085348460" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1138007642" type="text" class="form-control" name="entry.1138007642" class="form-control" >
+        <input id="471781714" type="text" class="form-control" name="entry.471781714" class="form-control" >
       </div>
       <div class="input-group" id="template">
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="951880327" type="text" class="form-control" name="entry.951880327" class="form-control" >
+        <input id="270401399" type="text" class="form-control" name="entry.270401399" class="form-control" >
         &nbsp;
-        <input type="text" class="form-control">
-        <input type="text" class="form-control">
+        <input id="1771740640" type="text" class="form-control" name="entry.1771740640" class="form-control" >
+        <input id="1846288848" type="text" class="form-control" name="entry.1846288848" class="form-control" >
       </div>
       <br>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-social-tab')">Next</a>
@@ -703,44 +724,44 @@
         <br>
         <div class="mb-2" id='relationship' onchange="validate_checkbox(this.id)">
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">Single</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="Single" onchange="validate(this.id)" required>
+            <label class="form-check-label">Single</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">In a committed relationship</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="In a committed relationship" onchange="validate(this.id)" required>
+            <label class="form-check-label">In a committed relationship</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">Married</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="Married" onchange="validate(this.id)" required>
+            <label class="form-check-label">Married</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">Separated</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="Separated" onchange="validate(this.id)" required>
+            <label class="form-check-label">Separated</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">Divorced</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="Divorced" onchange="validate(this.id)" required>
+            <label class="form-check-label">Divorced</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="111" id="exampleRadios4" value="option4" onchange="validate(this.id)" required>
-            <label class="form-check-label" for="exampleRadios4">Widowed</label>
+            <input type="radio" class="form-check-input" name="entry.114996775" value="Widowed" onchange="validate(this.id)" required>
+            <label class="form-check-label">Widowed</label>
           </div>
         </div>
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Alcohol: </b>Do you drink alcohol?&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="222" id="exampleRadios4" value="option4" onclick="disappear('alcohol_info')">
+            <input type="radio" class="form-check-input" name="entry.440461028" value="No" onclick="disappear('alcohol_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="222" id="exampleRadios4" value="option4" onclick="show('alcohol_info')">
+            <input type="radio" class="form-check-input" name="entry.440461028" value="Yes" onclick="show('alcohol_info')" required>
             <label class="form-check-label" for="exampleRadios4">Yes</label>
           </div>
           <div id="alcohol_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How often?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;">
+              <input id="1452308177" type="text" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">times/week</span>
               </div>
@@ -750,24 +771,24 @@
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="333" id="exampleRadios4" value="option4" onclick="disappear('tobacoo_info')">
+            <input type="radio" class="form-check-input" name="entry.2023575525" value="No" onclick="disappear('tobacoo_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="333" id="exampleRadios4" value="option4" onclick="show('tobacoo_info')">
+            <input type="radio" class="form-check-input" name="entry.2023575525" value="Yes" onclick="show('tobacoo_info')" required>
             <label class="form-check-label" for="exampleRadios4">Yes</label>
           </div>
           <div id="tobacoo_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How often?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;">
+              <input id="705853817" type="text" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
-              <label class="form-check-label">How many years?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;">
+              <label class="form-check-label">For how many years?&nbsp;</label>
+              <input id="816411990" type="text" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
@@ -777,60 +798,60 @@
         <div class="mb-1">
           <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you previously smoke?&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="444" id="exampleRadios4" value="option4" onclick="disappear('tobacoo_prev_info')">
+            <input type="radio" class="form-check-input" name="entry.2118824515" value="No" onclick="disappear('tobacoo_prev_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="444" id="exampleRadios4" value="option4" onclick="show('tobacoo_prev_info')">
+            <input type="radio" class="form-check-input" name="entry.2118824515" value="Yes" onclick="show('tobacoo_prev_info')" required>
             <label class="form-check-label" for="exampleRadios4">Yes</label>
           </div>
           <div id="tobacoo_prev_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How often?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;">
+              <input id="715172636" type="text" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">How many years?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;">
+              <input id="2033700742" type="text" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">Year you quit?&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 125px;">
+              <input id="1428509395" type="text" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 125px;" required>
             </div>
           </div>
         </div>
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Employment status:</b></label>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="555" id="exampleRadios4" value="option4">
+            <input type="radio" class="form-check-input" name="entry.1217890044" value="Working" required>
             <label class="form-check-label" for="exampleRadios4">Working</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="555" id="exampleRadios4" value="option4">
+            <input type="radio" class="form-check-input" name="entry.1217890044" value="Retired" required>
             <label class="form-check-label" for="exampleRadios4">Retired</label>
           </div>
           <div class="form-check form-check-inline">
-            <input required class="form-check-input" type="radio" name="555" id="exampleRadios4" value="option4">
+            <input type="radio" class="form-check-input" name="entry.1217890044" value="Disabled" required>
             <label class="form-check-label" for="exampleRadios4">Disabled</label>
           </div>
           <div class="form-check form-check-inline" style="margin-right: 0rem;">
-            <input required class="form-check-input" type="radio" name="555" id="exampleRadios4" value="option4">
+            <input type="radio" class="form-check-input" name="entry.1217890044" value="__other_option__" required>
             <label class="form-check-label" for="exampleRadios4">Others:</label>
           </div>
           <div class="form-check-inline">
-              <input type="text" class="form-control" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
+              <input type="text" class="form-control" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
           </div>
           <br>
           <label style="margin-bottom: 0rem;"><b>Occupation:</b></label>
           <div class="form-check-inline">
               <label class="form-check-label">What is your current occupation?&nbsp;&nbsp;</label>
-              <input required type="text" class="form-control" onchange="validate(this.id)" placeholder="Engineer" style="height: 30px; width: 200px;">
+              <input id="942743805" type="text" name="entry.942743805" class="form-control" onchange="validate(this.id)" placeholder="Teacher" style="height: 30px; width: 200px;" required>
           </div>
         </div>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-family-tab')">Next</a>
@@ -861,18 +882,18 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.120417658" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1565875295" type="text" class="form-control" name="entry.1565875295" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.120417658" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1317691108" type="text" class="form-control" name="entry.1317691108" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -880,18 +901,18 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1795127444" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="2042049324" type="text" class="form-control" name="entry.2042049324" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1795127444" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="707339394" type="text" class="form-control" name="entry.707339394" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -899,18 +920,18 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1584128817" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1830581718" type="text" class="form-control" name="entry.1830581718" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1584128817" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1260199512" type="text" class="form-control" name="entry.1260199512" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -918,18 +939,18 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.318978035" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="391752654" type="text" class="form-control" name="entry.391752654" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.318978035" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="372853481" type="text" class="form-control" name="entry.372853481" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -937,18 +958,18 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.630839300" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="87081226" type="text" class="form-control" name="entry.87081226" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.630839300" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="105365515" type="text" class="form-control" name="entry.105365515" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -956,39 +977,39 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1713011573" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1400766530" type="text" class="form-control" name="entry.1400766530" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1713011573" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="932783784" type="text" class="form-control" name="entry.932783784" class="form-control" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text" style="width:150px;" id="Uncles">Others:&nbsp;
-              <input type="text" id="validationCustomUsername"style="width: 75px; height: 95%" onchange="validate(this.id)" placeholder="">
+              <input id="516058083" type="text" name="entry.516058083" class="form-control" style="width: 75px; height: 95%" onchange="validate(this.id)">
             </span>
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1001956085" value="None_major" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="1876695148" type="text" class="form-control" name="entry.1876695148" class="form-control" >
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" aria-label="Checkbox for following text input">
+              <input type="checkbox" name="entry.1001956085" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input type="text" class="form-control" aria-label="Text input with checkbox">
+          <input id="2071609554" type="text" class="form-control" name="entry.2071609554" class="form-control" >
         </div>
       </div>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-physicians-tab')">Next</a>
@@ -998,24 +1019,24 @@
       <h2><span class="badge badge-secondary">Referring Physicians</span></h2>
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputFirst4">First Name</label>
-          <input required type="text" class="form-control" id="inputFirst4" placeholder="Inderbir">
+          <label for="40039240">First Name</label>
+          <input id="40039240" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir" required>
         </div>
         <div class="form-group col-md-4">
-          <label for="inputLast4">Last Name</label>
-          <input required type="text" class="form-control" id="inputLast4" placeholder="Gill">
+          <label for="325567427">Last Name</label>
+          <input id="325567427" type="text" name="entry.325567427" class="form-control" placeholder="Urology" required>
         </div>
         <div class="form-group col-md-4">
-          <label for="inputSpecialty">Specialty</label>
-          <input required type="text" class="form-control" id="inputSpecialty" placeholder="Urology">
+          <label for="1892335894">Specialty</label>
+          <input id="1892335894" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" required>
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-5">
-          <label for="inputAddress">Address</label>
-          <input required type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" height=300%>
+        <div class="form-group col-md-6">
+          <label for="321663243">Address</label>
+          <input id="321663243" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" required>
         </div>
-        <div class="form-group col-md-3">
+        <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
           <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
         </div>
@@ -1030,9 +1051,17 @@
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
           <input required type="text" class="form-control" id="inputZip">
+        </div> -->
+        <div class="form-group col-md-3">
+          <label for="1257300614">Tel</label>
+          <input id="1257300614" type="text" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="269642805">Fax</label>
+          <input id="269642805" type="text" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" required>
         </div>
       </div>
-      <div class="form-row">
+<!--       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel2">Tel</label>
           <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
@@ -1041,40 +1070,40 @@
           <label for="inputTel2">Fax</label>
           <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
         </div>
-      </div>
+      </div> -->
       <div class="form-check form-check-inline mb-2">
-        <input required class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+        <input type="checkbox" class="form-check-input" name="entry.1924612540" value="refer me" required>
         <label class="form-check-label" for="exampleRadios4">Referred you to see us</label>
       </div>
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians2-tab')">Add physicians</button>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
     </div>
     <!-- physicians 2 -->
     <div class="tab-pane fade" id="v-pills-physicians2" role="tabpanel2" aria-labelledby="v-pills-physicians-tab2" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Referring Physicians 2</span></h2>
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputFirst4">First Name</label>
-          <input type="text" class="form-control" id="inputFirst4" placeholder="Inderbir">
+          <label for="819961389">First Name</label>
+          <input id="819961389" type="text" name="entry.819961389" class="form-control" placeholder="Inderbir" >
         </div>
         <div class="form-group col-md-4">
-          <label for="inputLast4">Last Name</label>
-          <input type="text" class="form-control" id="inputLast4" placeholder="Gill">
+          <label for="362320967">Last Name</label>
+          <input id="362320967" type="text" name="entry.362320967" class="form-control" placeholder="Urology" >
         </div>
         <div class="form-group col-md-4">
-          <label for="inputSpecialty">Specialty</label>
-          <input type="text" class="form-control" id="inputSpecialty" placeholder="Urology">
+          <label for="269727290">Specialty</label>
+          <input id="269727290" type="text" name="entry.269727290" class="form-control" placeholder="Urology" >
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-5">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" height=300%>
+        <div class="form-group col-md-6">
+          <label for="1648677105">Address</label>
+          <input id="1648677105" type="text" name="entry.1648677105" class="form-control" placeholder="1234 Main St" >
         </div>
-        <div class="form-group col-md-3">
+        <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
+          <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
         </div>
         <div class="form-group col-md-2">
           <label for="inputState">State</label>
@@ -1086,53 +1115,61 @@
         </div>
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
+          <input required type="text" class="form-control" id="inputZip">
+        </div> -->
+        <div class="form-group col-md-3">
+          <label for="1062978314">Tel</label>
+          <input id="1062978314" type="text" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="437570330">Fax</label>
+          <input id="437570330" type="text" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" >
         </div>
       </div>
-      <div class="form-row">
+<!--       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel2">Tel</label>
-          <input type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
+          <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
         </div>
         <div class="form-group col-md-6">
           <label for="inputTel2">Fax</label>
-          <input type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
+          <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
         </div>
-      </div>
+      </div> -->
       <div class="form-check form-check-inline mb-2">
-        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+        <input type="checkbox" class="form-check-input" name="entry.550459955" value="refer me" required>
         <label class="form-check-label" for="exampleRadios4">Referred you to see us</label>
       </div>
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians3-tab')">Add physicians</a>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians2-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
     </div>
     <!-- physicians 3 -->
     <div class="tab-pane fade" id="v-pills-physicians3" role="tabpanel3" aria-labelledby="v-pills-physicians-tab3" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Referring Physicians 3</span></h2>
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputFirst4">First Name</label>
-          <input type="text" class="form-control" id="inputFirst4" placeholder="Inderbir">
+          <label for="163361409">First Name</label>
+          <input id="163361409" type="text" name="entry.163361409" class="form-control" placeholder="Inderbir" >
         </div>
         <div class="form-group col-md-4">
-          <label for="inputLast4">Last Name</label>
-          <input type="text" class="form-control" id="inputLast4" placeholder="Gill">
+          <label for="1066483225">Last Name</label>
+          <input id="1066483225" type="text" name="entry.1066483225" class="form-control" placeholder="Urology" >
         </div>
         <div class="form-group col-md-4">
-          <label for="inputSpecialty">Specialty</label>
-          <input type="text" class="form-control" id="inputSpecialty" placeholder="Urology">
+          <label for="894152847">Specialty</label>
+          <input id="894152847" type="text" name="entry.894152847" class="form-control" placeholder="Urology" >
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group col-md-5">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" height=300%>
+        <div class="form-group col-md-6">
+          <label for="1957767689">Address</label>
+          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St" required>
         </div>
-        <div class="form-group col-md-3">
+        <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
+          <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
         </div>
         <div class="form-group col-md-2">
           <label for="inputState">State</label>
@@ -1144,26 +1181,34 @@
         </div>
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
+          <input required type="text" class="form-control" id="inputZip">
+        </div> -->
+        <div class="form-group col-md-3">
+          <label for="1717853478">Tel</label>
+          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" required>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="970138022">Fax</label>
+          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" required>
         </div>
       </div>
-      <div class="form-row">
+<!--       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputTel2">Tel</label>
-          <input type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
+          <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
         </div>
         <div class="form-group col-md-6">
           <label for="inputTel2">Fax</label>
-          <input type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
+          <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
         </div>
-      </div>
+      </div> -->
       <div class="form-check form-check-inline mb-2">
-        <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+        <input type="checkbox" class="form-check-input" name="entry.692598252" value="refer me" required>
         <label class="form-check-label" for="exampleRadios4">Referred you to see us</label>
       </div>
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians3-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
     </div>
     <!-- general activity level -->
     <div class="tab-pane fade" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab" onchange="validate_tab(this.id)">
@@ -1180,112 +1225,108 @@
       <br>
       <div class="mb-3">
         <div class="form-check-inline" style="padding-left: 0rem;">
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select id="824704100" name="entry.1534454855" class="form-control">
               <option>Select</option>
-              <option>I can perform all my usual activities without limitations (ECOG 0)</option>
-              <option> I can perform all my usual activities (walking, office work, light housework) but I am not able to exercise or carry out heavy housework (EGOC 1)</option>
-              <option> I am able to walk and take care of myself (bathing, eat, toilet) (ECOG 2)</option>
-              <option> I need help taking care of myself (bathing, eating, toileting) and I am in bed or a chair more the half the time I am awake (ECOG 3)</option>
-              <option> I need someone to help with all of my self-care (bathing, eating, toileting) I am in confined to a bed or chair (ECOG 4)</option>
+              <option value="ECOG0">I can perform all my usual activities without limitations.</option>
+              <option value="ECOG1"> I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
+              <option value="ECOG2"> I am able to walk and take care of myself.</option>
+              <option value="ECOG3"> I need help taking care of myself and I am in bed or a chair more the half the time I am awake.</option>
+              <option value="ECOG4"> I need someone to help with all of my self-care I am in confined to a bed or chair.</option>
             </select>
         </div>
         <br>
         <br>
         <div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
+            <label class="form-check-label">How do you walk?&nbsp;</label>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" name="entry.1953145569" value="On foot" required>
+              <label class="form-check-label" for="inlineCheckbox5">On foot</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" name="entry.1953145569" value="Wheel-chair" required>
+              <label class="form-check-label" for="inlineCheckbox5">Wheel-chair</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" name="entry.1953145569" value="Walker" required>
+              <label class="form-check-label" for="inlineCheckbox5">Walker</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" name="entry.1953145569" value="Walking stick" required>
+              <label class="form-check-label" for="inlineCheckbox5">Walking stick</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" name="entry.1953145569" value="I do not walk" required>
+              <label class="form-check-label" for="inlineCheckbox5">I do not walk</label>
+            </div>
+          </div>
+          <div id="gal-1 " onchange="validate_checkbox(this.id)">
             <label class="form-check-label">How much can you walk?&nbsp;</label>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox3" value="option3">
-              <label class="form-check-label" for="inlineCheckbox3">Less than half mile</label>
+              <input type="radio" class="form-check-input" name="entry.1929417680" value="0.5 mile" required>
+              <label class="form-check-label" for="inlineCheckbox1">0.5 mile</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox1" value="option1">
-              <label class="form-check-label" for="inlineCheckbox1">Half-mile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox2" value="option2">
+              <input type="radio" class="form-check-input" name="entry.1929417680" value="1 mile" required>
               <label class="form-check-label" for="inlineCheckbox2">1 mile</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox4" value="option2">
-              <label class="form-check-label" for="inlineCheckbox4">2 miles</label>
+              <input type="radio" class="form-check-input" name="entry.1929417680" value="2 miles" required>
+              <label class="form-check-label" for="inlineCheckbox5">2 miles</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">3 miles</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">4 miles</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">5 or more</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">I do not walk</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="checkbox" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">I use a wheel-chair</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="checkbox" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">I use a walker</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="checkbox" name="a" id="inlineCheckbox5" value="option2">
-              <label class="form-check-label" for="inlineCheckbox5">I use a walking stick</label>
+              <input type="radio" class="form-check-input" name="entry.1929417680" value="3 or more" required>
+              <label class="form-check-label" for="inlineCheckbox5">3 or more</label>
             </div>
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
             <label class="form-check-label">How many flights of stairs can you climb?&nbsp;</label>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="b" id="inlineCheckbox3" value="option3">
+              <input type="radio" class="form-check-input" name="entry.313001010" value="1" required>
               <label class="form-check-label" for="inlineCheckbox3">1</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="b" id="inlineCheckbox1" value="option1">
+              <input type="radio" class="form-check-input" name="entry.313001010" value="2" required>
               <label class="form-check-label" for="inlineCheckbox1">2</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="b" id="inlineCheckbox2" value="option2">
+              <input type="radio" class="form-check-input" name="entry.313001010" value="3" required>
               <label class="form-check-label" for="inlineCheckbox2">3</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="b" id="inlineCheckbox4" value="option2">
+              <input type="radio" class="form-check-input" name="entry.313001010" value="4" required>
               <label class="form-check-label" for="inlineCheckbox4">4</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="b" id="inlineCheckbox5" value="option2">
+              <input type="radio" class="form-check-input" name="entry.313001010" value="5 or more" required>
               <label class="form-check-label" for="inlineCheckbox5">5 or more</label>
             </div>
           </div>
-          <div id="gal-1 " onchange="validate_checkbox(this.id)">
+          <div>
             <label class="form-check-label">Shortness of breath at rest?&nbsp;</label>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="d" id="inlineCheckbox1" value="option1">
+              <input type="radio" class="form-check-input" name="entry.1262283224" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="d" id="inlineCheckbox3" value="option3">
+              <input type="radio" class="form-check-input" name="entry.1262283224" value="Yes" required>
               <label class="form-check-label" for="inlineCheckbox3">Yes</label>
             </div>
           </div>
-          <div id="gal-1 " onchange="validate_checkbox(this.id)">
+          <div>
             <label class="form-check-label">Shortness of breath on exertion?&nbsp;</label>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="e" id="inlineCheckbox1" value="option1">
+              <input type="radio" class="form-check-input" name="entry.213842803" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
             </div>
             <div class="form-check form-check-inline">
-              <input required class="form-check-input" type="radio" name="e" id="inlineCheckbox3" value="option3">
+              <input type="radio" class="form-check-input" name="entry.213842803" value="Yes" required>
               <label class="form-check-label" for="inlineCheckbox3">Yes</label>
             </div>
           </div>
         </div>
       </div>
+    <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab')">Next</a>
     </div>
     <!-- symptoms -->
     <div class="tab-pane fade" id="v-pills-symptoms" role="tabpanel" aria-labelledby="v-pills-symptoms-tab" onchange="validate_tab(this.id)">
@@ -1302,102 +1343,102 @@
       <div class="row" id="sys1" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Head:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col" style="">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input class="form-check-input" type="checkbox" name="entry.420567850" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.420567850" value="Headache" >
           <label class="form-check-label" for="inlineCheckbox1">Headache</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.420567850" value="Dizziness" >
           <label class="form-check-label" for="inlineCheckbox2">Dizziness</label>
         </div>
       </div>
       <div class="row" id="sys2" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Neck:&nbsp;&nbsp;</b></label>
          <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.24393389" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.24393389" value="Pain" >
           <label class="form-check-label" for="inlineCheckbox1">Pain</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.24393389" value="Stiffness" >
           <label class="form-check-label" for="inlineCheckbox2">Stiffness</label>
         </div>
       </div>
       <div class="row" id="sys3" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Eyes:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" iname="entry.355094542" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.355094542" value="Change" >
           <label class="form-check-label" for="inlineCheckbox1">Change</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.355094542" value="Glaucoma" >
           <label class="form-check-label" for="inlineCheckbox2">Glaucoma</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.355094542" value="Double" >
           <label class="form-check-label" for="inlineCheckbox3">Double</label>
         </div>
       </div>
       <div class="row" id="sys4" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Ears:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1482893409" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1482893409" value="Pain/ache" >
           <label class="form-check-label" for="inlineCheckbox1">Pain/ache</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1482893409" value="Discharge" >
           <label class="form-check-label" for="inlineCheckbox2">Discharge</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1482893409" value="Ringing" >
           <label class="form-check-label" for="inlineCheckbox3">Ringing</label>
         </div>
       </div>
       <div class="row" id="sys5" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Nose:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.169869634" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.169869634" value="Bleeding" >
           <label class="form-check-label" for="inlineCheckbox1">Bleeding</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.169869634" value="Discharge" >
           <label class="form-check-label" for="inlineCheckbox2">Discharge</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.169869634" value="Sinus infections" >
           <label class="form-check-label" for="inlineCheckbox3">Sinus infections</label>
         </div>
       </div>
       <div class="row" id="sys6" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Skin:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1721787384" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1721787384" value="Rashes" >
           <label class="form-check-label" for="inlineCheckbox1">Rashes</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1721787384" value="Non-healing wounds" >
           <label class="form-check-label" for="inlineCheckbox2">Dry skin</label>
         </div>
         <div class="form-check form-check-inline">
@@ -1408,78 +1449,78 @@
      <div class="row" id="sys7" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Mouth:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.349626757" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.349626757" value="Sore throat" >
           <label class="form-check-label" for="inlineCheckbox1">Sore throat</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.349626757" value="Mouth sores" >
           <label class="form-check-label" for="inlineCheckbox2">Mouth sores</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.349626757" value="Bleeding from gum" >
           <label class="form-check-label" for="inlineCheckbox3">Bleeding from gums</label>
         </div>
       </div>
       <div class="row" id="sys8" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Breasts:&nbsp;&nbsp;</b></label>
          <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.2113739215" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.2113739215" value="Lump" >
           <label class="form-check-label" for="inlineCheckbox1">Lump</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.2113739215" value="Discharge" >
           <label class="form-check-label" for="inlineCheckbox2">Discharge</label>
         </div>
       </div>
       <div class="row" id="sys9" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Allergic:&nbsp;&nbsp;</b></label>
          <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1397350331" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1397350331" value="Hives" >
           <label class="form-check-label" for="inlineCheckbox1">Hives</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1397350331" value="Hay fever" >
           <label class="form-check-label" for="inlineCheckbox2">Hay fever</label>
         </div>
       </div>
       <div class="row" id="sys10" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Urinary:&nbsp;&nbsp;</b></label>
          <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Frequent" >
           <label class="form-check-label" for="inlineCheckbox1">Frequent</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Burning" >
           <label class="form-check-label" for="inlineCheckbox2">Burning</label>
         </div>
         <div class="form-check form-check-inline" style="width: 10%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Blood" >
           <label class="form-check-label" for="inlineCheckbox2">Blood</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Leakage" >
           <label class="form-check-label" for="inlineCheckbox2">Leakage</label>
         </div>
       </div>
       <div class="row" id="sys11" onchange="validate_checkbox(this.id)">
         <div class="form-check form-check-inline col-4" style="margin-left: 9%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Change in force of of stream" >
           <label class="form-check-label" for="inlineCheckbox2">Change in force of stream</label>
         </div>
       </div>
@@ -1501,148 +1542,148 @@
       <div class="row" id="sys12" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Lymphatic:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1008226366" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1008226366" value="Swelling" >
           <label class="form-check-label" for="inlineCheckbox1">Swelling</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1008226366" value="Tenderness" >
           <label class="form-check-label" for="inlineCheckbox2">Tenderness</label>
         </div>
       </div>
       <div class="row" id="sys13" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Endocrine:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1109242234" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" iname="entry.1109242234" value="Diabetes" >
           <label class="form-check-label" for="inlineCheckbox1">Diabetes</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1109242234" value="Increased thirst" >
           <label class="form-check-label" for="inlineCheckbox2">Increased thirst</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1109242234" value="Changes in hair" >
           <label class="form-check-label" for="inlineCheckbox2">Changes in hair</label>
         </div>
       </div>
       <div class="row" id="sys14" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Hematologic:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1529100926" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1529100926" value="Transfusions" >
           <label class="form-check-label" for="inlineCheckbox1">Transfusions</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1529100926" value="Easy bruising" >
           <label class="form-check-label" for="inlineCheckbox2">Easy bruising</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1529100926" value="Bleeding disorder" >
           <label class="form-check-label" for="inlineCheckbox2">Bleeding disorder</label>
         </div>
       </div>
       <div class="row" id="sys15" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Respiratory:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.544137998" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.544137998" value="Cough" >
           <label class="form-check-label" for="inlineCheckbox1">Cough</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.544137998" value="Wheezing" >
           <label class="form-check-label" for="inlineCheckbox2">Wheezing</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.544137998" value="Shortness of breath" >
           <label class="form-check-label" for="inlineCheckbox2">Shortness of breath</label>
         </div>
       </div>
       <div class="row" id="sys16" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Psychiatric:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.497894844" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.497894844" value="Anxiety" >
           <label class="form-check-label" for="inlineCheckbox1">Anxiety</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.497894844" value="Insomnia" >
           <label class="form-check-label" for="inlineCheckbox2">Insomnia</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.497894844" value="Depression" >
           <label class="form-check-label" for="inlineCheckbox2">Depression</label>
         </div>
       </div>
       <div class="row" id="sys17" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Neurologic:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.621021451" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.621021451" value="Weakness" >
           <label class="form-check-label" for="inlineCheckbox1">Weakness</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.621021451" value="Seizures" >
           <label class="form-check-label" for="inlineCheckbox2">Seizures</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.621021451" value="Memory loss" >
           <label class="form-check-label" for="inlineCheckbox2">Memory loss</label>
         </div>
       </div>
       <div class="row" id="sys18" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Cardiovascular:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.28376273" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.28376273" value="Fainting" >
           <label class="form-check-label" for="inlineCheckbox1">Fainting</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.28376273" value="Chest pain" >
           <label class="form-check-label" for="inlineCheckbox2">Chest pain</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.28376273" value="Heart palpitations" >
           <label class="form-check-label" for="inlineCheckbox2">Heart palpitations</label>
         </div>
       </div>
       <div class="row" id="sys19" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Musculoskeletal:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.283950140" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.283950140" value="Bone pain" >
           <label class="form-check-label" for="inlineCheckbox1">Bone pain</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.283950140" value="Back pain" >
           <label class="form-check-label" for="inlineCheckbox2">Back pain</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.283950140" value="Joint pain" >
           <label class="form-check-label" for="inlineCheckbox2">Joint pain</label>
         </div>
       </div>
@@ -1650,25 +1691,25 @@
       <div class="row" id="sys20">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Constitutional:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Fever" >
           <label class="form-check-label" for="inlineCheckbox1">Fever</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Chills" >
           <label class="form-check-label" for="inlineCheckbox2">Chills</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Night sweats" >
           <label class="form-check-label" for="inlineCheckbox2">Night sweats</label>
         </div>
       </div>
       <div class="row" id="sys21">
         <div class="form-check form-check-inline" style="margin-left: 18%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Recent weight change" >
           <label class="form-check-label" for="inlineCheckbox2">Recent weight change</label>
         </div>
       </div>
@@ -1677,39 +1718,39 @@
       <div class="row" id="sys22" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Gastrointestinal:&nbsp;&nbsp;</b></label>
         <div class="form-check form-check-inline" style="width: 9.7%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Constipation" >
           <label class="form-check-label" for="inlineCheckbox1">Constipation</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Rectal bleeding" >
           <label class="form-check-label" for="inlineCheckbox2">Rectal bleeding</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Abdominal pain" >
           <label class="form-check-label" for="inlineCheckbox2">Abdominal pain</label>
         </div>
       </div>
       <div class="row" id="sys23">
         <div class="form-check form-check-inline" style="margin-left: 18%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Diarrhea" >
           <label class="form-check-label" for="inlineCheckbox1">Diarrhea</label>
         </div>
         <div class="form-check form-check-inline" style="margin-right: 1.65%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Loss of appetite" >
           <label class="form-check-label" for="inlineCheckbox2">Loss of appetite</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Nausea or vomiting" >
           <label class="form-check-label" for="inlineCheckbox2">Nausea or vomiting</label>
         </div>
       </div>
       <div class="row" id="sys24">
         <div class="form-check form-check-inline" style="margin-left: 18%">
-          <input required class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Change in bowel habits" >
           <label class="form-check-label" for="inlineCheckbox2">Change in bowel habits</label>
         </div>
       </div>
@@ -1746,7 +1787,11 @@
 </body>
 
 <script type="text/javascript">
-
+document.getElementById('openVideo').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    // What you want to do after the event
+    document.getElementById('open_btn').style.display = 'block'
+}
 function summary() {
   var str;
   str = "Name: "+document.getElementById("2035245450").value+" "+document.getElementById("1238999267").value+"<br>"+
@@ -1869,18 +1914,20 @@ function validate(id){
 
 function nextpage(id) {
   document.getElementById(id).click();
-  document.getElementById("logo").style.display = 'block';
+  if (id == 'v-pills-profile-tab') {
+    var vid = document.getElementById("openVideo");
+    vid.play();
+    // nextpage("v-pills-profile-tab")
+  }
 }
 
 function addphysician(id) {
   document.getElementById(id).click();
-  document.getElementById("logo").style.display = 'block';
   document.getElementById(id).style.display = 'block';
 }
 
 function deletepatient(id1, id2) {
   document.getElementById(id1).click();
-  document.getElementById("logo").style.display = 'block';
   document.getElementById(id2).style.display = 'none';
 }
 
