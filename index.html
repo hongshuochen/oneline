@@ -162,8 +162,8 @@
           </div>
         </div>
         <div class="col-md-4 mb-2">
-          <label for="2132997145">Date of Birth<span class="red-star">*</span></label>
-          <input type="date" class="form-control" id="2132997145" placeholder="07/14/2020" onchange="validate(this.id)" required>
+          <label for="2132997145_date">Date of Birth<span class="red-star">*</span></label>
+          <input type="date" class="form-control" id="2132997145_date" placeholder="07/14/2020" onchange="validate(this.id)" required>
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -2131,7 +2131,41 @@ function progres() {
   document.getElementById("percent").innerHTML = Math.round(num/total*100) + "%"
 
 }
+
+$('#bootstrapForm').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    {
+        /* Parsing input date id=2132997145 */
+        var dateField = $("#2132997145_date").val()
+        var timeField = $("#2132997145_time").val()
+        let d = new Date(dateField)
+        if (!isNaN(d.getTime())) {
+            extraData["entry.2132997145_year"] = d.getFullYear()
+            extraData["entry.2132997145_month"] = d.getMonth() + 1
+            extraData["entry.2132997145_day"] = d.getUTCDate()
+        }
+        if (timeField && timeField.split(':').length >= 2) {
+            let values = timeField.split(':')
+            extraData["entry.2132997145_hour"] = values[0]
+            extraData["entry.2132997145_minute"] = values[1]
+        }
+    }
+    $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Form Submitted. Thanks.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+    })
+})
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
