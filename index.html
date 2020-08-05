@@ -625,7 +625,7 @@
     <div class="tab-pane fade" id="v-pills-allergies" role="tabpanel" aria-labelledby="v-pills-allergies-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Medications/Allergies</span></h2>
       <div class="mb-2">
-        <label style="margin-bottom: 0rem"><b>Allergies:</b> Do you have any allergies for medicines or food?&nbsp;</label>
+        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?&nbsp;</label>
         <div class="form-check form-check-inline">
           <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="disappear('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">No</label>
@@ -847,7 +847,7 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Alcohol: </b>Do you drink alcohol?&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Alcohol: </b> &nbsp;&nbsp;Do you drink alcohol?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.440461028" value="No" onclick="disappear('alcohol_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -867,7 +867,7 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.2023575525" value="No" onclick="disappear('tobacoo_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -1608,19 +1608,19 @@
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Burning" >
           <label class="form-check-label" for="inlineCheckbox2">Burning</label>
         </div>
-        <div class="form-check form-check-inline" style="width: 10%">
-          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Blood" >
-          <label class="form-check-label" for="inlineCheckbox2">Blood</label>
-        </div>
         <div class="form-check form-check-inline">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Leakage" >
-          <label class="form-check-label" for="inlineCheckbox2">Leakage</label>
+          <label class="form-check-label" for="inlineCheckbox2">Change in force of stream</label>
         </div>
       </div>
       <div class="row" id="sys11">
-        <div class="form-check form-check-inline col-4" style="margin-left: 9%">
+        <div class="form-check form-check-inline" style="margin-left: 27.4%">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Change in force of of stream" >
-          <label class="form-check-label" for="inlineCheckbox2">Change in force of stream</label>
+          <label class="form-check-label" for="inlineCheckbox2">Blood</label>
+        </div>
+        <div class="form-check form-check-inline" style="margin-left: 9.8%">
+          <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Blood" >
+          <label class="form-check-label" for="inlineCheckbox2">Leakage</label>
         </div>
       </div>
       </div>
@@ -1802,15 +1802,19 @@
           <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Chills" >
           <label class="form-check-label" for="inlineCheckbox2">Chills</label>
         </div>
-        <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Night sweats" >
-          <label class="form-check-label" for="inlineCheckbox2">Night sweats</label>
+        <div class="form-check form-check-inline">
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Recent weight change" >
+          <label class="form-check-label" for="inlineCheckbox2">Recent weight change</label>
         </div>
       </div>
       <div class="row" id="sys21">
+        <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
+          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <label class="form-check-label" for="inlineCheckbox3">None</label>
+        </div>
         <div class="form-check form-check-inline" style="margin-left: 18%">
-          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Recent weight change" >
-          <label class="form-check-label" for="inlineCheckbox2">Recent weight change</label>
+          <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Night sweats" >
+          <label class="form-check-label" for="inlineCheckbox2">Night sweats</label>
         </div>
       </div>
       </div>
@@ -1835,23 +1839,31 @@
         </div>
       </div>
       <div class="row" id="sys23">
-        <div class="form-check form-check-inline" style="margin-left: 18%">
+        <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
+          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <label class="form-check-label" for="inlineCheckbox3">None</label>
+        </div>
+        <div class="form-check form-check-inline symptom-col" style="margin-left: 18%">
           <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Diarrhea" >
           <label class="form-check-label" for="inlineCheckbox1">Diarrhea</label>
         </div>
-        <div class="form-check form-check-inline" style="margin-right: 1.65%">
+        <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Loss of appetite" >
           <label class="form-check-label" for="inlineCheckbox2">Loss of appetite</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Nausea or vomiting" >
-          <label class="form-check-label" for="inlineCheckbox2">Nausea or vomiting</label>
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Change in bowel habits" >
+          <label class="form-check-label" for="inlineCheckbox2">Change in bowel habits</label>
         </div>
       </div>
       <div class="row" id="sys24">
+        <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
+          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <label class="form-check-label" for="inlineCheckbox3">None</label>
+        </div>
         <div class="form-check form-check-inline" style="margin-left: 18%">
-          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Change in bowel habits" >
-          <label class="form-check-label" for="inlineCheckbox2">Change in bowel habits</label>
+          <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Nausea or vomiting" >
+          <label class="form-check-label" for="inlineCheckbox2">Nausea or vomiting</label>
         </div>
       </div>
       </div>
