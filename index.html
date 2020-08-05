@@ -51,6 +51,12 @@
         position: static;
       }
 
+      .red-star {
+        color: red;
+      }
+
+      .form-check-input.is-valid~.form-check-label,.was-validated .form-check-input:valid~.form-check-label{color:black}
+
       .cvalid{border-color:#28a745;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}
 
       .cinvalid{border-color:#dc3545;padding-right:calc(1.5em + .75rem);background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right calc(.375em + .1875rem) center;background-size:calc(.75em + .375rem) calc(.75em + .375rem)}
@@ -90,40 +96,44 @@
     <a class="nav-link" id="v-pills-symptoms2-tab" data-toggle="pill" href="#v-pills-symptoms2" role="tab" aria-controls="v-pills-symptoms2" aria-selected="false">Review of Symptoms II</a>
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
   </div>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="_self" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='./close.html'}"></iframe>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
   <div class="tab-content" id="v-pills-tabContent">
     <!-- home -->
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
       <div class="text-center mb-4">
         <img class="mb-4" src="./OneLine.png" alt="" height="72">
+<!--         <h1 class="h3 mb-3 font-weight-normal">One Line Health</h1>
+        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p> -->
         <h1 class="h3 mb-3 font-weight-normal">One Line Health</h1>
-        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+        <p>For better experience, please <b>turn on you sound</b> and use <b>Google Chrome</b>.</p>
+        <p>If you are ready, please click start.</p>
       </div>
       <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-open-tab')">Start</a>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
     </div>
     <div class="tab-pane fade" id="v-pills-open" role="tabpanel" aria-labelledby="v-pills-open-tab">
-    <div class="row">
-      <div class="col-md-3">
-        &nbsp;
+      <div class="row">
+        <div class="col-md-3">
+          &nbsp;
+        </div>
+        <div class="col-md-5">
+        <video id="openVideo" height="600" controls autoplay="autoplay">
+          <source src="open.mp4" type="video/mp4">
+        </video>
+        </div>
+        <div class="col-md-3">
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab')" role="button">Next</a>
+        </div>
       </div>
-      <div class="col-md-5">
-      <video id="openVideo" height="600" controls autoplay="autoplay">
-        <source src="open.mp4" type="video/mp4">
-      </video>
-      </div>
-      <div class="col-md-3">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab')" role="button">Next</a>
-      </div>
-    </div>
     </div>
     <!-- profile -->
     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Profile</span></h2>
       <div class="form-row">
         <div class="col-md-4 mb-3">
-          <label for="2035245450">First name</label>
+          <label for="2035245450">First name<span class="red-star">*</span></label>
           <input id="2035245450" type="text" name="entry.2035245450" class="form-control" onchange="validate(this.id)" placeholder="Inderbir" required>
           <div class="valid-feedback">
             Looks good!
@@ -133,7 +143,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <label for="1238999267">Last name</label>
+          <label for="1238999267">Last name<span class="red-star">*</span></label>
           <input id="1238999267" type="text" name="entry.1238999267" class="form-control" onchange="validate(this.id)" placeholder="Gill" required>
           <div class="valid-feedback">
             Looks good!
@@ -143,7 +153,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <label for="2132997145_date">Date of Birth</label>
+          <label for="2132997145_date">Date of Birth<span class="red-star">*</span></label>
           <input type="date" class="form-control" id="2132997145_date" placeholder="7/14/2020" onchange="validate(this.id)" required>
           <div class="valid-feedback">
             Looks good!
@@ -155,7 +165,7 @@
       </div>
       <div class="form-row">
         <div class="col-md-4 mb-3">
-          <label for="768146479">Email</label>
+          <label for="768146479">Email<span class="red-star">*</span></label>
           <input id="768146479" type="text" name="entry.768146479" class="form-control" onchange="validate(this.id)" placeholder="xyz@gmail.com" required>
           <div class="valid-feedback">
             Looks good!
@@ -165,7 +175,7 @@
           </div>
         </div>
         <div class="col-md-4 mb-3">
-          <label for="727509711">Phone Number 1</label>
+          <label for="727509711">Phone Number 1<span class="red-star">*</span></label>
           <input id="727509711" type="text" name="entry.727509711" class="form-control" onchange="validate(this.id)"placeholder="(201) 555-0123">
           <div class="valid-feedback">
             Looks good!
@@ -187,7 +197,7 @@
       </div>
       <div class="form-row">
         <div class="col-md-3 mb-3">
-          <label for="1791832648">Height</label>
+          <label for="1791832648">Height<span class="red-star">*</span></label>
           <div class="input-group">
             <input required type="number" class="form-control" id="1791832648" name="entry.1791832648" onchange="validate(this.id)" placeholder="5" min="0" max="9" required>
             <div class="input-group-append">
@@ -217,7 +227,7 @@
           </div>
         </div>
         <div class="col-md-6 mb-3">
-          <label for="1758371700">Weight</label>
+          <label for="1758371700">Weight<span class="red-star">*</span></label>
           <div class="input-group">
             <input type="number" class="form-control" id="1758371700" name="entry.1758371700" onchange="validate(this.id)" placeholder="150" min="0" max="974" required>
             <div class="input-group-append">
@@ -238,7 +248,7 @@
     <div class="tab-pane fade" id="v-pills-cc" role="tabpanel" aria-labelledby="v-pills-cc-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Chief Complaint</span></h2>
       <div id="xxx" class="form-group">
-          <label for="inputCC">What is the reason for your seeing the doctor today?</label>
+          <label for="inputCC">What is the reason for your seeing the doctor today?<span class="red-star">*</span></label>
              <a class="btn sound_btn" onclick="playAudio('./1.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -263,7 +273,7 @@
     <div class="tab-pane fade" id="v-pills-hpi" role="tabpanel" aria-labelledby="v-pills-hpi-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">History of Illiness</span></h2>
       <div class="form-group">
-        <label for="inputHPI">What have your physicians told you?</label>
+        <label for="inputHPI">What have your physicians told you?<span class="red-star">*</span></label>
             <a class="btn sound_btn" onclick="playAudio('./2.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -276,7 +286,7 @@
         <textarea id="1252370919" name="entry.1252370919" class="span6 form-control" rows="4" placeholder="Abc" onchange="validate(this.id)" required></textarea>
       </div>
       <div class="form-group">
-        <label for="inputHPI"><b>Prior Treatments: </b>What treatments have you had so far?</label>
+        <label for="inputHPI"><b>Prior Treatments: </b>What treatments have you had so far?<span class="red-star">*</span></label>
             <a class="btn sound_btn" onclick="playAudio('./3.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -289,7 +299,7 @@
         <input id="1694937621" type="text" name="entry.1694937621" class="form-control" placeholder="Abc" onchange="validate(this.id)" required>
       </div>
       <div class="form-group">
-        <label for="inputHPI"><b>Future Treatments: </b>What future treatment options you have been told you may need in the future?</label>
+        <label for="inputHPI"><b>Future Treatments: </b>What future treatment options you have been told you may need in the future?<span class="red-star">*</span></label>
             <a class="btn sound_btn" onclick="playAudio('./4.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -306,7 +316,7 @@
     <!-- urologic -->
     <div class="tab-pane fade" id="v-pills-urologic" role="tabpanel" aria-labelledby="v-pills-urologic-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Urologic History</span></h2>
-      <label>Check all that apply. List any other UROLOGIC problems in the provided blanks.</label>
+      <label>Check all that apply. List any other UROLOGIC problems in the provided blanks.<span class="red-star">*</span></label>
             <a class="btn sound_btn" onclick="playAudio('./5.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -316,6 +326,7 @@
               </svg>
             </a>
       <br>
+      <small>Please at least check one. If none please check None.</small>
       <div class="row" id="ur" onchange="validate_checkbox(this.id)">
         <div class="col">
           <div class="form-check mb-2">
@@ -401,8 +412,8 @@
             <label class="form-check-label" for="exampleRadios1">Urine retention</label>
           </div>
           <div class="form-check mb-2">
-            <input type="checkbox" class="form-check-input" name="entry.595182463" value="Catherization" required>
-            <label class="form-check-label" for="exampleRadios2">Catherization</label>
+            <input type="checkbox" class="form-check-input" name="entry.595182463" value="Catheterization" required>
+            <label class="form-check-label" for="exampleRadios2">Catheterization</label>
           </div>
           <div class="form-check mb-2">
             <input type="checkbox" class="form-check-input" name="entry.595182463" value="Instrumentation of the penis/urethra" required>
@@ -425,7 +436,7 @@
     <!-- medical -->
     <div class="tab-pane fade" id="v-pills-medical" role="tabpanel" aria-labelledby="v-pills-medical-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Past Medical History</span></h2>
-      <label>Check all that apply. List other MEDICAL problems in the provided blanks.</label>
+      <label>Check all that apply. List other MEDICAL problems in the provided blanks.<span class="red-star">*</span></label>
             <a class="btn" onclick="playAudio('./6.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -435,6 +446,7 @@
               </svg>
             </a>
       <br>
+      <small>Please at least check one. If none please check None.</small>
       <div class="row" id="md" onchange="validate_checkbox(this.id)">
         <div class="col">
           <div class="form-check mb-2">
@@ -550,7 +562,7 @@
       <div class="mb-2">
         <label style="margin-bottom: 0rem"><b>Allergies: Do you have any allergies for medicines or food?&nbsp;</b></label>
         <div class="form-check form-check-inline">
-          <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="show('allergies_blank')" required>
+          <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="disappear('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">No</label>
         </div>
         <div class="form-check form-check-inline">
@@ -584,7 +596,7 @@
       </div>
       <label style="margin-bottom: 0rem"><b>Medications: Do you have any medicines?&nbsp;</b></label>
       <div class="form-check form-check-inline">
-        <input type="radio" class="form-check-input" name="entry.157084051" value="No" onclick="show('medicines_blank')" required>
+        <input type="radio" class="form-check-input" name="entry.157084051" value="No" onclick="disappear('medicines_blank')" required>
         <label class="form-check-label" for="exampleRadios4">No</label>
       </div>
       <div class="form-check form-check-inline">
@@ -1072,7 +1084,7 @@
         </div>
       </div> -->
       <div class="form-check form-check-inline mb-2">
-        <input type="checkbox" class="form-check-input" name="entry.1924612540" value="refer me" required>
+        <input type="checkbox" class="form-check-input" name="entry.1924612540" value="refer me">
         <label class="form-check-label" for="exampleRadios4">Referred you to see us</label>
       </div>
       <br>
@@ -1137,7 +1149,7 @@
         </div>
       </div> -->
       <div class="form-check form-check-inline mb-2">
-        <input type="checkbox" class="form-check-input" name="entry.550459955" value="refer me" required>
+        <input type="checkbox" class="form-check-input" name="entry.550459955" value="refer me">
         <label class="form-check-label" for="exampleRadios4">Referred you to see us</label>
       </div>
       <br>
@@ -1165,7 +1177,7 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="1957767689">Address</label>
-          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St" required>
+          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St">
         </div>
         <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
@@ -1185,11 +1197,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1717853478">Tel</label>
-          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" required>
+          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234">
         </div>
         <div class="form-group col-md-3">
           <label for="970138022">Fax</label>
-          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" required>
+          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234">
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1225,8 +1237,8 @@
       <br>
       <div class="mb-3">
         <div class="form-check-inline" style="padding-left: 0rem;">
-            <select id="824704100" name="entry.1534454855" class="form-control">
-              <option>Select</option>
+            <select id="824704100" name="entry.1534454855" class="form-control" required>
+              <option value="">Select</option>
               <option value="ECOG0">I can perform all my usual activities without limitations.</option>
               <option value="ECOG1"> I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
               <option value="ECOG2"> I am able to walk and take care of myself.</option>
@@ -1495,7 +1507,8 @@
           <label class="form-check-label" for="inlineCheckbox2">Hay fever</label>
         </div>
       </div>
-      <div class="row" id="sys10" onchange="validate_checkbox(this.id)">
+      <div id="sys1111" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys10">
         <label class="form-check-label symptom" for="inlineCheckbox1"><b>Urinary:&nbsp;&nbsp;</b></label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="None" >
@@ -1518,11 +1531,12 @@
           <label class="form-check-label" for="inlineCheckbox2">Leakage</label>
         </div>
       </div>
-      <div class="row" id="sys11" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys11">
         <div class="form-check form-check-inline col-4" style="margin-left: 9%">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Change in force of of stream" >
           <label class="form-check-label" for="inlineCheckbox2">Change in force of stream</label>
         </div>
+      </div>
       </div>
       <br>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms2-tab')">Next</a>
@@ -1792,12 +1806,26 @@ function myHandler(e) {
     // What you want to do after the event
     document.getElementById('open_btn').style.display = 'block'
 }
+function _calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
 function summary() {
   var str;
-  str = "Name: "+document.getElementById("2035245450").value+" "+document.getElementById("1238999267").value+"<br>"+
-        "Date of Birth"+document.getElementById("2132997145_date").value+"<br>"+
-        "Email: "+document.getElementById("768146479").value+"<br>"+
-        "Phone Number:"+document.getElementById("727509711").value+"<br>";
+  var birthday = new Date(document.getElementById("2132997145_date").value)
+  str = "<b>Name: </b>"+document.getElementById("2035245450").value+" "+document.getElementById("1238999267").value+" "+
+        "<b>Age: </b>"+_calculateAge(birthday)+" yrs "+
+        "<b>Sex: </b>"+"M/F"+"<br>"+
+        "<b>Chief Complaint: </b>"+document.getElementById("1516623984").value+"<br>"+
+        // "<b>History of Present Illiness: </b><br>"+
+        "<b>What have your physicians told you: </b>"+document.getElementById("1252370919").value+"<br>"+
+        "<b>Prior treatments: </b>"+document.getElementById("1694937621").value+"<br>"+
+        "<b>Future treatment: </b>"+document.getElementById("731455572").value+"<br>";
+
+
+
   document.getElementById("report").innerHTML = str;
 
 }
@@ -1835,11 +1863,27 @@ function adddrugpage(id) {
 
 function show(id) {
   document.getElementById(id).style.display = 'block';
+  var div = document.getElementById(id)
+  var c = div.getElementsByTagName('input');
+  for (var i = 0; i < c.length; i++)
+  {
+    if (id != 'medicines_blank' && id != 'allergies_blank')
+    {
+      c[i].required = true;
+    }
+  }
 }
 
 function disappear(id) {
   document.getElementById(id).style.display = 'none';
+  var div = document.getElementById(id)
+  var c = div.getElementsByTagName('input');
+  for (var i = 0; i < c.length; i++)
+  {
+    c[i].required = false;
+  }
 }
+
 function one_box_clicked(id) {
   var div = document.getElementById(id)
   var c = div.getElementsByTagName('input');
@@ -1918,6 +1962,9 @@ function nextpage(id) {
     var vid = document.getElementById("openVideo");
     vid.play();
     // nextpage("v-pills-profile-tab")
+  }
+  else if (id == 'v-pills-family-tab'){
+    validate_tab('v-pills-family');
   }
 }
 
