@@ -1885,7 +1885,7 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary btn-block" type="submit">Submit</button>
+      <button class="btn btn-primary btn-block" type="submit" onclick="check_all_tab()">Submit</button>
     </div>
   </div>
 </form>
@@ -2023,6 +2023,13 @@ function validate_checkbox(id){
       }
     }
   } 
+}
+
+function check_all_tab(id){
+  var c = document.getElementsByClassName('tab-pane');
+  for (var i = 0; i < c.length; i++) {
+    validate_tab(c[i].id)
+  }
 }
 
 function validate_tab(id){
