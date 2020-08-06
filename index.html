@@ -699,11 +699,11 @@
         </svg>
       </a>
       <div class="form-check form-check-inline">
-        <input type="radio" class="form-check-input" id="157084051_1" name="entry.157084051" value="No" onclick="disappear('medicines_blank')" required>
+        <input type="radio" class="form-check-input" id="157084051_1" name="entry.157084051" value="No" onclick="disappear('medicines_blank'); pharmacy_required('n');" required>
         <label class="form-check-label" for="157084051_1">No</label>
       </div>
       <div class="form-check form-check-inline">
-        <input type="radio" class="form-check-input" id="157084051_2" name="entry.157084051" value="Yes" onclick="show('medicines_blank')" required>
+        <input type="radio" class="form-check-input" id="157084051_2" name="entry.157084051" value="Yes" onclick="show('medicines_blank'); pharmacy_required('y');" required>
         <label class="form-check-label" for="157084051_2">Yes</label>
       </div>
       <div id="medicines_blank" style="display: none;">
@@ -761,15 +761,15 @@
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="630327060">Name</label>
-          <input id="630327060" type="text" name="entry.630327060" class="form-control" placeholder="ABC" >
+          <input id="630327060" type="text" name="entry.630327060" class="form-control" placeholder="ABC" required>
         </div>
         <div class="form-group col-md-3">
           <label for="2026807051">Address</label>
-          <input id="2026807051" type="text" name="entry.2026807051" class="form-control" placeholder="1234 Main St" >
+          <input id="2026807051" type="text" name="entry.2026807051" class="form-control" placeholder="1234 Main St" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1978025847">Tel</label>
-          <input id="1978025847" type="text" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" >
+          <input id="1978025847" type="text" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1042841192">Fax</label>
@@ -2142,6 +2142,18 @@ function disable_none(id1, id2) {
     document.getElementById(id1).disabled = true;
   } else {
     document.getElementById(id1).disabled = false;
+  }
+}
+
+function pharmacy_required(flag) {
+  if (flag == 'y') {
+    document.getElementById('630327060').required = true;
+    document.getElementById('2026807051').required = true;
+    document.getElementById('1978025847').required = true;
+  } else {
+    document.getElementById('630327060').required = false;
+    document.getElementById('2026807051').required = false;
+    document.getElementById('1978025847').required = false;
   }
 }
 
