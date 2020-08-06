@@ -646,7 +646,15 @@
     <div class="tab-pane fade" id="v-pills-allergies" role="tabpanel" aria-labelledby="v-pills-allergies-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Medications/Allergies</span></h2>
       <div class="mb-2">
-        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?<span class="red-star">*</span>&nbsp;</label>
+        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?<span class="red-star">*</span></label>
+        <a class="btn" onclick="playAudio('./11.mp3')" style="padding: 0rem;">
+          <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+            <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+            <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+            <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+          </svg>
+        </a>
         <div class="form-check form-check-inline">
           <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="disappear('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">No</label>
@@ -681,7 +689,15 @@
         </div>
       </div>
       <div class="mb-2">
-      <label style="margin-bottom: 0rem"><b>Medications:</b> Do you take any medicines?<span class="red-star">*</span>&nbsp;</label>
+      <label style="margin-bottom: 0rem"><b>Medications:</b> Do you take any medicines?<span class="red-star">*</span></label>
+      <a class="btn" onclick="playAudio('./12.mp3')" style="padding: 0rem;">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+          <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+          <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+          <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+          <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+        </svg>
+      </a>
       <div class="form-check form-check-inline">
         <input type="radio" class="form-check-input" name="entry.157084051" value="No" onclick="disappear('medicines_blank')" required>
         <label class="form-check-label" for="exampleRadios4">No</label>
@@ -734,6 +750,14 @@
       </div>
       <div>
       <label style="margin-bottom: 0rem"><b>Pharmacy:&nbsp;</b> Please provide the information of the pharmacy.</label>
+      <a class="btn" onclick="playAudio('./13.mp3')" style="padding: 0rem;">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+          <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+          <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+          <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+          <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+        </svg>
+      </a>
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="630327060">Name</label>
@@ -870,7 +894,17 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Alcohol: </b> &nbsp;&nbsp;Do you drink alcohol?<span class="red-star">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Alcohol: </b> &nbsp;&nbsp;Do you drink alcohol?<span class="red-star">*</span>
+          <a class="btn" onclick="playAudio('./14.mp3')" style="padding: 0rem;">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+              <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+              <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+              <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+              <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+            </svg>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.440461028" value="No" onclick="disappear('alcohol_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -882,7 +916,7 @@
           <div id="alcohol_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How often?<span class="red-star">*</span>&nbsp;</label>
-              <input id="1452308177" type="text" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
+              <input id="1452308177" type="text" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" max="7" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">times/week</span>
               </div>
@@ -890,7 +924,17 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?<span class="red-star">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?<span class="red-star">*</span>
+          <a class="btn" onclick="playAudio('./15.mp3')" style="padding: 0rem;">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+              <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+              <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+              <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+              <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+            </svg>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.2023575525" value="No" onclick="disappear('tobacoo_info'); show('prev_smoke');" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -917,14 +961,27 @@
           </div>
         </div>
         <div id="prev_smoke" class="mb-1" style="display: none">
-          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Did you previously smoke?<span class="red-star">*</span>&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Did you previously smoke?<span class="red-star">*</span>
+          <a class="btn" onclick="playAudio('./16.mp3')" style="padding: 0rem;">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+              <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+              <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+              <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+              <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+            </svg>
+          </a>
+          &nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" name="entry.2118824515" value="No" onclick="disappear('tobacoo_prev_info')" required>
+            <input type="radio" class="form-check-input" name="entry.2118824515" value="No" onclick="disappear('tobacoo_prev_info'); disappear('tobacoo_prev_year');"" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
           </div>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" name="entry.2118824515" value="Yes" onclick="show('tobacoo_prev_info')" required>
+            <input type="radio" class="form-check-input" name="entry.2118824515" value="Yes" onclick="show('tobacoo_prev_info'); show('tobacoo_prev_year');" required>
             <label class="form-check-label" for="exampleRadios4">Yes</label>
+          </div>
+          <div class="form-check form-check-inline" id="tobacoo_prev_year" style="display: none;">
+            <label class="form-check-label">Year you quit?<span class="red-star">*</span>&nbsp;</label>
+            <input id="1428509395" type="text" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 95px; display: inline;" required>
           </div>
           <div id="tobacoo_prev_info" style="display: none">
             <div class="form-check-inline">
@@ -940,10 +997,6 @@
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
-            </div>
-            <div class="form-check-inline">
-              <label class="form-check-label">Year you quit?<span class="red-star">*</span>&nbsp;</label>
-              <input id="1428509395" type="text" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 95px;" required>
             </div>
           </div>
         </div>
@@ -972,7 +1025,16 @@
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Occupation:</b></label>
           <div class="form-check-inline">
-              <label class="form-check-label">What is your current occupation?<span class="red-star">*</span>&nbsp;&nbsp;</label>
+              <label class="form-check-label">What is your current occupation?<span class="red-star">*</span>
+              <a class="btn" onclick="playAudio('./17.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+              </a>
+              &nbsp;&nbsp;</label>
               <input id="942743805" type="text" name="entry.942743805" class="form-control" onchange="validate(this.id)" placeholder="Teacher" style="height: 30px; width: 200px;" required>
           </div>
         </div>
@@ -1008,14 +1070,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1565875295" type="text" class="form-control" name="entry.1565875295" class="form-control" >
+          <input id="1565875295" type="text" class="form-control" name="entry.1565875295" onchange="unclicked()">
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.120417658" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1317691108" type="text" class="form-control" name="entry.1317691108" class="form-control" >
+          <input id="1317691108" type="text" class="form-control" name="entry.1317691108" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1027,14 +1089,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="2042049324" type="text" class="form-control" name="entry.2042049324" class="form-control" >
+          <input id="2042049324" type="text" class="form-control" name="entry.2042049324" >
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.1795127444" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="707339394" type="text" class="form-control" name="entry.707339394" class="form-control" >
+          <input id="707339394" type="text" class="form-control" name="entry.707339394" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1046,14 +1108,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1830581718" type="text" class="form-control" name="entry.1830581718" class="form-control" >
+          <input id="1830581718" type="text" class="form-control" name="entry.1830581718" >
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.1584128817" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1260199512" type="text" class="form-control" name="entry.1260199512" class="form-control" >
+          <input id="1260199512" type="text" class="form-control" name="entry.1260199512" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1065,14 +1127,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="391752654" type="text" class="form-control" name="entry.391752654" class="form-control" >
+          <input id="391752654" type="text" class="form-control" name="entry.391752654" >
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.318978035" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="372853481" type="text" class="form-control" name="entry.372853481" class="form-control" >
+          <input id="372853481" type="text" class="form-control" name="entry.372853481" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1084,14 +1146,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="87081226" type="text" class="form-control" name="entry.87081226" class="form-control" >
+          <input id="87081226" type="text" class="form-control" name="entry.87081226" >
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.630839300" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="105365515" type="text" class="form-control" name="entry.105365515" class="form-control" >
+          <input id="105365515" type="text" class="form-control" name="entry.105365515" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1103,14 +1165,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1400766530" type="text" class="form-control" name="entry.1400766530" class="form-control" >
+          <input id="1400766530" type="text" class="form-control" name="entry.1400766530" >
           <div class="input-group-prepend">
             <div class="input-group-text">
               <input type="checkbox" name="entry.1713011573" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="932783784" type="text" class="form-control" name="entry.932783784" class="form-control" >
+          <input id="932783784" type="text" class="form-control" name="entry.932783784" >
         </div>
         <div class="input-group">
           <div class="input-group-prepend">
@@ -1124,14 +1186,14 @@
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="1876695148" type="text" class="form-control" name="entry.1876695148" class="form-control" >
+          <input id="1876695148" type="text" class="form-control" name="entry.1876695148" >
           <div class="input-group-prepend"  style="height: 38px">
             <div class="input-group-text">
               <input type="checkbox" name="entry.1001956085" value="None_cancer" >
               <label class="form-check-label" for="inlineCheckbox3">&nbsp;None</label>
             </div>
           </div>
-          <input id="2071609554" type="text" class="form-control" name="entry.2071609554" class="form-control" >
+          <input id="2071609554" type="text" class="form-control" name="entry.2071609554" >
         </div>
       </div>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-physicians-tab')">Next</a>
@@ -1360,7 +1422,16 @@
         <br>
         <div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
-            <label class="form-check-label">How do you walk?<span class="red-star">*</span>&nbsp;</label>
+            <label class="form-check-label">How do you walk?<span class="red-star">*</span>
+            <a class="btn" onclick="playAudio('./18.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+            </a>
+            &nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1953145569" value="On foot" required>
               <label class="form-check-label" for="inlineCheckbox5">On foot</label>
@@ -1383,7 +1454,16 @@
             </div>
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
-            <label class="form-check-label">How much can you walk?<span class="red-star">*</span>&nbsp;</label>
+            <label class="form-check-label">How much can you walk?<span class="red-star">*</span>
+            <a class="btn" onclick="playAudio('./19.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+            </a>
+            &nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1929417680" value="0.5 mile" required>
               <label class="form-check-label" for="inlineCheckbox1">0.5 mile</label>
@@ -1403,6 +1483,14 @@
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
             <label class="form-check-label">How many flights of stairs can you climb?<span class="red-star">*</span>&nbsp;</label>
+            <a class="btn" onclick="playAudio('./20.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+            </a>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.313001010" value="1" required>
               <label class="form-check-label" for="inlineCheckbox3">1</label>
@@ -1425,7 +1513,16 @@
             </div>
           </div>
           <div>
-            <label class="form-check-label">Shortness of breath at rest?<span class="red-star">*</span>&nbsp;</label>
+            <label class="form-check-label">Shortness of breath at rest?<span class="red-star">*</span>
+            <a class="btn" onclick="playAudio('./21.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+            </a>
+            &nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1262283224" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
@@ -1436,7 +1533,16 @@
             </div>
           </div>
           <div>
-            <label class="form-check-label">Shortness of breath on exertion?<span class="red-star">*</span>&nbsp;</label>
+            <label class="form-check-label">Shortness of breath on exertion?<span class="red-star">*</span>
+            <a class="btn" onclick="playAudio('./22.mp3')" style="padding: 0rem;">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+                  <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+                  <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                  <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                  <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+                </svg>
+            </a>
+            &nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.213842803" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
@@ -1864,8 +1970,8 @@
           <label class="form-check-label" for="210477320_3">Rectal bleeding</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="210477320_4" name="entry.210477320" value="Abdominal pain" >
-          <label class="form-check-label" for="210477320_4">Abdominal pain</label>
+          <input required class="form-check-input" type="checkbox" id="210477320_4" name="entry.210477320" value="Nausea or vomiting" >
+          <label class="form-check-label" for="210477320_4">Nausea or vomiting</label>
         </div>
       </div>
       <div class="row" id="sys23">
@@ -1894,8 +2000,8 @@
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="210477320_8" name="entry.210477320" value="Nausea or vomiting" >
-          <label class="form-check-label" for="210477320_8">Nausea or vomiting</label>
+          <input required class="form-check-input" type="checkbox" id="210477320_8" name="entry.210477320" value="Abdominal pain" >
+          <label class="form-check-label" for="210477320_8">Abdominal pain</label>
         </div>
       </div>
       </div>
@@ -1917,13 +2023,13 @@
           </div>
         </div>
       </div>
-      <button class="btn btn-primary btn-block" type="submit" onclick="check_all_tab()">Submit</button>
+      <button class="btn btn-primary btn-block mb-2" type="submit" onclick="check_all_tab()">Submit</button>
       <label id="submit_warning" style="color: #dc3545; display: none;">
       <svg width="0.9em" height="0.9em" viewBox="0 0 16 16" class="bi bi-exclamation-triangle" fill="#dc3545" xmlns="http://www.w3.org/2000/svg" style="vertical-align:baseline;">
         <path fill-rule="evenodd" d="M7.938 2.016a.146.146 0 0 0-.054.057L1.027 13.74a.176.176 0 0 0-.002.183c.016.03.037.05.054.06.015.01.034.017.066.017h13.713a.12.12 0 0 0 .066-.017.163.163 0 0 0 .055-.06.176.176 0 0 0-.003-.183L8.12 2.073a.146.146 0 0 0-.054-.057A.13.13 0 0 0 8.002 2a.13.13 0 0 0-.064.016zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
         <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
       </svg>
-      &nbsp; Please fill out all required fields.</label>
+      &nbsp; Please complete the item indicated in red in the menu on the left side.</label>
     </div>
   </div>
 </form>
@@ -2004,7 +2110,11 @@ function adddrugpage(id) {
 }
 
 function show(id) {
-  document.getElementById(id).style.display = 'block';
+  if (id == "tobacoo_prev_year") {
+    document.getElementById(id).style.display = 'inline';
+  } else {
+    document.getElementById(id).style.display = 'block';
+  }
   var div = document.getElementById(id)
   var c = div.getElementsByTagName('input');
   for (var i = 0; i < c.length; i++)
