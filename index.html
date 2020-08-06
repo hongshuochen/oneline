@@ -163,13 +163,13 @@
         </div>
         <div class="col-md-2 mb-2">
           <label for="210835964">Sex<span class="red-star">*</span></label>
-          <select class="form-control" id="210835964" name="entry.210835964" onchange="validate(this.id)">
+          <select class="form-control" id="210835964" name="entry.210835964" onchange="validate(this.id)" required="">
             <option value="">Select</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
           <div class="invalid-feedback">
-            Please select your sex.
+            Select your sex.
           </div>
         </div>
         <div class="col-md-4 mb-2">
@@ -2226,15 +2226,8 @@ function validate_checkbox(id){
 
 function check_all_tab(id){
   var c = document.getElementsByClassName('tab-pane');
-  var success = true;
   for (var i = 0; i < c.length; i++) {
-    if(validate_tab(c[i].id) == false) {
-      document.getElementById('submit_warning').style.display = 'block';
-      success = false;
-    }
-  }
-  if (success) {
-    document.getElementById('submit_warning').style.display = 'none';
+    validate_tab(c[i].id)
   }
 }
 
@@ -2333,7 +2326,11 @@ function progress() {
   var progressbar = document.getElementById('mypgb')
   progressbar.style.width = Math.round(num/total*100) + "%"
   document.getElementById("percent").innerHTML = Math.round(num/total*100) + "%"
-
+  if (Math.round(num/total*100) == 100) {
+    document.getElementById('submit_warning').style.display = 'none';
+  } else {
+    document.getElementById('submit_warning').style.display = 'block';
+  }
 }
 
 function phone(id) {
@@ -2341,10 +2338,10 @@ function phone(id) {
   div.value = div.value.replace(/(\d{3})(\d{3})(\d{3})/, "($1) $2-$3");
 }
 
-window.onbeforeunload = function(event)
-{
-    return confirm("Confirm refresh");
-};
+// window.onbeforeunload = function(event)
+// {
+//     return confirm("Confirm refresh");
+// };
 </script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
