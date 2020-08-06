@@ -1411,11 +1411,11 @@
         <div class="form-check-inline" style="padding-left: 0rem;">
             <select id="824704100" name="entry.1534454855" class="form-control" required>
               <option value="">Select</option>
-              <option value="ECOG0">I can perform all my usual activities without limitations.</option>
-              <option value="ECOG1"> I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
-              <option value="ECOG2"> I am able to walk and take care of myself.</option>
-              <option value="ECOG3"> I need help taking care of myself and I am in bed or a chair more the half the time I am awake.</option>
-              <option value="ECOG4"> I need someone to help with all of my self-care I am in confined to a bed or chair.</option>
+              <option value="0">I can perform all my usual activities without limitations.</option>
+              <option value="1"> I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
+              <option value="2"> I am able to walk and take care of myself.</option>
+              <option value="3"> I need help taking care of myself and I am in bed or a chair more the half the time I am awake.</option>
+              <option value="4"> I need someone to help with all of my self-care I am in confined to a bed or chair.</option>
             </select>
         </div>
         <br>
@@ -1930,7 +1930,7 @@
           <label class="form-check-label" for="1872380614_1">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="1872380614_2" ame="entry.1872380614" value="Fever" >
+          <input required class="form-check-input" type="checkbox" id="1872380614_2" name="entry.1872380614" value="Fever" >
           <label class="form-check-label" for="1872380614_2">Fever</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
@@ -2139,9 +2139,6 @@ function disappear(id) {
 function disable_none(id1, id2) {
   if (document.getElementById(id2).value != "") {
     document.getElementById(id1).checked = false;
-    document.getElementById(id1).disabled = true;
-  } else {
-    document.getElementById(id1).disabled = false;
   }
 }
 
