@@ -30,12 +30,12 @@
 
       .symptom {
         padding-left: 0rem;
-        width: 9%;
+        width: 12%;
       }
 
       .symptom2 {
         padding-left: 0rem;
-        width: 18%;
+        width: 20%;
       }
 
       .symptom-col {
@@ -106,7 +106,7 @@
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
   </div>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='./close.html'}"></iframe>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate onkeydown="return event.key != 'Enter';">
   <div class="tab-content" id="v-pills-tabContent">
     <!-- home -->
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -141,7 +141,7 @@
     <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Profile</span></h2>
       <div class="form-row">
-        <div class="col-md-4 mb-2">
+        <div class="col-md-3 mb-2">
           <label for="2035245450">First name<span class="red-star">*</span></label>
           <input id="2035245450" type="text" name="entry.2035245450" class="form-control" onchange="validate(this.id)" placeholder="Inderbir" required>
 <!--           <div class="valid-feedback">
@@ -151,7 +151,7 @@
             Please enter your first name.
           </div>
         </div>
-        <div class="col-md-4 mb-2">
+        <div class="col-md-3 mb-2">
           <label for="1238999267">Last name<span class="red-star">*</span></label>
           <input id="1238999267" type="text" name="entry.1238999267" class="form-control" onchange="validate(this.id)" placeholder="Gill" required>
 <!--           <div class="valid-feedback">
@@ -161,9 +161,20 @@
             Please enter your last name.
           </div>
         </div>
+        <div class="col-md-2 mb-2">
+          <label for="1238999267">Sex<span class="red-star">*</span></label>
+          <select class="form-control" id="exampleFormControlSelect1" onchange="validate(this.id)">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select your sex.
+          </div>
+        </div>
         <div class="col-md-4 mb-2">
-          <label for="2132997145_date">Date of Birth<span class="red-star">*</span></label>
-          <input type="date" class="form-control" id="2132997145_date" placeholder="07/14/2020" onchange="validate(this.id)" required>
+          <label for="2132997145">Date of Birth<span class="red-star">*</span></label>
+          <input type="date" class="form-control" id="2132997145" name="entry.2132997145" placeholder="01/01/2000" min="1900-01-01" onchange="validate(this.id)" required>
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -175,7 +186,7 @@
       <div class="form-row">
         <div class="col-md-4 mb-2">
           <label for="768146479">Email<span class="red-star">*</span></label>
-          <input id="768146479" type="text" name="entry.768146479" class="form-control" onchange="validate(this.id)" placeholder="xyz@gmail.com" required>
+          <input id="768146479" type="email" name="entry.768146479" class="form-control" onchange="validate(this.id)" placeholder="xyz@gmail.com" required>
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -185,7 +196,7 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="727509711">Phone Number 1<span class="red-star">*</span></label>
-          <input id="727509711" type="text" name="entry.727509711" class="form-control" onchange="validate(this.id)"placeholder="(201) 555-0123">
+          <input id="727509711" type="text" name="entry.727509711" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -195,7 +206,7 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="899933585">Phone Number 2</label>
-          <input id="899933585" type="text" name="entry.899933585" class="form-control" onchange="validate(this.id)"placeholder="(201) 555-0123">
+          <input id="899933585" type="text" name="entry.899933585" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123">
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -208,7 +219,7 @@
         <div class="col-md-3 mb-2">
           <label for="1791832648">Height<span class="red-star">*</span></label>
           <div class="input-group">
-            <input required type="number" class="form-control" id="1791832648" name="entry.1791832648" onchange="validate(this.id)" placeholder="5" min="0" max="9" required>
+            <input required type="number" class="form-control" id="1791832648" name="entry.1791832648" onchange="validate(this.id);" placeholder="5" min="0" max="9" required>
             <div class="input-group-append">
                 <span class="input-group-text">ft</span>
             </div>
@@ -251,7 +262,8 @@
           </div>
         </div>  
       </div>
-      <label>Emergency Contacts</label>
+      <br>
+      <label><b>Emergency Contacts</b></label>
       <div class="form-row">
         <div class="col-md-4 mb-2">
           <label for="1430380711">First name<span class="red-star">*</span></label>
@@ -297,7 +309,7 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="2125361867">Phone Number 1<span class="red-star">*</span></label>
-          <input id="2125361867" type="text" name="entry.2125361867" class="form-control" onchange="validate(this.id)"placeholder="(201) 555-0123">
+          <input id="2125361867" type="text" name="entry.2125361867" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -307,7 +319,7 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="1774684884">Phone Number 2</label>
-          <input id="1774684884" type="text" name="entry.1774684884" class="form-control" onchange="validate(this.id)"placeholder="(201) 555-0123">
+          <input id="1774684884" type="text" name="entry.1774684884" class="form-control" onchange="validate(this.id);phone(this.id);" placeholder="(201) 555-0123">
 <!--           <div class="valid-feedback">
             Looks good!
           </div> -->
@@ -499,7 +511,7 @@
             <label class="form-check-label" for="exampleRadios4">Benign Prostate enlargement</label>
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
-            <input type="checkbox" class="form-check-input" name="entry.595182463" value="__other_option__" >
+            <input type="checkbox" class="form-check-input" name="entry.595182463" value="__other_option__" required>
             <label class="form-check-label" for="exampleRadios4">Others:&nbsp;</label>
             <input type="text" class="form-control" name="entry.595182463.other_option_response" onchange="validate(this.id)" style="height: 30px; width: 80%;">
           </div>
@@ -634,7 +646,7 @@
     <div class="tab-pane fade" id="v-pills-allergies" role="tabpanel" aria-labelledby="v-pills-allergies-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Medications/Allergies</span></h2>
       <div class="mb-2">
-        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?&nbsp;</label>
+        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?<span class="red-star">*</span>&nbsp;</label>
         <div class="form-check form-check-inline">
           <input type="radio" class="form-check-input" name="entry.1564701543" value="No" onclick="disappear('allergies_blank')" required>
           <label class="form-check-label" for="exampleRadios4">No</label>
@@ -668,7 +680,8 @@
           </div>
         </div>
       </div>
-      <label style="margin-bottom: 0rem"><b>Medications:</b> Do you take any medicines?&nbsp;</label>
+      <div class="mb-2">
+      <label style="margin-bottom: 0rem"><b>Medications:</b> Do you take any medicines?<span class="red-star">*</span>&nbsp;</label>
       <div class="form-check form-check-inline">
         <input type="radio" class="form-check-input" name="entry.157084051" value="No" onclick="disappear('medicines_blank')" required>
         <label class="form-check-label" for="exampleRadios4">No</label>
@@ -681,9 +694,9 @@
         <small class="text-muted">List ALL your MEDICINES (prescribed or any over-the-counter drugs). List dose/frequency if you can. </small>
         <div class="input-group-prepend">
             <div class="col-md-3" style="text-align: center;">Drug Name</div>
-            <div class="col-md-3" style="text-align: center;">Dose</div>
+            <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
             <div class="col-md-3" style="text-align: center;">Drug Name</div>
-            <div class="col-md-3" style="text-align: center;">Dose</div>
+            <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
         </div>
         <div class="input-group">
           <input id="849484916" type="text" class="form-control" name="entry.849484916" class="form-control" >
@@ -716,7 +729,8 @@
         <br>
 <!--         <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrug()">Add Drugs</a>
         <a type="button" class="btn btn-outline-primary mb-3" onclick="deletedrug()">Delete Drugs</a> -->
-        <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrugpage('v-pills-medicines-tab')">Add Medicines Page</a>
+        <a type="button" class="btn btn-outline-primary mb-1" onclick="adddrugpage('v-pills-medicines-tab')">Add Medicines Page</a>
+      </div>
       </div>
       <div>
       <label style="margin-bottom: 0rem"><b>Pharmacy:&nbsp;</b> Please provide the information of the pharmacy.</label>
@@ -827,7 +841,7 @@
     <!-- social -->
     <div class="tab-pane fade" id="v-pills-social" role="tabpanel" aria-labelledby="v-pills-social-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Social History</span></h2>
-        <label style="margin-bottom: 0rem;"><b>Relationship status: </b></label>
+        <label style="margin-bottom: 0rem;"><b>Relationship status:</b><span class="red-star">*</span></label>
         <br>
         <div class="mb-2" id='relationship' onchange="validate_checkbox(this.id)">
           <div class="form-check form-check-inline">
@@ -856,7 +870,7 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Alcohol: </b> &nbsp;&nbsp;Do you drink alcohol?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Alcohol: </b> &nbsp;&nbsp;Do you drink alcohol?<span class="red-star">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.440461028" value="No" onclick="disappear('alcohol_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -867,7 +881,7 @@
           </div>
           <div id="alcohol_info" style="display: none">
             <div class="form-check-inline">
-              <label class="form-check-label">How often?&nbsp;</label>
+              <label class="form-check-label">How often?<span class="red-star">*</span>&nbsp;</label>
               <input id="1452308177" type="text" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">times/week</span>
@@ -876,25 +890,25 @@
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Do you currently smoke?<span class="red-star">*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" name="entry.2023575525" value="No" onclick="disappear('tobacoo_info')" required>
+            <input type="radio" class="form-check-input" name="entry.2023575525" value="No" onclick="disappear('tobacoo_info'); show('prev_smoke');" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
           </div>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" name="entry.2023575525" value="Yes" onclick="show('tobacoo_info')" required>
+            <input type="radio" class="form-check-input" name="entry.2023575525" value="Yes" onclick="show('tobacoo_info'); disappear('prev_smoke');" required>
             <label class="form-check-label" for="exampleRadios4">Yes</label>
           </div>
           <div id="tobacoo_info" style="display: none">
             <div class="form-check-inline">
-              <label class="form-check-label">How many packs per day?&nbsp;</label>
+              <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
               <input id="705853817" type="text" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
-              <label class="form-check-label">For how many years?&nbsp;</label>
+              <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
               <input id="816411990" type="text" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
@@ -902,8 +916,8 @@
             </div>
           </div>
         </div>
-        <div class="mb-1">
-          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Did you previously smoke?&nbsp;&nbsp;</label>
+        <div id="prev_smoke" class="mb-1" style="display: none">
+          <label style="margin-bottom: 0rem;"><b>Tobacco: </b>Did you previously smoke?<span class="red-star">*</span>&nbsp;&nbsp;</label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.2118824515" value="No" onclick="disappear('tobacoo_prev_info')" required>
             <label class="form-check-label" for="exampleRadios4">No</label>
@@ -914,27 +928,27 @@
           </div>
           <div id="tobacoo_prev_info" style="display: none">
             <div class="form-check-inline">
-              <label class="form-check-label">How many packs per day?&nbsp;</label>
+              <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
               <input id="715172636" type="text" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
-              <label class="form-check-label">For how many years?&nbsp;</label>
+              <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
               <input id="2033700742" type="text" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
             </div>
             <div class="form-check-inline">
-              <label class="form-check-label">Year you quit?&nbsp;</label>
+              <label class="form-check-label">Year you quit?<span class="red-star">*</span>&nbsp;</label>
               <input id="1428509395" type="text" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 95px;" required>
             </div>
           </div>
         </div>
         <div class="mb-2">
-          <label style="margin-bottom: 0rem;"><b>Employment status:</b></label>
+          <label style="margin-bottom: 0rem;"><b>Employment status:</b><span class="red-star">*</span></label>
           <div class="form-check form-check-inline">
             <input type="radio" class="form-check-input" name="entry.1217890044" value="Working" required>
             <label class="form-check-label" for="exampleRadios4">Working</label>
@@ -954,10 +968,11 @@
           <div class="form-check-inline">
               <input type="text" class="form-control" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
           </div>
-          <br>
+        </div>
+        <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Occupation:</b></label>
           <div class="form-check-inline">
-              <label class="form-check-label">What is your current occupation?&nbsp;&nbsp;</label>
+              <label class="form-check-label">What is your current occupation?<span class="red-star">*</span>&nbsp;&nbsp;</label>
               <input id="942743805" type="text" name="entry.942743805" class="form-control" onchange="validate(this.id)" placeholder="Teacher" style="height: 30px; width: 200px;" required>
           </div>
         </div>
@@ -1126,21 +1141,21 @@
       <h2><span class="badge badge-secondary">Referring Physicians</span></h2>
       <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="40039240">First Name</label>
+          <label for="40039240">First Name<span class="red-star">*</span></label>
           <input id="40039240" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir" required>
         </div>
         <div class="form-group col-md-4">
-          <label for="325567427">Last Name</label>
+          <label for="325567427">Last Name<span class="red-star">*</span></label>
           <input id="325567427" type="text" name="entry.325567427" class="form-control" placeholder="Urology" required>
         </div>
         <div class="form-group col-md-4">
-          <label for="1892335894">Specialty</label>
+          <label for="1892335894">Specialty<span class="red-star">*</span></label>
           <input id="1892335894" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="321663243">Address</label>
+          <label for="321663243">Address<span class="red-star">*</span></label>
           <input id="321663243" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" required>
         </div>
         <!-- <div class="form-group col-md-3">
@@ -1160,11 +1175,11 @@
           <input required type="text" class="form-control" id="inputZip">
         </div> -->
         <div class="form-group col-md-3">
-          <label for="1257300614">Tel</label>
+          <label for="1257300614">Tel<span class="red-star">*</span></label>
           <input id="1257300614" type="text" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" required>
         </div>
         <div class="form-group col-md-3">
-          <label for="269642805">Fax</label>
+          <label for="269642805">Fax<span class="red-star">*</span></label>
           <input id="269642805" type="text" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" required>
         </div>
       </div>
@@ -1320,7 +1335,7 @@
     <!-- general activity level -->
     <div class="tab-pane fade" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">General Activity Level</span></h2>
-      <label style="margin-bottom: 0rem;">Please rate your activity level.</label>
+      <label style="margin-bottom: 0rem;">Please rate your activity level.<span class="red-star">*</span></label>
             <a class="btn" onclick="playAudio('./9.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -1345,7 +1360,7 @@
         <br>
         <div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
-            <label class="form-check-label">How do you walk?&nbsp;</label>
+            <label class="form-check-label">How do you walk?<span class="red-star">*</span>&nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1953145569" value="On foot" required>
               <label class="form-check-label" for="inlineCheckbox5">On foot</label>
@@ -1368,7 +1383,7 @@
             </div>
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
-            <label class="form-check-label">How much can you walk?&nbsp;</label>
+            <label class="form-check-label">How much can you walk?<span class="red-star">*</span>&nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1929417680" value="0.5 mile" required>
               <label class="form-check-label" for="inlineCheckbox1">0.5 mile</label>
@@ -1387,7 +1402,7 @@
             </div>
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
-            <label class="form-check-label">How many flights of stairs can you climb?&nbsp;</label>
+            <label class="form-check-label">How many flights of stairs can you climb?<span class="red-star">*</span>&nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.313001010" value="1" required>
               <label class="form-check-label" for="inlineCheckbox3">1</label>
@@ -1410,7 +1425,7 @@
             </div>
           </div>
           <div>
-            <label class="form-check-label">Shortness of breath at rest?&nbsp;</label>
+            <label class="form-check-label">Shortness of breath at rest?<span class="red-star">*</span>&nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.1262283224" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
@@ -1421,7 +1436,7 @@
             </div>
           </div>
           <div>
-            <label class="form-check-label">Shortness of breath on exertion?&nbsp;</label>
+            <label class="form-check-label">Shortness of breath on exertion?<span class="red-star">*</span>&nbsp;</label>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" name="entry.213842803" value="No" required>
               <label class="form-check-label" for="inlineCheckbox1">No</label>
@@ -1448,9 +1463,9 @@
               </svg>
             </a>
       <div class="row" id="sys1" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Head:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Head:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col" style="">
-          <input class="form-check-input" type="checkbox" name="entry.420567850" value="None" >
+          <input required class="form-check-input" type="checkbox" name="entry.420567850" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
@@ -1463,7 +1478,7 @@
         </div>
       </div>
       <div class="row" id="sys2" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Neck:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Neck:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.24393389" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1478,7 +1493,7 @@
         </div>
       </div>
       <div class="row" id="sys3" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Eyes:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Eyes:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" iname="entry.355094542" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1497,7 +1512,7 @@
         </div>
       </div>
       <div class="row" id="sys4" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Ears:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Ears:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.1482893409" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1516,7 +1531,7 @@
         </div>
       </div>
       <div class="row" id="sys5" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Nose:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Nose:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.169869634" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1535,7 +1550,7 @@
         </div>
       </div>
       <div class="row" id="sys6" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Skin:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Skin:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.1721787384" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1554,7 +1569,7 @@
         </div>
       </div>
      <div class="row" id="sys7" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Mouth:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Mouth:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.349626757" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1573,7 +1588,7 @@
         </div>
       </div>
       <div class="row" id="sys8" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Breasts:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Breasts:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.2113739215" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1588,7 +1603,7 @@
         </div>
       </div>
       <div class="row" id="sys9" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Allergic:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Allergic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.1397350331" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1604,7 +1619,7 @@
       </div>
       <div id="sys1111" onchange="validate_checkbox(this.id)">
       <div class="row" id="sys10">
-        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Urinary:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom" for="inlineCheckbox1"><b>Urinary:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1623,11 +1638,16 @@
         </div>
       </div>
       <div class="row" id="sys11">
-        <div class="form-check form-check-inline" style="margin-left: 27.4%">
+        <label class="form-check-label symptom" for="inlineCheckbox1" style="visibility:hidden">&nbsp;&nbsp;</label>
+        <div class="form-check form-check-inline symptom-col" style="visibility:hidden">
+          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <label class="form-check-label" for="inlineCheckbox3">None</label>
+        </div>
+        <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Change in force of of stream" >
           <label class="form-check-label" for="inlineCheckbox2">Blood</label>
         </div>
-        <div class="form-check form-check-inline" style="margin-left: 9.8%">
+        <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.322483325" value="Blood" >
           <label class="form-check-label" for="inlineCheckbox2">Leakage</label>
         </div>
@@ -1649,7 +1669,7 @@
           </svg>
         </a>
       <div class="row" id="sys12" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Lymphatic:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Lymphatic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.1008226366" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1664,7 +1684,7 @@
         </div>
       </div>
       <div class="row" id="sys13" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Endocrine:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Endocrine:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.1109242234" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1683,7 +1703,7 @@
         </div>
       </div>
       <div class="row" id="sys14" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Hematologic:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Hematologic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.1529100926" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1702,7 +1722,7 @@
         </div>
       </div>
       <div class="row" id="sys15" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Respiratory:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Respiratory:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.544137998" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1721,7 +1741,7 @@
         </div>
       </div>
       <div class="row" id="sys16" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Psychiatric:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Psychiatric:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.497894844" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1740,7 +1760,7 @@
         </div>
       </div>
       <div class="row" id="sys17" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Neurologic:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Neurologic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.621021451" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1759,7 +1779,7 @@
         </div>
       </div>
       <div class="row" id="sys18" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Cardiovascular:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Cardiovascular:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.28376273" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1778,7 +1798,7 @@
         </div>
       </div>
       <div class="row" id="sys19" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Musculoskeletal:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Musculoskeletal:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.283950140" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1798,7 +1818,7 @@
       </div>
       <div id="sys2021" onchange="validate_checkbox(this.id)">
       <div class="row" id="sys20">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Constitutional:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Constitutional:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1817,11 +1837,12 @@
         </div>
       </div>
       <div class="row" id="sys21">
+        <label class="form-check-label symptom2" for="inlineCheckbox1" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
           <input required class="form-check-input" type="checkbox" name="entry." value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
-        <div class="form-check form-check-inline" style="margin-left: 18%">
+        <div class="form-check form-check-inline">
           <input required class="form-check-input" type="checkbox" name="entry.1872380614" value="Night sweats" >
           <label class="form-check-label" for="inlineCheckbox2">Night sweats</label>
         </div>
@@ -1829,7 +1850,7 @@
       </div>
       <div id="sys222324" onchange="validate_checkbox(this.id)">
       <div class="row" id="sys22" onchange="validate_checkbox(this.id)">
-        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Gastrointestinal:&nbsp;&nbsp;</b></label>
+        <label class="form-check-label symptom2" for="inlineCheckbox1"><b>Gastrointestinal:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" name="entry.210477320" value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
@@ -1848,11 +1869,12 @@
         </div>
       </div>
       <div class="row" id="sys23">
+        <label class="form-check-label symptom2" for="inlineCheckbox1" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
           <input required class="form-check-input" type="checkbox" name="entry." value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
-        <div class="form-check form-check-inline symptom-col" style="margin-left: 18%">
+        <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Diarrhea" >
           <label class="form-check-label" for="inlineCheckbox1">Diarrhea</label>
         </div>
@@ -1866,11 +1888,12 @@
         </div>
       </div>
       <div class="row" id="sys24">
+        <label class="form-check-label symptom2" for="inlineCheckbox1" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
           <input required class="form-check-input" type="checkbox" name="entry." value="None" >
           <label class="form-check-label" for="inlineCheckbox3">None</label>
         </div>
-        <div class="form-check form-check-inline" style="margin-left: 18%">
+        <div class="form-check form-check-inline">
           <input required class="form-check-input" type="checkbox" name="entry.210477320" value="Nausea or vomiting" >
           <label class="form-check-label" for="inlineCheckbox2">Nausea or vomiting</label>
         </div>
@@ -1900,7 +1923,6 @@
 </form>
 </div>
 </body>
-
 <script type="text/javascript">
 document.getElementById('openVideo').addEventListener('ended',myHandler,false);
 function myHandler(e) {
@@ -2132,40 +2154,11 @@ function progres() {
 
 }
 
-$('#bootstrapForm').submit(function (event) {
-    event.preventDefault()
-    var extraData = {}
-    {
-        /* Parsing input date id=2132997145 */
-        var dateField = $("#2132997145_date").val()
-        var timeField = $("#2132997145_time").val()
-        let d = new Date(dateField)
-        if (!isNaN(d.getTime())) {
-            extraData["entry.2132997145_year"] = d.getFullYear()
-            extraData["entry.2132997145_month"] = d.getMonth() + 1
-            extraData["entry.2132997145_day"] = d.getUTCDate()
-        }
-        if (timeField && timeField.split(':').length >= 2) {
-            let values = timeField.split(':')
-            extraData["entry.2132997145_hour"] = values[0]
-            extraData["entry.2132997145_minute"] = values[1]
-        }
-    }
-    $('#bootstrapForm').ajaxSubmit({
-        data: extraData,
-        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-        error: function () {
-            // Submit of form should be successful but JSONP callback will fail because Google Forms
-            // does not support it, so this is handled as a failure.
-            alert('Form Submitted. Thanks.')
-            // You can also redirect the user to a custom thank-you page:
-            // window.location = 'http://www.mydomain.com/thankyoupage.html'
-        }
-    })
-})
+function phone(id) {
+  var div = document.getElementById(id);
+  div.value = div.value.replace(/(\d{3})(\d{3})(\d{3})/, "($1) $2-$3");
+}
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
