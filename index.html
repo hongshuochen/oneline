@@ -2063,15 +2063,15 @@ function summary() {
         "<b>What have your physicians told you: </b>"+document.getElementById("1252370919").value+"<br>"+
         "<b>Prior treatments: </b>"+document.getElementById("1694937621").value+"<br>"+
         "<b>Future treatment: </b>"+document.getElementById("731455572").value+"<br>";
-  var c = document.querySelectorAll(".form-check-input:checked");
-  str += "<b>Head: </b>";
-  for (var i = 0; i < c.length; i++)
-  {
-    if (c[i].name == 'entry.420567850')
-    {
-      str += c[i].value + " "
-    }
-  }
+  // var c = document.querySelectorAll(".form-check-input:checked");
+  // str += "<b>Head: </b>";
+  // for (var i = 0; i < c.length; i++)
+  // {
+  //   if (c[i].name == 'entry.420567850')
+  //   {
+  //     str += c[i].value + " "
+  //   }
+  // }
 
   document.getElementById("report").innerHTML = str;
 
