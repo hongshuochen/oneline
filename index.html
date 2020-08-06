@@ -916,7 +916,7 @@
           <div id="alcohol_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How often?<span class="red-star">*</span>&nbsp;</label>
-              <input id="1452308177" type="number" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" max="7" required>
+              <input id="1452308177" type="number" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" max="7" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">times/week</span>
               </div>
@@ -946,14 +946,14 @@
           <div id="tobacoo_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
-              <input id="705853817" type="text" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
+              <input id="705853817" type="number" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" step="0.1" min="0.5" max="10" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
-              <input id="816411990" type="text" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" required>
+              <input id="816411990" type="number" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
@@ -981,19 +981,19 @@
           </div>
           <div class="form-check form-check-inline" id="tobacoo_prev_year" style="display: none;">
             <label class="form-check-label">Year you quit?<span class="red-star">*</span>&nbsp;</label>
-            <input id="1428509395" type="text" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 95px; display: inline;" required>
+            <input id="1428509395" type="number" name="entry.1428509395" class="form-control" onchange="validate(this.id)" placeholder="2020" style="height: 30px; width: 120px; display: inline;" min="1900" max="2020" required>
           </div>
           <div id="tobacoo_prev_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
-              <input id="715172636" type="text" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
+              <input id="715172636" type="number" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="0.5" max="10" step="0.1" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
-              <input id="2033700742" type="text" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 75px;" required>
+              <input id="2033700742" type="number" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
@@ -1066,14 +1066,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="120417658_1" name="entry.120417658" value="None_major" >
+              <input type="checkbox" id="120417658_1" name="entry.120417658" value="None_major" onchange="disable_input('120417658_1', '1565875295')">
               <label class="form-check-label" for="120417658_1">&nbsp;None</label>
             </div>
           </div>
           <input id="1565875295" type="text" class="form-control" name="entry.1565875295" onchange="disable_none('120417658_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="120417658_2" name="entry.120417658" value="None_cancer" >
+              <input type="checkbox" id="120417658_2" name="entry.120417658" value="None_cancer" onchange="disable_input('120417658_2', '1317691108')">
               <label class="form-check-label" for="120417658_2">&nbsp;None</label>
             </div>
           </div>
@@ -1085,14 +1085,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1795127444_1" name="entry.1795127444" value="None_major" >
+              <input type="checkbox" id="1795127444_1" name="entry.1795127444" value="None_major" onchange="disable_input('1795127444_1', '2042049324')">
               <label class="form-check-label" for="1795127444_1">&nbsp;None</label>
             </div>
           </div>
           <input id="2042049324" type="text" class="form-control" name="entry.2042049324" onchange="disable_none('1795127444_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1795127444_2" name="entry.1795127444" value="None_cancer" >
+              <input type="checkbox" id="1795127444_2" name="entry.1795127444" value="None_cancer" onchange="disable_input('1795127444_2', '707339394')">
               <label class="form-check-label" for="1795127444_2">&nbsp;None</label>
             </div>
           </div>
@@ -1104,14 +1104,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1584128817_1" name="entry.1584128817" value="None_major" >
+              <input type="checkbox" id="1584128817_1" name="entry.1584128817" value="None_major" onchange="disable_input('1584128817_1', '1830581718')">
               <label class="form-check-label" for="1584128817_1">&nbsp;None</label>
             </div>
           </div>
           <input id="1830581718" type="text" class="form-control" name="entry.1830581718" onchange="disable_none('1584128817_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1584128817_2" name="entry.1584128817" value="None_cancer" >
+              <input type="checkbox" id="1584128817_2" name="entry.1584128817" value="None_cancer" onchange="disable_input('1584128817_2', '1260199512')">
               <label class="form-check-label" for="1584128817_2">&nbsp;None</label>
             </div>
           </div>
@@ -1123,14 +1123,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="318978035_1" name="entry.318978035" value="None_major" >
+              <input type="checkbox" id="318978035_1" name="entry.318978035" value="None_major" onchange="disable_input('318978035_1', '391752654')">
               <label class="form-check-label" for="318978035_1">&nbsp;None</label>
             </div>
           </div>
           <input id="391752654" type="text" class="form-control" name="entry.391752654" onchange="disable_none('318978035_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="318978035_2" name="entry.318978035" value="None_cancer" >
+              <input type="checkbox" id="318978035_2" name="entry.318978035" value="None_cancer" onchange="disable_input('318978035_2', '372853481')">
               <label class="form-check-label" for="318978035_2">&nbsp;None</label>
             </div>
           </div>
@@ -1142,14 +1142,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="630839300_1" name="entry.630839300" value="None_major" >
+              <input type="checkbox" id="630839300_1" name="entry.630839300" value="None_major" onchange="disable_input('630839300_1', '87081226')">
               <label class="form-check-label" for="630839300_1">&nbsp;None</label>
             </div>
           </div>
           <input id="87081226" type="text" class="form-control" name="entry.87081226" onchange="disable_none('630839300_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="630839300_2" name="entry.630839300" value="None_cancer" >
+              <input type="checkbox" id="630839300_2" name="entry.630839300" value="None_cancer" onchange="disable_input('630839300_2', '105365515')">
               <label class="form-check-label" for="630839300_2">&nbsp;None</label>
             </div>
           </div>
@@ -1161,14 +1161,14 @@
           </div>
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1713011573_1" name="entry.1713011573" value="None_major" >
+              <input type="checkbox" id="1713011573_1" name="entry.1713011573" value="None_major" onchange="disable_input('1713011573_1', '1400766530')">
               <label class="form-check-label" for="1713011573_1">&nbsp;None</label>
             </div>
           </div>
           <input id="1400766530" type="text" class="form-control" name="entry.1400766530" onchange="disable_none('1713011573_1', this.id)">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <input type="checkbox" id="1713011573_2" name="entry.1713011573" value="None_cancer" >
+              <input type="checkbox" id="1713011573_2" name="entry.1713011573" value="None_cancer" onchange="disable_input('1713011573_2', '932783784')">
               <label class="form-check-label" for="1713011573_2">&nbsp;None</label>
             </div>
           </div>
@@ -1182,14 +1182,14 @@
           </div>
           <div class="input-group-prepend" style="height: 38px">
             <div class="input-group-text">
-              <input type="checkbox" id="1001956085_1" name="entry.1001956085" value="None_major" >
+              <input type="checkbox" id="1001956085_1" name="entry.1001956085" value="None_major" onchange="disable_input('1001956085_1', '1876695148')">
               <label class="form-check-label" for="1001956085_1">&nbsp;None</label>
             </div>
           </div>
           <input id="1876695148" type="text" class="form-control" name="entry.1876695148" onchange="disable_none('1001956085_1', this.id)">
           <div class="input-group-prepend"  style="height: 38px">
             <div class="input-group-text">
-              <input type="checkbox" id="1001956085_2" name="entry.1001956085" value="None_cancer" >
+              <input type="checkbox" id="1001956085_2" name="entry.1001956085" value="None_cancer" onchange="disable_input('1001956085_2', '2071609554')">
               <label class="form-check-label" for="1001956085_2">&nbsp;None</label>
             </div>
           </div>
@@ -2133,6 +2133,12 @@ function disappear(id) {
   for (var i = 0; i < c.length; i++)
   {
     c[i].required = false;
+  }
+}
+
+function disable_input(id1, id2) {
+  if (document.getElementById(id1).checked == true) {
+    document.getElementById(id2).value = "";
   }
 }
 
