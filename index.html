@@ -1204,21 +1204,21 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="40039240">First Name<span class="red-star">*</span></label>
-          <input id="40039240" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir" required>
+          <input id="40039240" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir"  onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-4">
           <label for="325567427">Last Name<span class="red-star">*</span></label>
-          <input id="325567427" type="text" name="entry.325567427" class="form-control" placeholder="Urology" required>
+          <input id="325567427" type="text" name="entry.325567427" class="form-control" placeholder="Gill" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-4">
           <label for="1892335894">Specialty<span class="red-star">*</span></label>
-          <input id="1892335894" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" required>
+          <input id="1892335894" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" onchange="validate(this.id);" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="321663243">Address<span class="red-star">*</span></label>
-          <input id="321663243" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" required>
+          <input id="321663243" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);" required>
         </div>
         <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
@@ -1238,11 +1238,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1257300614">Tel<span class="red-star">*</span></label>
-          <input id="1257300614" type="text" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" required>
+          <input id="1257300614" type="text" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="269642805">Fax<span class="red-star">*</span></label>
-          <input id="269642805" type="text" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" required>
+          <input id="269642805" type="text" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1269,15 +1269,15 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="819961389">First Name</label>
-          <input id="819961389" type="text" name="entry.819961389" class="form-control" placeholder="Inderbir" >
+          <input id="819961389" type="text" name="entry.819961389" class="form-control" placeholder="Inderbir" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-4">
           <label for="362320967">Last Name</label>
-          <input id="362320967" type="text" name="entry.362320967" class="form-control" placeholder="Urology" >
+          <input id="362320967" type="text" name="entry.362320967" class="form-control" placeholder="Gill" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-4">
           <label for="269727290">Specialty</label>
-          <input id="269727290" type="text" name="entry.269727290" class="form-control" placeholder="Urology" >
+          <input id="269727290" type="text" name="entry.269727290" class="form-control" placeholder="Urology" onchange="validate(this.id);">
         </div>
       </div>
       <div class="form-row">
@@ -1303,11 +1303,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1062978314">Tel</label>
-          <input id="1062978314" type="text" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" >
+          <input id="1062978314" type="text" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" >
         </div>
         <div class="form-group col-md-3">
           <label for="437570330">Fax</label>
-          <input id="437570330" type="text" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" >
+          <input id="437570330" type="text" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" >
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1335,21 +1335,21 @@
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="163361409">First Name</label>
-          <input id="163361409" type="text" name="entry.163361409" class="form-control" placeholder="Inderbir" >
+          <input id="163361409" type="text" name="entry.163361409" class="form-control" placeholder="Inderbir" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-4">
           <label for="1066483225">Last Name</label>
-          <input id="1066483225" type="text" name="entry.1066483225" class="form-control" placeholder="Urology" >
+          <input id="1066483225" type="text" name="entry.1066483225" class="form-control" placeholder="Gill" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-4">
           <label for="894152847">Specialty</label>
-          <input id="894152847" type="text" name="entry.894152847" class="form-control" placeholder="Urology" >
+          <input id="894152847" type="text" name="entry.894152847" class="form-control" placeholder="Urology" onchange="validate(this.id);" >
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="1957767689">Address</label>
-          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St">
+          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);">
         </div>
         <!-- <div class="form-group col-md-3">
           <label for="inputCity">City</label>
@@ -1369,11 +1369,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1717853478">Tel</label>
-          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234">
+          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
         </div>
         <div class="form-group col-md-3">
           <label for="970138022">Fax</label>
-          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234">
+          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
         </div>
       </div>
 <!--       <div class="form-row">
