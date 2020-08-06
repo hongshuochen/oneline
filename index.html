@@ -596,7 +596,7 @@
             <label class="form-check-label" for="1042938998_10">Others:</label>
           </div>
           <div class="form-check-inline">
-              <input type="text" class="form-control" onchange="validate(this.id)" placeholder="" style="height: 30px; width: 175px;">
+              <input type="text" class="form-control" name="entry.1042938998.other_option_response"  onchange="validate(this.id)" placeholder="" style="height: 30px; width: 175px;">
           </div>
         </div>
         <div class="col">
@@ -761,19 +761,19 @@
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="630327060">Name</label>
-          <input id="630327060" type="text" name="entry.630327060" class="form-control" placeholder="ABC" required>
+          <input id="630327060" type="text" name="entry.630327060" class="form-control" placeholder="ABC" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="2026807051">Address</label>
-          <input id="2026807051" type="text" name="entry.2026807051" class="form-control" placeholder="1234 Main St" required>
+          <input id="2026807051" type="text" name="entry.2026807051" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1978025847">Tel</label>
-          <input id="1978025847" type="text" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" required>
+          <input id="1978025847" type="text" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1042841192">Fax</label>
-          <input id="1042841192" type="text" name="entry.1042841192" class="form-control" placeholder="(555) 555-1234" >
+          <input id="1042841192" type="text" name="entry.1042841192" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
         </div>
       </div>
       </div>
@@ -2193,7 +2193,6 @@ function validate_checkbox(id){
       if (c[i].type == 'checkbox')
       {
          c[i].required = false;
-         dict[c[i].id] = c[i].checked;
       }
     }
     if (none_clicked) {
@@ -2221,7 +2220,14 @@ function validate_checkbox(id){
          c[i].required = true;
       }
     }
-  } 
+  }
+  for (var i = 0; i < c.length; i++)
+  {
+    if (c[i].type == 'checkbox')
+    {
+       dict[c[i].id] = c[i].checked;
+    }
+  }
 }
 
 function check_all_tab(id){
