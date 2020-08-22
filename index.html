@@ -93,6 +93,7 @@
     <a class="nav-link" id="v-pills-hpi-tab" data-toggle="pill" href="#v-pills-hpi" role="tab" aria-controls="v-pills-hpi" aria-selected="false">History of Present Illness</a>
     <a class="nav-link" id="v-pills-urologic-tab" data-toggle="pill" href="#v-pills-urologic" role="tab" aria-controls="v-pills-urologic" aria-selected="false">Urologic history</a>
     <a class="nav-link" id="v-pills-medical-tab" data-toggle="pill" href="#v-pills-medical" role="tab" aria-controls="v-pills-medical" aria-selected="false">Past Medical history</a>
+    <a class="nav-link" id="v-pills-surgeries-tab" data-toggle="pill" href="#v-pills-surgeries" role="tab" aria-controls="v-pills-surgeries" aria-selected="false">Past Surgical History</a>
     <a class="nav-link" id="v-pills-allergies-tab" data-toggle="pill" href="#v-pills-allergies" role="tab" aria-controls="v-pills-allergies" aria-selected="false">Medications/Allergies</a>
     <a class="nav-item" id="v-pills-medicines-tab" data-toggle="pill" href="#v-pills-medicines" role="tab" aria-controls="v-pills-physicians3" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Medicines</a>
     <a class="nav-link" id="v-pills-social-tab" data-toggle="pill" href="#v-pills-social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social History</a>
@@ -118,7 +119,7 @@
         <p>For better experience, please <b>turn on you sound</b> and use <b>Google Chrome</b>.</p>
         <p>If you are ready, please click start.</p>
       </div>
-      <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-open-tab')">Start</a>
+      <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-open-tab', 'v-pills-tabContent')">Start</a>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
     </div>
     <div class="tab-pane fade" id="v-pills-open" role="tabpanel" aria-labelledby="v-pills-open-tab">
@@ -133,7 +134,7 @@
         </div>
         <div class="col-md-3">
           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab')" role="button">Next</a>
+          <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab', 'v-pills-open-tab')" role="button">Next</a>
         </div>
       </div>
     </div>
@@ -144,9 +145,6 @@
         <div class="col-md-3 mb-2">
           <label for="2035245450">First name<span class="red-star">*</span></label>
           <input id="2035245450" type="text" name="entry.2035245450" class="form-control" onchange="validate(this.id)" placeholder="Inderbir" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please enter your first name.
           </div>
@@ -154,16 +152,13 @@
         <div class="col-md-3 mb-2">
           <label for="1238999267">Last name<span class="red-star">*</span></label>
           <input id="1238999267" type="text" name="entry.1238999267" class="form-control" onchange="validate(this.id)" placeholder="Gill" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please enter your last name.
           </div>
         </div>
         <div class="col-md-2 mb-2">
           <label for="210835964">Sex<span class="red-star">*</span></label>
-          <select class="form-control" id="210835964" name="entry.210835964" onchange="validate(this.id)" required="">
+          <select class="form-control" id="210835964" name="entry.210835964" onchange="validate(this.id)" required>
             <option value="">Select</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -175,9 +170,6 @@
         <div class="col-md-4 mb-2">
           <label for="2132997145">Date of Birth<span class="red-star">*</span></label>
           <input type="date" class="form-control" id="2132997145" name="entry.2132997145" placeholder="01/01/2000" min="1900-01-01" onchange="validate(this.id)" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please enter your date of birth.
           </div>
@@ -187,9 +179,6 @@
         <div class="col-md-4 mb-2">
           <label for="768146479">Email<span class="red-star">*</span></label>
           <input id="768146479" type="email" name="entry.768146479" class="form-control" onchange="validate(this.id)" placeholder="xyz@gmail.com" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid email.
           </div>
@@ -197,9 +186,6 @@
         <div class="col-md-4 mb-2">
           <label for="727509711">Phone Number 1<span class="red-star">*</span></label>
           <input id="727509711" type="text" name="entry.727509711" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -207,55 +193,55 @@
         <div class="col-md-4 mb-2">
           <label for="899933585">Phone Number 2</label>
           <input id="899933585" type="text" name="entry.899933585" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123">
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
       </div>
       <div class="form-row">
-        <div class="col-md-3 mb-2">
+      	<div class="col-md-6 mb-2">
+          <label for="1791832648">Address<span class="red-star">*</span></label>
+          <div class="input-group">
+            <input required type="text" class="form-control" id="address" name="entry." onchange="validate(this.id);" placeholder="1234 Main St" required>
+            <div class="input-group-append">
+                <span class="input-group-text">ft</span>
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid address.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 mb-2">
           <label for="1791832648">Height<span class="red-star">*</span></label>
           <div class="input-group">
             <input required type="number" class="form-control" id="1791832648" name="entry.1791832648" onchange="validate(this.id);" placeholder="5" min="1" max="9" required>
             <div class="input-group-append">
                 <span class="input-group-text">ft</span>
             </div>
-<!--             <div class="valid-feedback">
-              Looks good!
-            </div> -->
             <div class="invalid-feedback">
               Please enter a valid height.
             </div>
           </div>
         </div>
-        <div class="col-md-3 mb-2">
+        <div class="col-md-2 mb-2">
           <label for="2087477866"><br></label>
           <div class="input-group">
             <input type="number" class="form-control" id="2087477866" name="entry.2087477866" onchange="validate(this.id)" placeholder="8" min="0" max="12" required>
             <div class="input-group-append">
                 <span class="input-group-text">in</span>
             </div>
-<!--             <div class="valid-feedback">
-              Looks good!
-            </div> -->
             <div class="invalid-feedback">
               Please enter a valid height.
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-2">
+        <div class="col-md-2 mb-2">
           <label for="1758371700">Weight<span class="red-star">*</span></label>
           <div class="input-group">
             <input type="number" class="form-control" id="1758371700" name="entry.1758371700" onchange="validate(this.id)" placeholder="150" min="1" max="974" required>
             <div class="input-group-append">
               <span class="input-group-text">lb</span>
             </div>
-<!--             <div class="valid-feedback">
-              Looks good!
-            </div> -->
             <div class="invalid-feedback">
               Please choose a valid weight.
             </div>
@@ -268,9 +254,6 @@
         <div class="col-md-4 mb-2">
           <label for="1430380711">First name<span class="red-star">*</span></label>
           <input id="1430380711" type="text" name="entry.1430380711" class="form-control" onchange="validate(this.id)" placeholder="Inderbir" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please enter your first name.
           </div>
@@ -278,9 +261,6 @@
         <div class="col-md-4 mb-2">
           <label for="1235027620">Last name<span class="red-star">*</span></label>
           <input id="1235027620" type="text" name="entry.1235027620" class="form-control" onchange="validate(this.id)" placeholder="Gill" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please enter your last name.
           </div>
@@ -288,9 +268,6 @@
         <div class="col-md-4 mb-2">
           <label for="658974182">Relationship<span class="red-star">*</span></label>
           <input id="658974182" type="text" name="entry.658974182" class="form-control" onchange="validate(this.id)" placeholder="Father" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid relationship.
           </div>
@@ -300,9 +277,6 @@
         <div class="col-md-4 mb-2">
           <label for="1392162889">Email<span class="red-star">*</span></label>
           <input id="1392162889" type="email" name="entry.1392162889" class="form-control" onchange="validate(this.id)" placeholder="xyz@gmail.com" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid email.
           </div>
@@ -310,9 +284,6 @@
         <div class="col-md-4 mb-2">
           <label for="2125361867">Phone Number 1<span class="red-star">*</span></label>
           <input id="2125361867" type="text" name="entry.2125361867" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -320,15 +291,12 @@
         <div class="col-md-4 mb-2">
           <label for="1774684884">Phone Number 2</label>
           <input id="1774684884" type="text" name="entry.1774684884" class="form-control" onchange="validate(this.id);phone(this.id);" placeholder="(201) 555-0123">
-<!--           <div class="valid-feedback">
-            Looks good!
-          </div> -->
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-cc-tab')" role="button">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-cc-tab', 'v-pills-profile-tab')" role="button">Next</a>
     </div>
     <!-- CC -->
     <div class="tab-pane fade" id="v-pills-cc" role="tabpanel" aria-labelledby="v-pills-cc-tab" onchange="validate_tab(this.id)">
@@ -353,7 +321,7 @@
           Please enter you chief complaint.
         </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-hpi-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-hpi-tab', 'v-pills-cc-tab')">Next</a>
     </div>
     <!-- HPI -->
     <div class="tab-pane fade" id="v-pills-hpi" role="tabpanel" aria-labelledby="v-pills-hpi-tab" onchange="validate_tab(this.id)">
@@ -397,7 +365,7 @@
         <small class="form-text text-muted" style="margin-top: 0rem; margin-bottom: .25rem">If the question does not apply, please type “N/A” in the space.</small>
         <input id="731455572" type="text" name="entry.731455572" class="form-control" placeholder="Abc" onchange="validate(this.id)" required>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-urologic-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-urologic-tab', 'v-pills-hpi-tab')">Next</a>
     </div>
     <!-- urologic -->
     <div class="tab-pane fade" id="v-pills-urologic" role="tabpanel" aria-labelledby="v-pills-urologic-tab" onchange="validate_tab(this.id)">
@@ -517,7 +485,7 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-medical-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-medical-tab', 'v-pills-urologic')">Next</a>
     </div>
     <!-- medical -->
     <div class="tab-pane fade" id="v-pills-medical" role="tabpanel" aria-labelledby="v-pills-medical-tab" onchange="validate_tab(this.id)">
@@ -640,13 +608,54 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-allergies-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-surgeries-tab', 'v-pills-medical-tab')">Next</a>
+    </div>
+    <!-- surgeries -->
+    <div class="tab-pane fade" id="v-pills-surgeries" role="tabpanel" aria-labelledby="v-pills-surgeries-tab" onchange="validate_tab(this.id)">
+      <h2><span class="badge badge-secondary">Past Surgical History</span></h2>
+      <div class="mb-2">
+        <label style="margin-bottom: 0rem;"><b>Surgeries:</b> Do you have any past surgical history?<span class="red-star">*</span></label>
+        <a class="btn" onclick="playAudio('./23.mp3')" style="padding: 0rem;">
+          <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
+            <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
+            <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+            <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
+          </svg>
+        </a>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" id="804651094_1" name="entry.804651094" value="No" onclick="disappear('surgeries_blank')" required>
+          <label class="form-check-label" for="804651094_1">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" id="804651094_2" name="entry.804651094" value="Yes" onclick="show('surgeries_blank')" required>
+          <label class="form-check-label" for="804651094_2">Yes</label>
+        </div>
+        <br>
+        <div id="surgeries_blank" style="display: none;">
+          <small class="text-muted"> If so, what surgeries did you have.</small>
+          <div id="surgeries_table">
+	          <div class="input-group-prepend">
+	              <div class="col-md-6" style="text-align: center;">Surgery</div>
+	              <div class="col-md-6" style="text-align: center;">Date</div>
+	          </div>
+	          <div class="input-group">
+	            <input id="809608804_0" type="text" name="entry.809608804" class="form-control">
+	            <input id="1585316133_0" type="text" name="entry.1585316133" class="form-control" >
+	          </div>
+      	  </div>
+          <br>
+          <a type="button" class="btn btn-outline-primary mb-3" onclick="add_blank('surgeries_table', '809608804', '1585316133')">Add Blanks</a>
+          <a type="button" class="btn btn-outline-primary mb-3" onclick="delete_blank('surgeries_table', '809608804', '1585316133')">Delete Blanks</a> 
+        </div>
+      </div>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-allergies-tab', 'v-pills-surgeries-tab')">Next</a>
     </div>
     <!-- allergies -->
     <div class="tab-pane fade" id="v-pills-allergies" role="tabpanel" aria-labelledby="v-pills-allergies-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Medications/Allergies</span></h2>
       <div class="mb-2">
-        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies for medicines or food?<span class="red-star">*</span></label>
+        <label style="margin-bottom: 0rem;"><b>Allergies:</b> Do you have any allergies to medicines or food?<span class="red-star">*</span></label>
         <a class="btn" onclick="playAudio('./11.mp3')" style="padding: 0rem;">
           <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
             <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -666,26 +675,19 @@
         <br>
         <div id="allergies_blank" style="display: none;">
           <small class="text-muted"> If so, what reaction did you have.</small>
-          <div class="input-group-prepend">
-              <div class="col-md-3" style="text-align: center;">Allergy</div>
-              <div class="col-md-3" style="text-align: center;">The Reaction you had</div>
-              <div class="col-md-3" style="text-align: center;">Allergy</div>
-              <div class="col-md-3" style="text-align: center;">The Reaction you had</div>
-          </div>
-          <div class="input-group">
-            <input id="1881770472" type="text" name="entry.1881770472" class="form-control" >
-            <input id="1743558470" type="text" name="entry.1743558470" class="form-control" >
-            &nbsp;
-            <input id="1708488701" type="text" name="entry.1708488701" class="form-control" >
-            <input id="2048102725" type="text" name="entry.2048102725" class="form-control" >
-          </div>
-          <div class="input-group">
-            <input id="458771763" type="text" name="entry.458771763" class="form-control" >
-            <input id="955959842" type="text" name="entry.955959842" class="form-control" >
-            &nbsp;
-            <input id="318698116" type="text" name="entry.318698116" class="form-control" >
-            <input id="1057122970" type="text" name="entry.1057122970" class="form-control" >
-          </div>
+          <div id="allergies_table">
+	          <div class="input-group-prepend">
+	              <div class="col-md-6" style="text-align: center;">Allergy</div>
+	              <div class="col-md-6" style="text-align: center;">The Reaction you had</div>
+	          </div>
+	          <div class="input-group">
+	            <input id="1881770472_0" type="text" name="entry.1881770472" class="form-control" placeholder="Penicillin">
+	            <input id="1743558470_0" type="text" name="entry.1743558470" class="form-control" placeholder="Hives">
+	          </div>
+      	  </div>
+      	  <br>
+      	  <a type="button" class="btn btn-outline-primary mb-3" onclick="add_blank('allergies_table','1881770472', '1743558470')">Add Blanks</a>
+          <a type="button" class="btn btn-outline-primary mb-3" onclick="delete_blank('allergies_table', '1881770472', '1743558470')">Delete Blanks</a> 
         </div>
       </div>
       <div class="mb-2">
@@ -709,43 +711,27 @@
       <div id="medicines_blank" style="display: none;">
         <small class="text-muted">List ALL your MEDICINES (prescribed or any over-the-counter drugs). List dose/frequency if you can. </small>
         <div class="input-group-prepend">
-            <div class="col-md-3" style="text-align: center;">Drug Name</div>
-            <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
-            <div class="col-md-3" style="text-align: center;">Drug Name</div>
-            <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
+            <div class="col-md-6" style="text-align: center;">Drug Name</div>
+            <div class="col-md-6" style="text-align: center;">Dose and Frequency</div>
         </div>
         <div class="input-group">
-          <input id="849484916" type="text" class="form-control" name="entry.849484916" class="form-control" >
-          <input id="1799696774" type="text" class="form-control" name="entry.1799696774" class="form-control" >
-          &nbsp;
+          <input id="849484916" type="text" class="form-control" name="entry.849484916" class="form-control" placeholder="Aspirin">
+          <input id="1799696774" type="text" class="form-control" name="entry.1799696774" class="form-control" placeholder="81 mg daily">
+        </div>
+        <div class="input-group">
           <input id="1833963266" type="text" class="form-control" name="entry.1833963266" class="form-control" >
           <input id="1116093556" type="text" class="form-control" name="entry.1116093556" class="form-control" >
         </div>
         <div class="input-group">
           <input id="15375545" type="text" class="form-control" name="entry.15375545" class="form-control" >
           <input id="1652644719" type="text" class="form-control" name="entry.1652644719" class="form-control" >
-          &nbsp;
+        </div>
+        <div class="input-group">
           <input id="1616447112" type="text" class="form-control" name="entry.1616447112" class="form-control" >
           <input id="1626577871" type="text" class="form-control" name="entry.1626577871" class="form-control" >
         </div>
-<!--         <div class="input-group" id="adddrug1" style="display: none;">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-          &nbsp;
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-        </div>
-        <div class="input-group" id="adddrug2" style="display: none;">
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-          &nbsp;
-          <input type="text" class="form-control">
-          <input type="text" class="form-control">
-        </div> -->
         <br>
-<!--         <a type="button" class="btn btn-outline-primary mb-3" onclick="adddrug()">Add Drugs</a>
-        <a type="button" class="btn btn-outline-primary mb-3" onclick="deletedrug()">Delete Drugs</a> -->
-        <a type="button" class="btn btn-outline-primary mb-1" onclick="adddrugpage('v-pills-medicines-tab')">Add Medicines Page</a>
+        <a type="button" class="btn btn-outline-primary mb-1" onclick="adddrugpage('v-pills-medicines-tab', 'v-pills-allergies-tab')">Add Medicines Page</a>
       </div>
       </div>
       <div>
@@ -777,7 +763,7 @@
         </div>
       </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-social-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-social-tab', 'v-pills-allergies-tab')">Next</a>
     </div>
     <!-- medicines -->
     <div class="tab-pane fade" id="v-pills-medicines" role="tabpanel" aria-labelledby="v-pills-medicines-tab" onchange="validate_tab(this.id)">
@@ -860,7 +846,7 @@
         <input id="1846288848" type="text" class="form-control" name="entry.1846288848" class="form-control" >
       </div>
       <br>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-allergies-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-allergies-tab', 'v-pills-medicines-tab')">Next</a>
     </div>
     <!-- social -->
     <div class="tab-pane fade" id="v-pills-social" role="tabpanel" aria-labelledby="v-pills-social-tab" onchange="validate_tab(this.id)">
@@ -1038,7 +1024,7 @@
               <input id="942743805" type="text" name="entry.942743805" class="form-control" onchange="validate(this.id)" placeholder="Teacher" style="height: 30px; width: 200px;" required>
           </div>
         </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-family-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-family-tab', 'v-pills-social-tab')">Next</a>
     </div>
     <!-- family -->
     <div class="tab-pane fade" id="v-pills-family" role="tabpanel" aria-labelledby="v-pills-family-tab" onchange="validate_tab(this.id)">
@@ -1196,7 +1182,7 @@
           <input id="2071609554" type="text" class="form-control" name="entry.2071609554" onchange="disable_none('1001956085_2', this.id)">
         </div>
       </div>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-physicians-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-physicians-tab', 'v-pills-family-tab')">Next</a>
     </div>
     <!-- physicians -->
     <div class="tab-pane fade" id="v-pills-physicians" role="tabpanel" aria-labelledby="v-pills-physicians-tab" onchange="validate_tab(this.id)">
@@ -1261,7 +1247,7 @@
       </div>
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians2-tab')">Add physicians</button>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab')">Next</a>
     </div>
     <!-- physicians 2 -->
     <div class="tab-pane fade" id="v-pills-physicians2" role="tabpanel2" aria-labelledby="v-pills-physicians-tab2" onchange="validate_tab(this.id)">
@@ -1327,7 +1313,7 @@
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians3-tab')">Add physicians</a>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians2-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab')">Next</a>
     </div>
     <!-- physicians 3 -->
     <div class="tab-pane fade" id="v-pills-physicians3" role="tabpanel3" aria-labelledby="v-pills-physicians-tab3" onchange="validate_tab(this.id)">
@@ -1392,7 +1378,7 @@
       </div>
       <br>
       <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians3-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab'')">Next</a>
     </div>
     <!-- general activity level -->
     <div class="tab-pane fade" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab" onchange="validate_tab(this.id)">
@@ -1412,10 +1398,10 @@
             <select id="824704100" name="entry.1534454855" class="form-control" required>
               <option value="">Select</option>
               <option value="0">I can perform all my usual activities without limitations.</option>
-              <option value="1"> I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
-              <option value="2"> I am able to walk and take care of myself.</option>
-              <option value="3"> I need help taking care of myself and I am in bed or a chair more the half the time I am awake.</option>
-              <option value="4"> I need someone to help with all of my self-care I am in confined to a bed or chair.</option>
+              <option value="1">I can perform all my usual activities but I am not able to exercise or carry out heavy housework.</option>
+              <option value="2">I am able to walk and take care of myself, but nothing more than that.</option>
+              <option value="3">I need help taking care of myself and I am in bed or a chair more the half the time I am awake.</option>
+              <option value="4">I need someone to help with all of my self-care and I am confined to bed or a chair.</option>
             </select>
         </div>
         <br>
@@ -1465,6 +1451,10 @@
             </a>
             &nbsp;</label>
             <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="1929417680_0" name="entry.1929417680" value="0.5 mile" required>
+              <label class="form-check-label" for="1929417680_0">None</label>
+            </div>
+            <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="1929417680_1" name="entry.1929417680" value="0.5 mile" required>
               <label class="form-check-label" for="1929417680_1">0.5 mile</label>
             </div>
@@ -1491,6 +1481,10 @@
                   <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
                 </svg>
             </a>
+            <div class="form-check form-check-inline">
+              <input type="radio" class="form-check-input" id="313001010_0" name="entry.313001010" value="1" required>
+              <label class="form-check-label" for="313001010_0">None</label>
+            </div>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="313001010_1" name="entry.313001010" value="1" required>
               <label class="form-check-label" for="313001010_1">1</label>
@@ -1554,7 +1548,7 @@
           </div>
         </div>
       </div>
-    <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab')">Next</a>
+    <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms-tab', 'v-pills-general-tab')">Next</a>
     </div>
     <!-- symptoms -->
     <div class="tab-pane fade" id="v-pills-symptoms" role="tabpanel" aria-labelledby="v-pills-symptoms-tab" onchange="validate_tab(this.id)">
@@ -1760,7 +1754,7 @@
       </div>
       </div>
       <br>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms2-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-symptoms2-tab', 'v-pills-symptoms-tab')">Next</a>
     </div>
     <!-- symptoms2 -->
     <div class="tab-pane fade" id="v-pills-symptoms2" role="tabpanel" aria-labelledby="v-pills-symptoms-tab2" onchange="validate_tab(this.id)">
@@ -2006,7 +2000,7 @@
       </div>
       </div>
       <br>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-summary-tab')">Next</a>
+      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-summary-tab', 'v-pills-symptoms2-tab')">Next</a>
     </div>
     <!-- summary -->
     <div class="tab-pane fade" id="v-pills-summary" role="tabpanel" aria-labelledby="v-pills-summary-tab" onchange="validate_tab(this.id)">
@@ -2037,6 +2031,14 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy + '-' + mm + '-' + dd;
+document.getElementById("2132997145").max = today
+console.log(today)
 $(document).on("keydown", ":input:not(textarea)", function(event) {
     return event.key != "Enter";
 });
@@ -2083,24 +2085,39 @@ function playAudio(id) {
   snd.currentTime=0;
 }
 
-function adddrug() {
-  var div1 = document.getElementById("adddrug1")
-  var div2 = document.getElementById("adddrug2")
-  if (div1.style.display == "none"){
-    div1.style = document.getElementById("template").style;
-  } else if (div2.style.display == "none"){
-    div2.style = document.getElementById("template").style;
-  }
+var count = {'surgeries_table': 0, 'allergies_table': 0}
+function add_blank(id, id_1, id_2) {
+	var dict_surgeries = []
+	var dict_data = []
+	for (var i=0; i <= count[id]; i++) {
+		dict_surgeries.push(document.getElementById(id_1 + "_" + i).value)
+		dict_data.push(document.getElementById(id_2 + "_" + i).value)
+	}
+	count[id] += 1
+	document.getElementById(id).innerHTML += 
+			"<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+	for (var i=0; i < count[id]; i++) {
+		document.getElementById(id_1 + "_" + i).value = dict_surgeries[i]
+		document.getElementById(id_2 + "_" + i).value = dict_data[i]
+	}
 }
 
-function deletedrug(){
-  var div1 = document.getElementById("adddrug1")
-  var div2 = document.getElementById("adddrug2")
-  if (div2.style.display != "none"){
-    div2.style.display = "none";
-  } else if (div1.style.display != "none"){
-    div1.style.display = "none";
-  }
+function delete_blank(id, id_1, id_2) {
+	if (count[id] > 0) {
+		var dict_surgeries = []
+		var dict_data = []
+		for (var i=0; i < count[id]; i++) {
+			dict_surgeries.push(document.getElementById(id_1 + "_" + i).value)
+			dict_data.push(document.getElementById(id_2 + "_" + i).value)
+		}
+		tmp = "<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+		document.getElementById(id).innerHTML = document.getElementById(id).innerHTML.slice(0, -tmp.length)
+		count[id] -= 1
+		for (var i=0; i <= count[id]; i++) {
+			document.getElementById(id_1 + "_" + i).value = dict_surgeries[i]
+			document.getElementById(id_2 + "_" + i).value = dict_data[i]
+		}
+	}
 }
 
 function adddrugpage(id) {
@@ -2119,7 +2136,7 @@ function show(id) {
   var c = div.getElementsByTagName('input');
   for (var i = 0; i < c.length; i++)
   {
-    if (id != 'medicines_blank' && id != 'allergies_blank')
+    if (id != 'medicines_blank' && id != 'allergies_blank' && id != 'surgeries_blank')
     {
       c[i].required = true;
     }
@@ -2255,6 +2272,10 @@ function validate_tab(id){
        div_btn.classList.add('btn-outline-danger');
        success=false;
     }
+    if (c[i].required && c[i].type != 'checkbox')
+    {
+    	validate(c[i].id)
+    }
   }
   if (success)
   {
@@ -2278,14 +2299,14 @@ function validate(id){
   }
 }
 
-function nextpage(id) {
+function nextpage(id, id_cur) {
   document.getElementById(id).click();
   if (id == 'v-pills-open-tab') {
     var vid = document.getElementById("openVideo");
     vid.play();
     // nextpage("v-pills-profile-tab")
   }
-  validate_tab(id.replace('-tab', ''));
+  validate_tab(id_cur.replace('-tab', ''));
 }
 
 function addphysician(id) {
