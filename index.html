@@ -105,9 +105,10 @@
     <a class="nav-link" id="v-pills-symptoms-tab" data-toggle="pill" href="#v-pills-symptoms" role="tab" aria-controls="v-pills-symptoms" aria-selected="false">Review of Symptoms I</a>
     <a class="nav-link" id="v-pills-symptoms2-tab" data-toggle="pill" href="#v-pills-symptoms2" role="tab" aria-controls="v-pills-symptoms2" aria-selected="false">Review of Symptoms II</a>
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
+    <a class="nav-link" id="v-pills-close-tab" data-toggle="pill" href="#v-pills-close" role="tab" aria-controls="v-pills-close" aria-selected="false" style="display: none;">Thank you</a>
   </div>
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='./close.html'}"></iframe>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="_self" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){nextpage('v-pills-close-tab','v-pills-summary-tab')}"></iframe>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
   <div class="tab-content" id="v-pills-tabContent">
     <!-- home -->
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -122,6 +123,7 @@
       <a class="btn btn-primary text-center" style="color: white; margin-top:30px; margin-bottom:50px; margin-right: 25px; margin-left: 35px;  display: block;" onclick="nextpage('v-pills-open-tab', 'v-pills-tabContent')">Start</a>
       <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
     </div>
+    <!-- open -->
     <div class="tab-pane fade" id="v-pills-open" role="tabpanel" aria-labelledby="v-pills-open-tab">
       <div class="row">
         <div class="col-md-3">
@@ -135,6 +137,19 @@
         <div class="col-md-3">
           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
           <a id="open_btn" class="btn btn-primary btn-block" style="color: white; display:none; width: 50%;" onclick="nextpage('v-pills-profile-tab', 'v-pills-open-tab')" role="button">Next</a>
+        </div>
+      </div>
+    </div>
+    <!-- close -->
+    <div class="tab-pane fade" id="v-pills-close" role="tabpanel" aria-labelledby="v-pills-close-tab">
+      <div class="row">
+        <div class="col-md-3">
+          &nbsp;
+        </div>
+        <div class="col-md-5">
+        <video id="closeVideo" height="600" controls>
+          <source src="close.mp4" type="video/mp4">
+        </video>
         </div>
       </div>
     </div>
@@ -185,14 +200,14 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="727509711">Phone Number 1<span class="red-star">*</span></label>
-          <input id="727509711" type="tel" name="entry.727509711" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
+          <input id="727509711" type="phoneNumber" name="entry.727509711" class="form-control phoneNumber" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
         <div class="col-md-4 mb-2">
           <label for="899933585">Phone Number 2</label>
-          <input id="899933585" type="tel" name="entry.899933585" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123">
+          <input id="899933585" type="phoneNumber" name="entry.899933585" class="form-control phoneNumber" onchange="validate(this.id);" placeholder="(201) 555-0123">
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -280,14 +295,14 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="2125361867">Phone Number 1<span class="red-star">*</span></label>
-          <input id="2125361867" type="tel" name="entry.2125361867" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
+          <input id="2125361867" type="phoneNumber" name="entry.2125361867" class="form-control phoneNumber" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
         <div class="col-md-4 mb-2">
           <label for="1774684884">Phone Number 2</label>
-          <input id="1774684884" type="tel" name="entry.1774684884" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123">
+          <input id="1774684884" type="phoneNumber" name="entry.1774684884" class="form-control phoneNumber" onchange="validate(this.id);" placeholder="(201) 555-0123">
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -749,11 +764,11 @@
         </div>
         <div class="form-group col-md-3">
           <label for="1978025847">Tel</label>
-          <input id="1978025847" type="tel" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+          <input id="1978025847" type="phoneNumber" name="entry.1978025847" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1042841192">Fax</label>
-          <input id="1042841192" type="tel" name="entry.1042841192" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
+          <input id="1042841192" type="phoneNumber" name="entry.1042841192" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
       </div>
       </div>
@@ -1218,11 +1233,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1257300614">Tel<span class="red-star">*</span></label>
-          <input id="1257300614" type="tel" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+          <input id="1257300614" type="phoneNumber" name="entry.1257300614" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="269642805">Fax<span class="red-star">*</span></label>
-          <input id="269642805" type="tel" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+          <input id="269642805" type="phoneNumber" name="entry.269642805" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1283,11 +1298,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1062978314">Tel</label>
-          <input id="1062978314" type="tel" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" >
+          <input id="1062978314" type="phoneNumber" name="entry.1062978314" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" >
         </div>
         <div class="form-group col-md-3">
           <label for="437570330">Fax</label>
-          <input id="437570330" type="tel" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" >
+          <input id="437570330" type="phoneNumber" name="entry.437570330" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" >
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1349,11 +1364,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1717853478">Tel</label>
-          <input id="1717853478" type="tel" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
+          <input id="1717853478" type="phoneNumber" name="entry.1717853478" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-3">
           <label for="970138022">Fax</label>
-          <input id="970138022" type="tel" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
+          <input id="970138022" type="phoneNumber" name="entry.970138022" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
       </div>
 <!--       <div class="form-row">
@@ -2026,11 +2041,52 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-function phoneMask() { 
-    var num = $(this).val().replace(/\D/g,''); 
-    $(this).val('(' + num.substring(0,3) + ')' +' '+ num.substring(3,6) + '-' + num.substring(6,10)); 
+const isNumericInput = (event) => {
+  const key = event.keyCode;
+  return ((key >= 48 && key <= 57) || // Allow number line
+    (key >= 96 && key <= 105) // Allow number pad
+  );
+};
+
+const isModifierKey = (event) => {
+  const key = event.keyCode;
+  return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+    (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+    (key > 36 && key < 41) || // Allow left, up, right, down
+    (
+      // Allow Ctrl/Command + A,C,V,X,Z
+      (event.ctrlKey === true || event.metaKey === true) &&
+      (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+    )
+};
+
+const enforceFormat = (event) => {
+  // Input must be of a valid number format or a modifier key, and not longer than ten digits
+  if(!isNumericInput(event) && !isModifierKey(event)){
+    event.preventDefault();
+  }
+};
+
+const formatToPhone = (event) => {
+  if(isModifierKey(event)) {return;}
+
+  // I am lazy and don't like to type things more than once
+  const target = event.target;
+  const input = event.target.value.replace(/\D/g,'').substring(0,10); // First ten digits of input only
+  const zip = input.substring(0,3);
+  const middle = input.substring(3,6);
+  const last = input.substring(6,10);
+
+  if(input.length > 6){target.value = `(${zip}) ${middle} - ${last}`;}
+  else if(input.length > 3){target.value = `(${zip}) ${middle}`;}
+  else if(input.length > 0){target.value = `(${zip}`;}
+};
+
+const inputElements = document.getElementsByClassName('phoneNumber');
+for (var i=0; i < inputElements.length; i++){
+  inputElements[i].addEventListener('keydown',enforceFormat);
+  inputElements[i].addEventListener('keyup',formatToPhone);
 }
-$('[type="tel"]').keyup(phoneMask);
 
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
@@ -2272,7 +2328,9 @@ function validate_checkbox(id){
 function check_all_tab(id){
   var c = document.getElementsByClassName('tab-pane');
   for (var i = 0; i < c.length; i++) {
-    validate_tab_all(c[i].id)
+    if (id != "v-pills-close"){
+      validate_tab_all(c[i].id)
+    }
   }
 }
 
@@ -2348,6 +2406,13 @@ function nextpage(id, id_cur) {
     var vid = document.getElementById("openVideo");
     vid.play();
     // nextpage("v-pills-profile-tab")
+  } else if (id == 'v-pills-close-tab') {
+    var c = document.getElementsByClassName('nav-link');
+    for (var i = 0; i < c.length-1; i++) {
+      c[i].style.display = "none";
+    }
+    var vid = document.getElementById("closeVideo");
+    vid.play();
   } else {
   	validate_tab_all(id_cur.replace('-tab', ''));
   }
