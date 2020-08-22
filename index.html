@@ -169,7 +169,7 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="2132997145">Date of Birth<span class="red-star">*</span></label>
-          <input type="date" class="form-control" id="2132997145" name="entry.2132997145" placeholder="01/01/2000" min="1900-01-01" onchange="validate(this.id)" required>
+          <input type="date" class="form-control" id="2132997145" name="entry.2132997145" placeholder="01/01/2000" min="1900-01-01" onchange="validate(this.id); _calculateAge(this.id);" required>
           <div class="invalid-feedback">
             Please enter your date of birth.
           </div>
@@ -185,14 +185,14 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="727509711">Phone Number 1<span class="red-star">*</span></label>
-          <input id="727509711" type="text" name="entry.727509711" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
+          <input id="727509711" type="tel" name="entry.727509711" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
         <div class="col-md-4 mb-2">
           <label for="899933585">Phone Number 2</label>
-          <input id="899933585" type="text" name="entry.899933585" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123">
+          <input id="899933585" type="tel" name="entry.899933585" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123">
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -203,9 +203,6 @@
           <label for="1791832648">Address<span class="red-star">*</span></label>
           <div class="input-group">
             <input required type="text" class="form-control" id="address" name="entry." onchange="validate(this.id);" placeholder="1234 Main St" required>
-            <div class="input-group-append">
-                <span class="input-group-text">ft</span>
-            </div>
             <div class="invalid-feedback">
               Please enter a valid address.
             </div>
@@ -283,14 +280,14 @@
         </div>
         <div class="col-md-4 mb-2">
           <label for="2125361867">Phone Number 1<span class="red-star">*</span></label>
-          <input id="2125361867" type="text" name="entry.2125361867" class="form-control" onchange="validate(this.id); phone(this.id);" placeholder="(201) 555-0123" required>
+          <input id="2125361867" type="tel" name="entry.2125361867" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123" required>
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
         </div>
         <div class="col-md-4 mb-2">
           <label for="1774684884">Phone Number 2</label>
-          <input id="1774684884" type="text" name="entry.1774684884" class="form-control" onchange="validate(this.id);phone(this.id);" placeholder="(201) 555-0123">
+          <input id="1774684884" type="tel" name="entry.1774684884" class="form-control" onchange="validate(this.id);" placeholder="(201) 555-0123">
           <div class="invalid-feedback">
             Please provide a valid phone number.
           </div>
@@ -314,9 +311,6 @@
         <small class="form-text text-muted" style="margin-top: 0rem;">In your own words, describe your problems as you see them (in detail).</small>
         <small class="form-text text-muted" style="margin-top: 0rem; margin-bottom: .25rem;">If the question does not apply, please type “N/A” in the space.</small>
         <textarea id="1516623984" name="entry.1516623984" class="span6 form-control" rows="6" placeholder="I have chest pain." onchange="validate(this.id)" required></textarea>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
         <div class="invalid-feedback">
           Please enter you chief complaint.
         </div>
@@ -353,7 +347,7 @@
         <input id="1694937621" type="text" name="entry.1694937621" class="form-control" placeholder="Abc" onchange="validate(this.id)" required>
       </div>
       <div class="form-group">
-        <label for="731455572"><b>Future Treatments: </b>Going forward, what treatment options have you been told you should consider?<span class="red-star">*</span></label>
+        <label for="731455572"><b>Future Treatments:<br></b>Going forward, what treatment options have you been told you should consider?<span class="red-star">*</span></label>
             <a class="btn sound_btn" onclick="playAudio('./4.mp3')">
               <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -755,11 +749,11 @@
         </div>
         <div class="form-group col-md-3">
           <label for="1978025847">Tel</label>
-          <input id="1978025847" type="text" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
+          <input id="1978025847" type="tel" name="entry.1978025847" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="1042841192">Fax</label>
-          <input id="1042841192" type="text" name="entry.1042841192" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
+          <input id="1042841192" type="tel" name="entry.1042841192" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
       </div>
       </div>
@@ -939,7 +933,7 @@
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
-              <input id="816411990" type="number" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" required>
+              <input id="816411990" type="number" name="entry.816411990" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" max="120" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
@@ -972,14 +966,14 @@
           <div id="tobacoo_prev_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
-              <input id="715172636" type="number" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="0.5" max="10" step="0.1" required>
+              <input id="715172636" type="number" name="entry.715172636" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="0.5" max="10" step="0.5" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
             </div>
             <div class="form-check-inline">
               <label class="form-check-label">For how many years?<span class="red-star">*</span>&nbsp;</label>
-              <input id="2033700742" type="number" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" required>
+              <input id="2033700742" type="number" name="entry.2033700742" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" max="120"required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">years</span>
               </div>
@@ -1224,11 +1218,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1257300614">Tel<span class="red-star">*</span></label>
-          <input id="1257300614" type="text" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
+          <input id="1257300614" type="tel" name="entry.1257300614" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
         <div class="form-group col-md-3">
           <label for="269642805">Fax<span class="red-star">*</span></label>
-          <input id="269642805" type="text" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" required>
+          <input id="269642805" type="tel" name="entry.269642805" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1289,11 +1283,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1062978314">Tel</label>
-          <input id="1062978314" type="text" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" >
+          <input id="1062978314" type="tel" name="entry.1062978314" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" >
         </div>
         <div class="form-group col-md-3">
           <label for="437570330">Fax</label>
-          <input id="437570330" type="text" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);" >
+          <input id="437570330" type="tel" name="entry.437570330" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);" >
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1355,11 +1349,11 @@
         </div> -->
         <div class="form-group col-md-3">
           <label for="1717853478">Tel</label>
-          <input id="1717853478" type="text" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
+          <input id="1717853478" type="tel" name="entry.1717853478" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
         <div class="form-group col-md-3">
           <label for="970138022">Fax</label>
-          <input id="970138022" type="text" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id); phone(this.id);">
+          <input id="970138022" type="tel" name="entry.970138022" class="form-control" placeholder="(555) 555-1234" onchange="validate(this.id);">
         </div>
       </div>
 <!--       <div class="form-row">
@@ -1740,7 +1734,7 @@
       <div class="row">
         <label class="form-check-label symptom" for="" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col" style="visibility:hidden">
-          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <input required class="form-check-input" type="checkbox" id="hidden_1" name="entry." value="None" >
           <label class="form-check-label">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
@@ -1939,7 +1933,7 @@
       <div class="row">
         <label class="form-check-label symptom2" for="" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
-          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <input required class="form-check-input" type="checkbox" id="hidden_2" name="entry." value="None" >
           <label class="form-check-label" for="">None</label>
         </div>
         <div class="form-check form-check-inline">
@@ -1971,7 +1965,7 @@
       <div class="row">
         <label class="form-check-label symptom2" for="" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
-          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <input required class="form-check-input" type="checkbox" id="hidden_3" name="entry." value="None" >
           <label class="form-check-label" for="">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
@@ -1990,7 +1984,7 @@
       <div class="row">
         <label class="form-check-label symptom2" for="" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
-          <input required class="form-check-input" type="checkbox" name="entry." value="None" >
+          <input required class="form-check-input" type="checkbox" id="hidden_4" name="entry." value="None" >
           <label class="form-check-label" for="">None</label>
         </div>
         <div class="form-check form-check-inline">
@@ -2031,6 +2025,13 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
+
+function phoneMask() { 
+    var num = $(this).val().replace(/\D/g,''); 
+    $(this).val('(' + num.substring(0,3) + ')' +' '+ num.substring(3,6) + '-' + num.substring(6,10)); 
+}
+$('[type="tel"]').keyup(phoneMask);
+
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
@@ -2038,7 +2039,6 @@ var yyyy = today.getFullYear();
 
 today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("2132997145").max = today
-console.log(today)
 $(document).on("keydown", ":input:not(textarea)", function(event) {
     return event.key != "Enter";
 });
@@ -2048,18 +2048,36 @@ function myHandler(e) {
     // What you want to do after the event
     document.getElementById('open_btn').style.display = 'block'
 }
-function _calculateAge(birthday) { // birthday is a date
+
+var age;
+function _calculateAge(id) { // birthday is a date
+	var birthday = new Date(document.getElementById(id).value)
     var ageDifMs = Date.now() - birthday.getTime();
     var ageDate = new Date(ageDifMs); // miliseconds from epoch
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
+    age = Math.abs(ageDate.getUTCFullYear() - 1970);
+    if (age != NaN)
+    {
+	    document.getElementById("2033700742").max = age;
+	    document.getElementById("816411990").max = age;
+	} else {
+	    document.getElementById("2033700742").max = 120;
+	    document.getElementById("816411990").max = 120;
+	}
 }
 
 function summary() {
   var str;
-  var birthday = new Date(document.getElementById("2132997145").value)
+  var sex;
+  if (document.getElementById("210835964").value == 'male') {
+  	sex ='M'
+  }
+  else {
+  	sex ='F'
+  }
+
   str = "<b>Name: </b>"+document.getElementById("2035245450").value+" "+document.getElementById("1238999267").value+" "+
-        "<b>Age: </b>"+_calculateAge(birthday)+" yrs "+
-        "<b>Sex: </b>"+document.getElementById("210835964").value+"<br>"+
+        "<b>Age: </b>"+age+" yrs "+
+        "<b>Sex: </b>"+ sex +"<br>"+
         "<b>Chief Complaint: </b>"+document.getElementById("1516623984").value+"<br>"+
         // "<b>History of Present Illiness: </b><br>"+
         "<b>What have your physicians told you: </b>"+document.getElementById("1252370919").value+"<br>"+
@@ -2246,6 +2264,7 @@ function validate_checkbox(id){
     if (c[i].type == 'checkbox')
     {
        dict[c[i].id] = c[i].checked;
+       validate(c[i].id)
     }
   }
 }
@@ -2253,7 +2272,7 @@ function validate_checkbox(id){
 function check_all_tab(id){
   var c = document.getElementsByClassName('tab-pane');
   for (var i = 0; i < c.length; i++) {
-    validate_tab(c[i].id)
+    validate_tab_all(c[i].id)
   }
 }
 
@@ -2272,10 +2291,35 @@ function validate_tab(id){
        div_btn.classList.add('btn-outline-danger');
        success=false;
     }
-    if (c[i].required && c[i].type != 'checkbox')
+  }
+  if (success)
+  {
+    div_btn.classList.add('cvalid');
+    div_btn.classList.add('btn-outline-success');
+    div_btn.classList.remove('cinvalid');
+    div_btn.classList.remove('btn-outline-danger');
+    success=false;
+  }
+  return success;
+}
+
+function validate_tab_all(id){
+  var div = document.getElementById(id);
+  var div_btn = document.getElementById(id+'-tab');
+  var c = div.querySelectorAll('input,textarea');
+  var success = true;
+  for (var i = 0; i < c.length; i++)
+  {
+    if (c[i].checkValidity() == false)
     {
-    	validate(c[i].id)
+       div_btn.classList.remove('cvalid');
+       div_btn.classList.remove('btn-outline-success');
+       div_btn.classList.add('cinvalid');
+       div_btn.classList.add('btn-outline-danger');
+       success=false;
     }
+   	validate(c[i].id)
+   	console.log(c[i].id)
   }
   if (success)
   {
@@ -2305,8 +2349,9 @@ function nextpage(id, id_cur) {
     var vid = document.getElementById("openVideo");
     vid.play();
     // nextpage("v-pills-profile-tab")
+  } else {
+  	validate_tab_all(id_cur.replace('-tab', ''));
   }
-  validate_tab(id_cur.replace('-tab', ''));
 }
 
 function addphysician(id) {
@@ -2361,11 +2406,6 @@ function progress() {
   } else {
     document.getElementById('submit_warning').style.display = 'block';
   }
-}
-
-function phone(id) {
-  var div = document.getElementById(id);
-  div.value = div.value.replace(/(\d{3})(\d{3})(\d{3})/, "($1) $2-$3");
 }
 
 // window.onbeforeunload = function(event)
