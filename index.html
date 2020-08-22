@@ -107,7 +107,7 @@
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
   </div>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='./close.html'}"></iframe>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="_self" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
   <div class="tab-content" id="v-pills-tabContent">
     <!-- home -->
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
@@ -475,7 +475,7 @@
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
             <input type="checkbox" class="form-check-input" id="595182463_18" name="entry.595182463" value="__other_option__" required>
             <label class="form-check-label" for="595182463_18">Others:&nbsp;</label>
-            <input type="text" class="form-control" name="entry.595182463.other_option_response" onchange="validate(this.id)" style="height: 30px; width: 80%;">
+            <input type="text" class="form-control" id="595182463_other" name="entry.595182463.other_option_response" onchange="validate(this.id)" style="height: 30px; width: 80%;">
           </div>
         </div>
       </div>
@@ -558,7 +558,7 @@
             <label class="form-check-label" for="1042938998_10">Others:</label>
           </div>
           <div class="form-check-inline">
-              <input type="text" class="form-control" name="entry.1042938998.other_option_response"  onchange="validate(this.id)" placeholder="" style="height: 30px; width: 175px;">
+              <input type="text" class="form-control" id="1042938998_other" name="entry.1042938998.other_option_response"  onchange="validate(this.id)" placeholder="" style="height: 30px; width: 175px;">
           </div>
         </div>
         <div class="col">
@@ -926,7 +926,7 @@
           <div id="tobacoo_info" style="display: none">
             <div class="form-check-inline">
               <label class="form-check-label">How many packs per day?<span class="red-star">*</span>&nbsp;</label>
-              <input id="705853817" type="number" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" step="0.1" min="0.5" max="10" required>
+              <input id="705853817" type="number" name="entry.705853817" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" step="0.5" min="0.5" max="10" required>
               <div class="input-group-append" style="height: 30px;">
                   <span class="input-group-text">packs/day</span>
               </div>
@@ -999,7 +999,7 @@
             <label class="form-check-label" for="1217890044_4">Others:</label>
           </div>
           <div class="form-check-inline">
-              <input type="text" class="form-control" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
+              <input type="text" class="form-control" id="1217890044_other" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
           </div>
         </div>
         <div class="mb-2">
@@ -2319,7 +2319,6 @@ function validate_tab_all(id){
        success=false;
     }
    	validate(c[i].id)
-   	console.log(c[i].id)
   }
   if (success)
   {
