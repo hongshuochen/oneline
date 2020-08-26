@@ -414,7 +414,7 @@
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;">
             <input type="checkbox" class="form-check-input" id="595182463_6" name="entry.595182463" value="Cancer1" required>
-            <label class="form-check-label" for="595182463_6">Cancer:</label>
+            <label class="form-check-label" for="595182463_6">Cancer1:</label>
           </div>
           <div class="form-check-inline">
               <select class="form-control" id="1407327638" name="entry.1407327638" style="height: 30px; font-size: 0.85rem;">
@@ -455,7 +455,7 @@
           </div>
           <div class="form-check form-check-inline mb-2" style="margin-right: 0rem;  ">
             <input type="checkbox" class="form-check-input" id="595182463_13" name="entry.595182463" value="Cancer2" required>
-            <label class="form-check-label" for="595182463_13">Cancer:</label>
+            <label class="form-check-label" for="595182463_13">Cancer2:</label>
           </div>
           <div class="form-check-inline">
               <select class="form-control" id="2002421051" name="entry.2002421051" style="height: 30px; font-size: 0.85rem;">
@@ -650,7 +650,7 @@
 	          </div>
 	          <div class="input-group">
 	            <input id="809608804_0" type="text" name="entry.809608804" class="form-control">
-	            <input id="1585316133_0" type="text" name="entry.1585316133" class="form-control" >
+	            <input id="1585316133_0" type="month" name="entry.1585316133" class="form-control">
 	          </div>
       	  </div>
           <br>
@@ -780,9 +780,9 @@
       <small class="text-muted">List ALL your MEDICINES (prescribed or any over-the-counter drugs). List dose/frequency if you can. </small>
       <div class="input-group-prepend">
           <div class="col-md-3" style="text-align: center;">Drug Name</div>
-          <div class="col-md-3" style="text-align: center;">Dose</div>
+          <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
           <div class="col-md-3" style="text-align: center;">Drug Name</div>
-          <div class="col-md-3" style="text-align: center;">Dose</div>
+          <div class="col-md-3" style="text-align: center;">Dose and Frequency</div>
       </div>
       <div class="input-group">
         <input id="586238945" type="text" class="form-control" name="entry.586238945" class="form-control" >
@@ -910,10 +910,10 @@
           </div>
           <div id="alcohol_info" style="display: none">
             <div class="form-check-inline">
-              <label class="form-check-label">How often?<span class="red-star">*</span>&nbsp;</label>
-              <input id="1452308177" type="number" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" max="7" required>
+              <label class="form-check-label">How much?<span class="red-star">*</span>&nbsp;</label>
+              <input id="1452308177" type="number" name="entry.1452308177" class="form-control" onchange="validate(this.id)" placeholder="3" style="height: 30px; width: 100px;" min="1" max="35" required>
               <div class="input-group-append" style="height: 30px;">
-                  <span class="input-group-text">times/week</span>
+                  <span class="input-group-text">drink/week</span>
               </div>
             </div>
           </div>
@@ -998,29 +998,29 @@
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Employment status:</b><span class="red-star">*</span></label>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" id="1217890044_1" name="entry.1217890044" value="Working" required>
-            <label class="form-check-label" for="1217890044_1">Working</label>
+            <input type="radio" class="form-check-input" id="1217890044_1" name="entry.1217890044" value="Employed" required>
+            <label class="form-check-label" for="1217890044_1">Employed</label>
           </div>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" id="1217890044_2" name="entry.1217890044" value="Retired" required>
-            <label class="form-check-label" for="1217890044_2">Retired</label>
+            <input type="radio" class="form-check-input" id="1217890044_2" name="entry.1217890044" value="Unemployed" required>
+            <label class="form-check-label" for="1217890044_2">Unemployed</label>
           </div>
           <div class="form-check form-check-inline">
-            <input type="radio" class="form-check-input" id="1217890044_3" name="entry.1217890044" value="Disabled" required>
-            <label class="form-check-label" for="1217890044_3">Disabled</label>
+            <input type="radio" class="form-check-input" id="1217890044_3" name="entry.1217890044" value="Retired" required>
+            <label class="form-check-label" for="1217890044_3">Retired</label>
           </div>
           <div class="form-check form-check-inline" style="margin-right: 0rem;">
-            <input type="radio" class="form-check-input" id="1217890044_4" name="entry.1217890044" value="__other_option__" required>
-            <label class="form-check-label" for="1217890044_4">Others:</label>
+            <input type="radio" class="form-check-input" id="1217890044_4" name="entry.1217890044" value="Disabled" required>
+            <label class="form-check-label" for="1217890044_4">Disabled Why?</label>
           </div>
           <div class="form-check-inline">
-              <input type="text" class="form-control" id="1217890044_other" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="" style="height: 25px; width: 100px;">
+              <input type="text" class="form-control" id="1217890044_other" name="entry.1217890044.other_option_response" onchange="validate(this.id)" placeholder="Accident" style="height: 25px; width: 100px;">
           </div>
         </div>
         <div class="mb-2">
           <label style="margin-bottom: 0rem;"><b>Occupation:</b></label>
           <div class="form-check-inline">
-              <label class="form-check-label">What is your current occupation?<span class="red-star">*</span>
+              <label class="form-check-label">What is/was your occupation?<span class="red-star">*</span>
               <a class="btn" onclick="playAudio('./17.mp3')" style="padding: 0rem;">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-volume-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="vertical-align: baseline;">
                   <path fill-rule="evenodd" d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zM6 5.04L4.312 6.39A.5.5 0 0 1 4 6.5H2v3h2a.5.5 0 0 1 .312.11L6 10.96V5.04z"/>
@@ -1433,7 +1433,7 @@
             </div>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="1953145569_2" name="entry.1953145569" value="Wheel-chair" required>
-              <label class="form-check-label" for="1953145569_2">Wheel-chair</label>
+              <label class="form-check-label" for="1953145569_2">Walking stick</label>
             </div>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="1953145569_3" name="entry.1953145569" value="Walker" required>
@@ -1441,11 +1441,11 @@
             </div>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="1953145569_4" name="entry.1953145569" value="Walking stick" required>
-              <label class="form-check-label" for="1953145569_4">Walking stick</label>
+              <label class="form-check-label" for="1953145569_4">Wheel-chair</label>
             </div>
             <div class="form-check form-check-inline">
               <input type="radio" class="form-check-input" id="1953145569_5" name="entry.1953145569" value="I do not walk" required>
-              <label class="form-check-label" for="1953145569_5">I do not walk</label>
+              <label class="form-check-label" for="1953145569_5">I don't walk</label>
             </div>
           </div>
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
@@ -1608,17 +1608,17 @@
           <label class="form-check-label" for="355094542_1">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="355094542_2" name="entry.355094542" value="Change" >
-          <label class="form-check-label" for="355094542_2">Change</label>
+          <input required class="form-check-input" type="checkbox" id="355094542_2" name="entry.355094542" value="Glaucoma" >
+          <label class="form-check-label" for="355094542_2">Glaucoma</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="355094542_3" name="entry.355094542" value="Glaucoma" >
-          <label class="form-check-label" for="355094542_3">Glaucoma</label>
+          <input required class="form-check-input" type="checkbox" id="355094542_3" name="entry.355094542" value="Cataract" >
+          <label class="form-check-label" for="355094542_3">Cataract</label>
         </div>
-        <div class="form-check form-check-inline">
+<!--         <div class="form-check form-check-inline">
           <input required class="form-check-input" type="checkbox" id="355094542_4" name="entry.355094542" value="Double" >
           <label class="form-check-label" for="355094542_4">Double</label>
-        </div>
+        </div> -->
       </div>
       <div class="row" id="sys14" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for=""><b>Ears:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
@@ -1710,6 +1710,10 @@
           <input required class="form-check-input" type="checkbox" id="2113739215_3" name="entry.2113739215" value="Discharge" >
           <label class="form-check-label" for="2113739215_3">Discharge</label>
         </div>
+        <div class="form-check form-check-inline symptom-col">
+          <input required class="form-check-input" type="checkbox" id="2113739215_4" name="entry.2113739215" value="Pain/ache" >
+          <label class="form-check-label" for="2113739215_4">Pain/ache</label>
+        </div>
       </div>
       <div class="row" id="sys19" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for=""><b>Allergic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
@@ -1742,7 +1746,7 @@
           <label class="form-check-label" for="322483325_3">Burning</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="322483325_4" name="entry.322483325" value="Leakage" >
+          <input required class="form-check-input" type="checkbox" id="322483325_4" name="entry.322483325" value="Change in force of stream" >
           <label class="form-check-label" for="322483325_4">Change in force of stream</label>
         </div>
       </div>
@@ -1753,12 +1757,12 @@
           <label class="form-check-label">None</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="322483325_5" name="entry.322483325" value="Change in force of of stream" >
-          <label class="form-check-label" for="322483325_5">Blood</label>
+          <input required class="form-check-input" type="checkbox" id="322483325_5" name="entry.322483325" value="Blood in Urine" >
+          <label class="form-check-label" for="322483325_5">Blood in Urine</label>
         </div>
         <div class="form-check form-check-inline symptom-col">
-          <input required class="form-check-input" type="checkbox" id="322483325_6" name="entry.322483325" value="Blood" >
-          <label class="form-check-label" for="322483325_6">Leakage</label>
+          <input required class="form-check-input" type="checkbox" id="322483325_6" name="entry.322483325" value="Urine Leakage<" >
+          <label class="form-check-label" for="322483325_6">Urine Leakage</label>
         </div>
       </div>
       </div>
@@ -2137,8 +2141,8 @@ function summary() {
         "<b>Chief Complaint: </b>"+document.getElementById("1516623984").value+"<br>"+
         // "<b>History of Present Illiness: </b><br>"+
         "<b>What have your physicians told you: </b>"+document.getElementById("1252370919").value+"<br>"+
-        "<b>Prior treatments: </b>"+document.getElementById("1694937621").value+"<br>"+
-        "<b>Future treatment: </b>"+document.getElementById("731455572").value+"<br>";
+        "<b>Prior treatments: </b>"+document.getElementById("1694937621").value+"<br>";
+        // "<b>Future treatment: </b>"+document.getElementById("731455572").value+"<br>";
   // var c = document.querySelectorAll(".form-check-input:checked");
   // str += "<b>Head: </b>";
   // for (var i = 0; i < c.length; i++)
@@ -2168,8 +2172,13 @@ function add_blank(id, id_1, id_2) {
 		dict_data.push(document.getElementById(id_2 + "_" + i).value)
 	}
 	count[id] += 1
-	document.getElementById(id).innerHTML += 
-			"<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+  if (id == 'surgeries_table'){
+  	document.getElementById(id).innerHTML += 
+  			"<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='month' name='entry." + id_2 + "' class='form-control' ></div>"
+  } else {
+    document.getElementById(id).innerHTML += 
+        "<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+  }
 	for (var i=0; i < count[id]; i++) {
 		document.getElementById(id_1 + "_" + i).value = dict_surgeries[i]
 		document.getElementById(id_2 + "_" + i).value = dict_data[i]
@@ -2184,7 +2193,11 @@ function delete_blank(id, id_1, id_2) {
 			dict_surgeries.push(document.getElementById(id_1 + "_" + i).value)
 			dict_data.push(document.getElementById(id_2 + "_" + i).value)
 		}
-		tmp = "<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+  if (id == 'surgeries_table'){
+    tmp = "<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='month' name='entry." + id_2 + "' class='form-control' ></div>"
+  } else {
+    tmp = "<div class='input-group'><input id='" + id_1 + "_" + count[id] + "' type='text' name='entry." + id_1 + "' class='form-control' ><input id='" + id_2 + "_" + count[id] + "' type='text' name='entry." + id_2 + "' class='form-control' ></div>"
+  }
 		document.getElementById(id).innerHTML = document.getElementById(id).innerHTML.slice(0, -tmp.length)
 		count[id] -= 1
 		for (var i=0; i <= count[id]; i++) {
