@@ -22,9 +22,7 @@
       }
 
       .logo {
-        position: fixed;
-        top: 3%;
-        left: 2%;
+        margin-top: 3%;
         width: 150px;
       }
 
@@ -95,17 +93,15 @@
     <a class="nav-link" id="v-pills-medical-tab" data-toggle="pill" href="#v-pills-medical" role="tab" aria-controls="v-pills-medical" aria-selected="false">Past Medical history</a>
     <a class="nav-link" id="v-pills-surgeries-tab" data-toggle="pill" href="#v-pills-surgeries" role="tab" aria-controls="v-pills-surgeries" aria-selected="false">Past Surgical History</a>
     <a class="nav-link" id="v-pills-allergies-tab" data-toggle="pill" href="#v-pills-allergies" role="tab" aria-controls="v-pills-allergies" aria-selected="false">Medications/Allergies</a>
-    <a class="nav-item" id="v-pills-medicines-tab" data-toggle="pill" href="#v-pills-medicines" role="tab" aria-controls="v-pills-physicians3" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Medicines</a>
+    <a class="nav-item" id="v-pills-medicines-tab" data-toggle="pill" href="#v-pills-medicines" role="tab" aria-controls="v-pills-medicines" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Medicines</a>
     <a class="nav-link" id="v-pills-social-tab" data-toggle="pill" href="#v-pills-social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social History</a>
     <a class="nav-link" id="v-pills-family-tab" data-toggle="pill" href="#v-pills-family" role="tab" aria-controls="v-pills-family" aria-selected="false">Family Health History</a>
     <a class="nav-link" id="v-pills-physicians-tab" data-toggle="pill" href="#v-pills-physicians" role="tab" aria-controls="v-pills-physicians" aria-selected="false">Referring Physicians</a>
-    <a class="nav-item" id="v-pills-physicians2-tab" data-toggle="pill" href="#v-pills-physicians2" role="tab" aria-controls="v-pills-physicians2" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Referring Physicians 2</a>
-    <a class="nav-item" id="v-pills-physicians3-tab" data-toggle="pill" href="#v-pills-physicians3" role="tab" aria-controls="v-pills-physicians3" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Referring Physicians 3</a>
     <a class="nav-link" id="v-pills-general-tab" data-toggle="pill" href="#v-pills-general" role="tab" aria-controls="v-pills-general" aria-selected="false">General Activity Level</a>
     <a class="nav-link" id="v-pills-symptoms-tab" data-toggle="pill" href="#v-pills-symptoms" role="tab" aria-controls="v-pills-symptoms" aria-selected="false">Review of Symptoms I</a>
     <a class="nav-link" id="v-pills-symptoms2-tab" data-toggle="pill" href="#v-pills-symptoms2" role="tab" aria-controls="v-pills-symptoms2" aria-selected="false">Review of Symptoms II</a>
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
-    <a class="nav-link" id="v-pills-close-tab" data-toggle="pill" href="#v-pills-close" role="tab" aria-controls="v-pills-close" aria-selected="false" style="display: none;">Thank you</a>
+    <a class="nav-link" id="v-pills-close-tab" data-toggle="pill" href="#v-pills-close" role="tab" aria-controls="v-pills-close" aria-selected="false" style="display: block;">Thank you</a>
   </div>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){nextpage('v-pills-close-tab','v-pills-summary-tab')}"></iframe>
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
@@ -114,8 +110,6 @@
     <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
       <div class="text-center mb-4">
         <img class="mb-4" src="./OneLine.png" alt="" height="72">
-<!--         <h1 class="h3 mb-3 font-weight-normal">One Line Health</h1>
-        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p> -->
         <h1 class="h3 mb-3 font-weight-normal">One Line Health</h1>
         <p>For better experience, please <b>turn on you sound</b> and use <b>Google Chrome</b>.</p>
         <p>If you are ready, please click start.</p>
@@ -142,8 +136,10 @@
     </div>
     <!-- close -->
     <div class="tab-pane fade" id="v-pills-close" role="tabpanel" aria-labelledby="v-pills-close-tab">
+<!--       <h3 style="text-align: center;">Thank you! We have received your information.<br>
+        We look forward to taking excellent care of you!</h3> -->
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           &nbsp;
         </div>
         <div class="col-md-5">
@@ -655,7 +651,7 @@
       	  </div>
           <br>
           <a type="button" class="btn btn-outline-primary mb-3" onclick="add_blank('surgeries_table', '809608804', '1585316133')">Add Blanks</a>
-          <a type="button" class="btn btn-outline-primary mb-3" onclick="delete_blank('surgeries_table', '809608804', '1585316133')">Delete Blanks</a> 
+          <a type="button" class="btn btn-outline-primary mb-3" onclick="delete_blank('surgeries_table', '809608804', '1585316133')" style="display: none;">Delete Blanks</a> 
         </div>
       </div>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-allergies-tab', 'v-pills-surgeries-tab')">Next</a>
@@ -1196,198 +1192,47 @@
     <!-- physicians -->
     <div class="tab-pane fade" id="v-pills-physicians" role="tabpanel" aria-labelledby="v-pills-physicians-tab" onchange="validate_tab(this.id)">
       <h2><span class="badge badge-secondary">Referring Physicians</span></h2>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="40039240">First Name<span class="red-star">*</span></label>
-          <input id="40039240" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir"  onchange="validate(this.id);" required>
+      <div id="physicians_info">
+        <div class="form-check form-check-inline mb-2">
+          <label class="form-check-label"><b>Physician 1</b>&nbsp;&nbsp;</label>
+          <input type="checkbox" class="form-check-input" id="1924612540_0" name="entry.1924612540" value='Yes' onchange='refer_me(this.id);'>
+          <div id=refer_me_0>
+            <input type='hidden' id="1924612540_0_hidden" name="entry.1924612540" value='No'>
+          </div>
+          <label class="form-check-label" for="1924612540_0">Referred you to see us</label>
         </div>
-        <div class="form-group col-md-4">
-          <label for="325567427">Last Name<span class="red-star">*</span></label>
-          <input id="325567427" type="text" name="entry.325567427" class="form-control" placeholder="Gill" onchange="validate(this.id);" required>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label>First Name<span class="red-star">*</span></label>
+            <input id="40039240_0" type="text" name="entry.40039240" class="form-control" placeholder="Inderbir"  onchange="validate(this.id);" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Last Name<span class="red-star">*</span></label>
+            <input id="325567427_0" type="text" name="entry.325567427" class="form-control" placeholder="Gill" onchange="validate(this.id);" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label>Specialty<span class="red-star">*</span></label>
+            <input id="1892335894_0" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" onchange="validate(this.id);" required>
+          </div>
         </div>
-        <div class="form-group col-md-4">
-          <label for="1892335894">Specialty<span class="red-star">*</span></label>
-          <input id="1892335894" type="text" name="entry.1892335894" class="form-control" placeholder="Urology" onchange="validate(this.id);" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="321663243">Address<span class="red-star">*</span></label>
-          <input id="321663243" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);" required>
-        </div>
-        <!-- <div class="form-group col-md-3">
-          <label for="inputCity">City</label>
-          <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>-</option>
-            <option>CA</option>
-            <option>IL</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input required type="text" class="form-control" id="inputZip">
-        </div> -->
-        <div class="form-group col-md-3">
-          <label for="1257300614">Tel<span class="red-star">*</span></label>
-          <input id="1257300614" type="phoneNumber" name="entry.1257300614" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
-        </div>
-        <div class="form-group col-md-3">
-          <label for="269642805">Fax<span class="red-star">*</span></label>
-          <input id="269642805" type="phoneNumber" name="entry.269642805" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>Address<span class="red-star">*</span></label>
+            <input id="321663243_0" type="text" name="entry.321663243" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label>Tel<span class="red-star">*</span></label>
+            <input id="1257300614_0" type="phoneNumber" name="entry.1257300614" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label>Fax<span class="red-star">*</span></label>
+            <input id="269642805_0" type="phoneNumber" name="entry.269642805" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" required>
+          </div>
         </div>
       </div>
-<!--       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Tel</label>
-          <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Fax</label>
-          <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
-        </div>
-      </div> -->
-      <div class="form-check form-check-inline mb-2">
-        <input type="checkbox" class="form-check-input" id="1924612540" name="entry.1924612540" value="refer me">
-        <label class="form-check-label" for="1924612540">Referred you to see us</label>
-      </div>
-      <br>
-      <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians2-tab')">Add physicians</button>
+      <a id="addphysician" type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('physicians_info')">Add physicians</a>
+      <a id="deletephysician" type="button" class="btn btn-outline-primary mb-3" onclick="deletephysician('physicians_info')">Delete physicians</a>
       <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab')">Next</a>
-    </div>
-    <!-- physicians 2 -->
-    <div class="tab-pane fade" id="v-pills-physicians2" role="tabpanel2" aria-labelledby="v-pills-physicians-tab2" onchange="validate_tab(this.id)">
-      <h2><span class="badge badge-secondary">Referring Physicians 2</span></h2>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="819961389">First Name</label>
-          <input id="819961389" type="text" name="entry.819961389" class="form-control" placeholder="Inderbir" onchange="validate(this.id);">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="362320967">Last Name</label>
-          <input id="362320967" type="text" name="entry.362320967" class="form-control" placeholder="Gill" onchange="validate(this.id);">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="269727290">Specialty</label>
-          <input id="269727290" type="text" name="entry.269727290" class="form-control" placeholder="Urology" onchange="validate(this.id);">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="1648677105">Address</label>
-          <input id="1648677105" type="text" name="entry.1648677105" class="form-control" placeholder="1234 Main St" >
-        </div>
-        <!-- <div class="form-group col-md-3">
-          <label for="inputCity">City</label>
-          <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>-</option>
-            <option>CA</option>
-            <option>IL</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input required type="text" class="form-control" id="inputZip">
-        </div> -->
-        <div class="form-group col-md-3">
-          <label for="1062978314">Tel</label>
-          <input id="1062978314" type="phoneNumber" name="entry.1062978314" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" >
-        </div>
-        <div class="form-group col-md-3">
-          <label for="437570330">Fax</label>
-          <input id="437570330" type="phoneNumber" name="entry.437570330" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);" >
-        </div>
-      </div>
-<!--       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Tel</label>
-          <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Fax</label>
-          <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
-        </div>
-      </div> -->
-      <div class="form-check form-check-inline mb-2">
-        <input type="checkbox" class="form-check-input" id="550459955" name="entry.550459955" value="refer me">
-        <label class="form-check-label" for="550459955">Referred you to see us</label>
-      </div>
-      <br>
-      <a type="button" class="btn btn-outline-primary mb-3" onclick="addphysician('v-pills-physicians3-tab')">Add physicians</a>
-      <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians2-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab')">Next</a>
-    </div>
-    <!-- physicians 3 -->
-    <div class="tab-pane fade" id="v-pills-physicians3" role="tabpanel3" aria-labelledby="v-pills-physicians-tab3" onchange="validate_tab(this.id)">
-      <h2><span class="badge badge-secondary">Referring Physicians 3</span></h2>
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="163361409">First Name</label>
-          <input id="163361409" type="text" name="entry.163361409" class="form-control" placeholder="Inderbir" onchange="validate(this.id);">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="1066483225">Last Name</label>
-          <input id="1066483225" type="text" name="entry.1066483225" class="form-control" placeholder="Gill" onchange="validate(this.id);">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="894152847">Specialty</label>
-          <input id="894152847" type="text" name="entry.894152847" class="form-control" placeholder="Urology" onchange="validate(this.id);" >
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="1957767689">Address</label>
-          <input id="1957767689" type="text" name="entry.1957767689" class="form-control" placeholder="1234 Main St" onchange="validate(this.id);">
-        </div>
-        <!-- <div class="form-group col-md-3">
-          <label for="inputCity">City</label>
-          <input required type="text" class="form-control" id="inputCity" placeholder="Los Angeles">
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>-</option>
-            <option>CA</option>
-            <option>IL</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input required type="text" class="form-control" id="inputZip">
-        </div> -->
-        <div class="form-group col-md-3">
-          <label for="1717853478">Tel</label>
-          <input id="1717853478" type="phoneNumber" name="entry.1717853478" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);">
-        </div>
-        <div class="form-group col-md-3">
-          <label for="970138022">Fax</label>
-          <input id="970138022" type="phoneNumber" name="entry.970138022" class="form-control phoneNumber" placeholder="(555) 555-1234" onchange="validate(this.id);">
-        </div>
-      </div>
-<!--       <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Tel</label>
-          <input required type="text" class="form-control" id="inputTel2" placeholder="(555) 555-1234">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputTel2">Fax</label>
-          <input required type="text" class="form-control" id="inputFax2" placeholder="(555) 555-1234">
-        </div>
-      </div> -->
-      <div class="form-check form-check-inline mb-2">
-        <input type="checkbox" class="form-check-input" id="692598252" name="entry.692598252" value="refer me">
-        <label class="form-check-label" for="692598252">Referred you to see us</label>
-      </div>
-      <br>
-      <a type="button" class="btn btn-outline-primary mb-3" onclick="deletepatient('v-pills-physicians-tab', 'v-pills-physicians3-tab')">Delete physicians</a>
-      <a class="btn btn-primary btn-block" style="color: white" onclick="nextpage('v-pills-general-tab', 'v-pills-physicians-tab'')">Next</a>
     </div>
     <!-- general activity level -->
     <div class="tab-pane fade" id="v-pills-general" role="tabpanel" aria-labelledby="v-pills-general-tab" onchange="validate_tab(this.id)">
@@ -1428,7 +1273,7 @@
             </a>
             &nbsp;</label>
             <div class="form-check form-check-inline">
-              <input type="radio" class="form-check-input" id="1953145569_1" name="entry.1953145569" value="On foot" required>
+              <input type="radio" class="form-check-input" id="1953145569_1" name="entry.1953145569" value="On foot" required onchange="show()">
               <label class="form-check-label" for="1953145569_1">On foot</label>
             </div>
             <div class="form-check form-check-inline">
@@ -1448,6 +1293,7 @@
               <label class="form-check-label" for="1953145569_5">I don't walk</label>
             </div>
           </div>
+          <div id="walk_question" style="display: none;">
           <div id="gal-1 " onchange="validate_checkbox(this.id)">
             <label class="form-check-label">How much can you walk?<span class="red-star">*</span>
             <a class="btn" onclick="playAudio('./19.mp3')" style="padding: 0rem;">
@@ -1515,6 +1361,7 @@
               <label class="form-check-label" for="313001010_5">5 or more</label>
             </div>
           </div>
+          </div>
           <div>
             <label class="form-check-label">Shortness of breath at rest?<span class="red-star">*</span>
             <a class="btn" onclick="playAudio('./21.mp3')" style="padding: 0rem;">
@@ -1571,7 +1418,7 @@
                 <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
               </svg>
             </a>
-      <div class="row" id="sys11" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys11" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0">
         <label class="form-check-label symptom" for=""><b>Head:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col" style="">
           <input required class="form-check-input" type="checkbox" id="420567850_1" name="entry.420567850" value="None" >
@@ -1601,7 +1448,7 @@
           <label class="form-check-label" for="24393389_3">Stiffness</label>
         </div>
       </div>
-      <div class="row" id="sys13" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys13" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0;">
         <label class="form-check-label symptom" for=""><b>Eyes:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" id="355094542_1" name="entry.355094542" value="None" >
@@ -1615,10 +1462,10 @@
           <input required class="form-check-input" type="checkbox" id="355094542_3" name="entry.355094542" value="Cataract" >
           <label class="form-check-label" for="355094542_3">Cataract</label>
         </div>
-<!--         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="checkbox" id="355094542_4" name="entry.355094542" value="Double" >
+        <div class="form-check form-check-inline">
+          <input required class="form-check-input" type="checkbox" id="355094542_4" name="entry.355094542" value="Change in vision" >
           <label class="form-check-label" for="355094542_4">Double</label>
-        </div> -->
+        </div>
       </div>
       <div class="row" id="sys14" onchange="validate_checkbox(this.id)">
         <label class="form-check-label symptom" for=""><b>Ears:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
@@ -1639,7 +1486,7 @@
           <label class="form-check-label" for="1482893409_4">Ringing</label>
         </div>
       </div>
-      <div class="row" id="sys15" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys15" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0;">
         <label class="form-check-label symptom" for=""><b>Nose:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" id="169869634_1" name="entry.169869634" value="None" >
@@ -1677,7 +1524,7 @@
           <label class="form-check-label" for="1721787384_4">Non-healing wounds</label>
         </div>
       </div>
-     <div class="row" id="sys17" onchange="validate_checkbox(this.id)">
+     <div class="row" id="sys17" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0;">
         <label class="form-check-label symptom" for=""><b>Mouth:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" id="349626757_1" name="entry.349626757" value="None" >
@@ -1706,16 +1553,16 @@
           <input required class="form-check-input" type="checkbox" id="2113739215_2" name="entry.2113739215" value="Lump" >
           <label class="form-check-label" for="2113739215_2">Lump</label>
         </div>
-        <div class="form-check form-check-inline">
+        <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" id="2113739215_3" name="entry.2113739215" value="Discharge" >
           <label class="form-check-label" for="2113739215_3">Discharge</label>
         </div>
-        <div class="form-check form-check-inline symptom-col">
+        <div class="form-check form-check-inline">
           <input required class="form-check-input" type="checkbox" id="2113739215_4" name="entry.2113739215" value="Pain/ache" >
           <label class="form-check-label" for="2113739215_4">Pain/ache</label>
         </div>
       </div>
-      <div class="row" id="sys19" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys19" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0;">
         <label class="form-check-label symptom" for=""><b>Allergic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
          <div class="form-check form-check-inline symptom-col">
           <input required class="form-check-input" type="checkbox" id="1397350331_1" name="entry.1397350331" value="None" >
@@ -1781,7 +1628,7 @@
             <path d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707z"/>
           </svg>
         </a>
-      <div class="row" id="sys21" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys21" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0;">
         <label class="form-check-label symptom2" for=""><b>Lymphatic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" id="1008226366_1" name="entry.1008226366" value="None" >
@@ -1815,7 +1662,7 @@
           <label class="form-check-label" for="1109242234_4">Changes in hair</label>
         </div>
       </div>
-      <div class="row" id="sys23" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys23" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0">
         <label class="form-check-label symptom2" for=""><b>Hematologic:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" id="1529100926_1" name="entry.1529100926" value="None" >
@@ -1853,7 +1700,7 @@
           <label class="form-check-label" for="544137998_4">Shortness of breath</label>
         </div>
       </div>
-      <div class="row" id="sys25" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys25" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0">
         <label class="form-check-label symptom2" for=""><b>Psychiatric:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" id="497894844_1" name="entry.497894844" value="None" >
@@ -1891,7 +1738,7 @@
           <label class="form-check-label" for="621021451_4">Memory loss</label>
         </div>
       </div>
-      <div class="row" id="sys27" onchange="validate_checkbox(this.id)">
+      <div class="row" id="sys27" onchange="validate_checkbox(this.id)" style="background-color: #F0F0F0">
         <label class="form-check-label symptom2" for=""><b>Cardiovascular:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" id="28376273_1" name="entry.28376273" value="None" >
@@ -1930,7 +1777,7 @@
         </div>
       </div>
       <div id="sys29" onchange="validate_checkbox(this.id)">
-      <div class="row">
+      <div class="row" style="background-color: #F0F0F0">
         <label class="form-check-label symptom2" for=""><b>Constitutional:</b><span class="red-star">*</span>&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%">
           <input required class="form-check-input" type="checkbox" id="1872380614_1" name="entry.1872380614" value="None" >
@@ -1949,7 +1796,7 @@
           <label class="form-check-label" for="1872380614_4">Recent weight change</label>
         </div>
       </div>
-      <div class="row">
+      <div class="row" style="background-color: #F0F0F0">
         <label class="form-check-label symptom2" for="" style="visibility:hidden">&nbsp;&nbsp;</label>
         <div class="form-check form-check-inline" style="width: 9.7%; visibility:hidden">
           <input required class="form-check-input" type="checkbox" id="hidden_2" name="entry." value="None" >
@@ -2045,6 +1892,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 
+function refer_me(id) {
+  console.log( id.split('_')[1])
+  if(document.getElementById(id).checked) {
+    document.getElementById('refer_me_' + id.split('_')[1]).innerHTML = '';
+  } else {
+    document.getElementById('refer_me_' + id.split('_')[1]).innerHTML = "<input type='hidden' id='1924612540_" + id.split('_')[1] + "_hidden' name='entry.1924612540' value='No'>";
+  }
+}
+
 const isNumericInput = (event) => {
   const key = event.keyCode;
   return ((key >= 48 && key <= 57) || // Allow number line
@@ -2139,22 +1995,9 @@ function summary() {
         "<b>Age: </b>"+age+" yrs "+
         "<b>Sex: </b>"+ sex +"<br>"+
         "<b>Chief Complaint: </b>"+document.getElementById("1516623984").value+"<br>"+
-        // "<b>History of Present Illiness: </b><br>"+
         "<b>What have your physicians told you: </b>"+document.getElementById("1252370919").value+"<br>"+
         "<b>Prior treatments: </b>"+document.getElementById("1694937621").value+"<br>";
-        // "<b>Future treatment: </b>"+document.getElementById("731455572").value+"<br>";
-  // var c = document.querySelectorAll(".form-check-input:checked");
-  // str += "<b>Head: </b>";
-  // for (var i = 0; i < c.length; i++)
-  // {
-  //   if (c[i].name == 'entry.420567850')
-  //   {
-  //     str += c[i].value + " "
-  //   }
-  // }
-
   document.getElementById("report").innerHTML = str;
-
 }
 
 function playAudio(id) {
@@ -2211,6 +2054,72 @@ function adddrugpage(id) {
   document.getElementById(id).click();
   document.getElementById("logo").style.display = 'block';
   document.getElementById(id).style.display = 'block';
+}
+
+var count_phy = 0
+function addphysician(id) {
+  if (count_phy < 2)
+  {
+    var id_list = ["40039240_", "325567427_", "1892335894_", "321663243_", "1257300614_", "269642805_"]
+    var dict_list = [];
+    var refer = [];
+    for (var i=0; i <= count_phy; i++) {
+      dict_list.push([])
+      for (var j=0; j < 6; j++) {
+        dict_list[i].push(document.getElementById(id_list[j] + i).value)
+      }
+      refer.push(document.getElementById('1924612540_' + i).checked)
+    }
+    count_phy += 1
+    var num_phy = count_phy + 1
+    document.getElementById(id).innerHTML += 
+        "<div class='form-check form-check-inline mb-2'><label class='form-check-label'><b>Physician "+ num_phy +"</b>&nbsp;&nbsp;</label><input type='checkbox' class='form-check-input' id='1924612540_"+ count_phy + "' name='entry.1924612540' value='Yes' onchange='refer_me(this.id);'><div id='refer_me_"+count_phy+"'><input type='hidden' id='1924612540_"+ count_phy + "_hidden' name='entry.1924612540' value='No'></div><label class='form-check-label' for='1924612540_"+ count_phy + "'>Referred you to see us</label></div><div class='form-row'><div class='form-group col-md-4'><label>First Name<span class='red-star'>*</span></label><input id='40039240_"+ count_phy + "' type='text' name='entry.40039240' class='form-control' placeholder='Inderbir'  onchange='validate(this.id);' required></div><div class='form-group col-md-4'><label>Last Name<span class='red-star'>*</span></label><input id='325567427_"+ count_phy + "' type='text' name='entry.325567427' class='form-control' placeholder='Gill' onchange='validate(this.id);' required></div><div class='form-group col-md-4'><label>Specialty<span class='red-star'>*</span></label><input id='1892335894_"+ count_phy + "' type='text' name='entry.1892335894' class='form-control' placeholder='Urology' onchange='validate(this.id);' required></div></div><div class='form-row'><div class='form-group col-md-6'><label>Address<span class='red-star'>*</span></label><input id='321663243_"+ count_phy + "' type='text' name='entry.321663243' class='form-control' placeholder='1234 Main St' onchange='validate(this.id);' required></div><div class='form-group col-md-3'><label>Tel<span class='red-star'>*</span></label><input id='1257300614_"+ count_phy + "' type='phoneNumber' name='entry.1257300614' class='form-control phoneNumber' placeholder='(555) 555-1234' onchange='validate(this.id);' required></div><div class='form-group col-md-3'><label>Fax<span class='red-star'>*</span></label><input id='269642805_"+ count_phy + "' type='phoneNumber' name='entry.269642805' class='form-control phoneNumber' placeholder='(555) 555-1234' onchange='validate(this.id);' required></div></div>"
+    for (var i=0; i < count_phy; i++) {
+      for (var j=0; j < 6; j++) {
+        document.getElementById(id_list[j] + i).value = dict_list[i][j]
+      }
+      document.getElementById('1924612540_' + i).checked = refer[i]
+    }
+  }
+  if (count_phy == 2){
+    document.getElementById('addphysician').style.display = "none"
+  }
+  if (count_phy != 0){
+    document.getElementById('deletephysician').style.display = "inline-block"
+  }
+}
+
+
+function deletephysician(id) {
+  if (count_phy > 0) {
+    var id_list = ["40039240_", "325567427_", "1892335894_", "321663243_", "1257300614_", "269642805_"]
+    var dict_list = [];
+    var refer = [];
+    for (var i=0; i <= count_phy; i++) {
+      dict_list.push([])
+      for (var j=0; j < 6; j++) {
+        dict_list[i].push(document.getElementById(id_list[j] + i).value)
+      }
+      refer.push(document.getElementById('1924612540_' + i).checked)
+    }
+  num_phy = count_phy + 1
+  tmp = "<div class='form-check form-check-inline mb-2'><label class='form-check-label'><b>Physician "+ num_phy +"</b>&nbsp;&nbsp;</label><input type='checkbox' class='form-check-input' id='1924612540_"+ count_phy + "' name='entry.1924612540' value='Yes' onchange='refer_me(this.id);'><div id='refer_me_"+count_phy+"'><input type='hidden' id='1924612540_"+ count_phy + "_hidden' name='entry.1924612540' value='No'></div><label class='form-check-label' for='1924612540_"+ count_phy + "'>Referred you to see us</label></div><div class='form-row'><div class='form-group col-md-4'><label>First Name<span class='red-star'>*</span></label><input id='40039240_"+ count_phy + "' type='text' name='entry.40039240' class='form-control' placeholder='Inderbir'  onchange='validate(this.id);' required></div><div class='form-group col-md-4'><label>Last Name<span class='red-star'>*</span></label><input id='325567427_"+ count_phy + "' type='text' name='entry.325567427' class='form-control' placeholder='Gill' onchange='validate(this.id);' required></div><div class='form-group col-md-4'><label>Specialty<span class='red-star'>*</span></label><input id='1892335894_"+ count_phy + "' type='text' name='entry.1892335894' class='form-control' placeholder='Urology' onchange='validate(this.id);' required></div></div><div class='form-row'><div class='form-group col-md-6'><label>Address<span class='red-star'>*</span></label><input id='321663243_"+ count_phy + "' type='text' name='entry.321663243' class='form-control' placeholder='1234 Main St' onchange='validate(this.id);' required></div><div class='form-group col-md-3'><label>Tel<span class='red-star'>*</span></label><input id='1257300614_"+ count_phy + "' type='phoneNumber' name='entry.1257300614' class='form-control phoneNumber' placeholder='(555) 555-1234' onchange='validate(this.id);' required></div><div class='form-group col-md-3'><label>Fax<span class='red-star'>*</span></label><input id='269642805_"+ count_phy + "' type='phoneNumber' name='entry.269642805' class='form-control phoneNumber' placeholder='(555) 555-1234' onchange='validate(this.id);' required></div></div>"
+
+    document.getElementById(id).innerHTML = document.getElementById(id).innerHTML.slice(0, -tmp.length)
+    count_phy -= 1
+    for (var i=0; i < count_phy; i++) {
+      for (var j=0; j < 6; j++) {
+        document.getElementById(id_list[j] + i).value = dict_list[i][j]
+      }
+      document.getElementById('1924612540_' + i).checked = refer[i]
+    }
+  }
+  if (count_phy < 2){
+    document.getElementById('addphysician').style.display = "inline-block"
+  }
+  if (count_phy == 0){
+    document.getElementById('deletephysician').style.display = "none"
+  }
 }
 
 function show(id) {
@@ -2431,15 +2340,6 @@ function nextpage(id, id_cur) {
   }
 }
 
-function addphysician(id) {
-  document.getElementById(id).click();
-  document.getElementById(id).style.display = 'block';
-}
-
-function deletepatient(id1, id2) {
-  document.getElementById(id1).click();
-  document.getElementById(id2).style.display = 'none';
-}
 
 // Disable form submissions if there are invalid fields
 (function() {
