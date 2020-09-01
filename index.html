@@ -93,7 +93,7 @@
     <a class="nav-link" id="v-pills-medical-tab" data-toggle="pill" href="#v-pills-medical" role="tab" aria-controls="v-pills-medical" aria-selected="false">Past Medical history</a>
     <a class="nav-link" id="v-pills-surgeries-tab" data-toggle="pill" href="#v-pills-surgeries" role="tab" aria-controls="v-pills-surgeries" aria-selected="false">Past Surgical History</a>
     <a class="nav-link" id="v-pills-allergies-tab" data-toggle="pill" href="#v-pills-allergies" role="tab" aria-controls="v-pills-allergies" aria-selected="false">Medications/Allergies</a>
-    <a class="nav-item" id="v-pills-medicines-tab" data-toggle="pill" href="#v-pills-medicines" role="tab" aria-controls="v-pills-medicines" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Medicines</a>
+    <a class="nav-link" id="v-pills-medicines-tab" data-toggle="pill" href="#v-pills-medicines" role="tab" aria-controls="v-pills-medicines" aria-selected="false" style="display: none; color: black; margin-left: 10%; font-size: 0.9rem;">Medicines</a>
     <a class="nav-link" id="v-pills-social-tab" data-toggle="pill" href="#v-pills-social" role="tab" aria-controls="v-pills-social" aria-selected="false">Social History</a>
     <a class="nav-link" id="v-pills-family-tab" data-toggle="pill" href="#v-pills-family" role="tab" aria-controls="v-pills-family" aria-selected="false">Family Health History</a>
     <a class="nav-link" id="v-pills-physicians-tab" data-toggle="pill" href="#v-pills-physicians" role="tab" aria-controls="v-pills-physicians" aria-selected="false">Referring Physicians</a>
@@ -101,7 +101,7 @@
     <a class="nav-link" id="v-pills-symptoms-tab" data-toggle="pill" href="#v-pills-symptoms" role="tab" aria-controls="v-pills-symptoms" aria-selected="false">Review of Symptoms I</a>
     <a class="nav-link" id="v-pills-symptoms2-tab" data-toggle="pill" href="#v-pills-symptoms2" role="tab" aria-controls="v-pills-symptoms2" aria-selected="false">Review of Symptoms II</a>
     <a class="nav-link" id="v-pills-summary-tab" data-toggle="pill" href="#v-pills-summary" role="tab" aria-controls="v-pills-summary" aria-selected="false" onclick="summary()">Summary</a>
-    <a class="nav-link" id="v-pills-close-tab" data-toggle="pill" href="#v-pills-close" role="tab" aria-controls="v-pills-close" aria-selected="false" style="display: block;">Thank you</a>
+    <a class="nav-link" id="v-pills-close-tab" data-toggle="pill" href="#v-pills-close" role="tab" aria-controls="v-pills-close" aria-selected="false" style="display: none;">Thank you</a>
   </div>
   <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){nextpage('v-pills-close-tab','v-pills-summary-tab')}"></iframe>
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSd29ZOzkW9acvZjk6m3RR5JbpgntAQnImYaoTmNmUg78NV_wQ/formResponse" target="hidden_iframe" id="bootstrapForm" method="POST" class="form-signin needs-validation" novalidate>
@@ -736,7 +736,7 @@
           <input id="1626577871" type="text" class="form-control" name="entry.1626577871" class="form-control" >
         </div>
         <br>
-        <a type="button" class="btn btn-outline-primary mb-1" onclick="adddrugpage('v-pills-medicines-tab', 'v-pills-allergies-tab')">Add Medicines Page</a>
+        <a type="button" class="btn btn-outline-primary mb-1" onclick="adddrugpage('v-pills-medicines-tab')">Add Medicines Page</a>
       </div>
       </div>
       <div>
@@ -2052,7 +2052,6 @@ function delete_blank(id, id_1, id_2) {
 
 function adddrugpage(id) {
   document.getElementById(id).click();
-  document.getElementById("logo").style.display = 'block';
   document.getElementById(id).style.display = 'block';
 }
 
